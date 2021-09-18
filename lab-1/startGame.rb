@@ -1,4 +1,5 @@
 require 'gosu'
+require './config/config.rb'
 
 class StartPage < Gosu::Window
   def initialize
