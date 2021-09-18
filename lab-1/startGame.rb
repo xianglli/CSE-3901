@@ -1,9 +1,10 @@
 require 'gosu'
 require './config/config.rb'
+include Config
 
 class StartPage < Gosu::Window
   def initialize
-    super 1920, 1080
+    super WINDOWS_WIDTH, WINDOWS_HEIGHT
     self.caption = "Set Game"
   end
 
