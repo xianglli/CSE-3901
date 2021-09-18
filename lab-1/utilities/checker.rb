@@ -1,4 +1,4 @@
-require '../utilities/cards'
+require './cards.rb'
 
 module Checker
   def checker(card1, card2, card3)
