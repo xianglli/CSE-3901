@@ -1,6 +1,6 @@
 require 'gosu'
 
-class Tutorial < Gosu::Window
+class StartPage < Gosu::Window
   def initialize
     super 1920, 1080
     self.caption = "Set Game"
@@ -15,4 +15,4 @@ class Tutorial < Gosu::Window
   end
 end
 
-Tutorial.new.show
+StartPage.new.show
