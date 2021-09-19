@@ -2,7 +2,7 @@
 # It contains initial of deck, and pop, push cards.
 # This class is powered by plizong
 
-require '/utilities/cards.rb'
+require './utilities/cards.rb'
 
 class Board
   attr_reader :board

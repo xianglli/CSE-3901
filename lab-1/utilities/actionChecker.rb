@@ -1,9 +1,15 @@
-# A module for checking if 3 card is a set
+# This module is used for check the actions in the pages
 # This module is powered by plizong
+require './config/config.rb'
+include Config
 
-require './cards.rb'
+module ActionChecker
 
-module Checker
+  ###############################################
+  #          Game Logic Checkers                #
+  ###############################################
+
+  # This checker is check if three card can be a set
   def checker(card1, card2, card3)
     shape_equal = (card1.shape == card2.shape && card2.shape == card3.shape)
     shape_diff = (card1.shape != card2.shape and card1.shape != card3.shape and card2.shape != card3.shape)
@@ -18,5 +24,14 @@ module Checker
       return false
     end
     true
+  end
+
+  ###############################################
+  #           System Control Checkers           #
+  ###############################################
+  def game_mode_checker(mouse_x, mouse_y)
+    if mouse_x > 60 and mouse_x < 60 + WEL_BUTTON_WIDTH and mouse_y > 11 * LINESPACE and mouse_y < 11 * LINESPACE + WEL_BUTTON_HEIGHT
+      "single"
+    end
   end
 end
