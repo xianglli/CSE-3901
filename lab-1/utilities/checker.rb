@@ -11,7 +11,7 @@ module Checker
     symbol_equal = (card1.symbol == card2.symbol && card2.symbol == card3.symbol)
     symbol_diff = (card1.symbol != card2.symbol and card1.symbol != card3.symbol and card2.symbol != card3.symbol)
 
-    if (shape_diff or shape_equal) and (color_diff or color_equal) and (number_diff or number_equal) and (symbol_diff or symbol_diff)
+    if (shape_diff or shape_equal) and (color_diff or color_equal) and (number_diff or number_equal) and (symbol_diff or symbol_equal)
       return false
     end
     true
