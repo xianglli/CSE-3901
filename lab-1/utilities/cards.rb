@@ -1,5 +1,5 @@
 # This class is used for create card and chase card info
-# This class is powered by Louis Xiang Li (plizong)
+# This class is powered by plizong
 
 class Card
   attr_reader :id, :selected
