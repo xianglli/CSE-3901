@@ -1,3 +1,6 @@
+# A module for checking if 3 card is a set
+# This module is powered by plizong
+
 require './cards.rb'
 
 module Checker
