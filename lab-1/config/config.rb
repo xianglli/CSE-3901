@@ -8,9 +8,10 @@ module Config
   WEL_PIC_HEIGHT = 640
   WEL_PIC_WIDTH = 480
 
-  # welcome page button size
-  WEL_BUTTON_HEIGHT = 128
-  WEL_BUTTON_WIDTH = 60
+  # welcome page button size and color
+  WEL_BUTTON_HEIGHT = 64
+  WEL_BUTTON_WIDTH = 256
+  WEL_BUTTON_COLOR = 0xffffcc00
 
   # parameter of line height
   LINESPACE = 50
@@ -20,7 +21,7 @@ module Config
   CARD_WIDTH = 70
 
   # parameter of Windows size
-  WINDOWS_HEIGHT = 1080
-  WINDOWS_WIDTH = 1920
+  WINDOWS_HEIGHT = 768
+  WINDOWS_WIDTH = 1024
 
 end
