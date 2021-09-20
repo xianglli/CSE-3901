@@ -70,6 +70,11 @@ class GameInterface < Gosu::Window
         @images[i].draw(position[0], position[1], 0)
       end
     }
+
+    if @newgame.turn != -1
+      Gosu.draw_rect(100, 635, G_BUTTON_WIDTH, G_BUTTON_HEIGHT, 0xffe6e6e6, ZOrder::TOP, mode = :default)
+    end
+
   end
 
   def needs_cursor?
