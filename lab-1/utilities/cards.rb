@@ -2,7 +2,7 @@
 # This class is powered by plizong
 
 class Card
-  attr_reader :id, :selected
+  attr_reader :id, :selected, :symbol, :shape, :color, :number
 
   # We make following assumption:
   # shape : 0: squiggles, 1:diamond  , 2:oval
@@ -19,11 +19,13 @@ class Card
 
     # decode the id to each field of Card Class
     while tmp / 3 != 0 do
-      remainder = tmp / base
+      remainder = tmp % 3
       result += remainder * (10 ** i)
       i += 1
       tmp = tmp / 3
     end
+
+    result += tmp * (10 ** i)
 
     @id = id
     @symbol = result / 1000

@@ -5,19 +5,22 @@
 require './utilities/cards.rb'
 
 class Board
-  attr_reader :board
+  attr_accessor :board
 
   def initialize
-    shuffler = [0..80]
-    shuffler.shuffle
+    shuffler = []
+    @board = []
+    (0..80).each { |i|
+      shuffler[i] = i
+    }
+    shuffler = shuffler.shuffle
     shuffler.each { |i|
       @board << Card.new(i)
     }
   end
 
-  def another_card
-    @board.shuffle
-    @board.pop
+  def get_card
+    return @board.pop
   end
 
   def remain_card
