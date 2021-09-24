@@ -9,7 +9,7 @@ module ActionChecker
   #          Game Logic Checkers                #
   ###############################################
 
-  # This checker is check if three card can be a set
+  # In the game, we have to choose the
   def checker(card1, card2, card3)
     shape_equal = (card1.shape == card2.shape && card2.shape == card3.shape)
     shape_diff = (card1.shape != card2.shape and card1.shape != card3.shape and card2.shape != card3.shape)
@@ -21,6 +21,7 @@ module ActionChecker
     symbol_diff = (card1.symbol != card2.symbol and card1.symbol != card3.symbol and card2.symbol != card3.symbol)
 
     if (shape_diff or shape_equal) and (color_diff or color_equal) and (number_diff or number_equal) and (symbol_diff or symbol_equal)
+      # if  shape_equal or color_equal or number_equal or symbol_equal
       return true
     end
     false
