@@ -32,4 +32,3 @@ class Board
   end
 
 end
-
