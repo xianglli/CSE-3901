@@ -1,4 +1,4 @@
-# This class stores player information
+# This class stores the player information
 # powered by plizong
 
 class Player
