@@ -54,15 +54,15 @@ For example, 3 solid red diamonds, 2 solid green squiggles, and 1 solid purple o
     the starter of the game. It contains the selection of game mode.
     
 
-### contribute your code
+### Contribute your code
 At the current time we just allow people from CSE 3901 group 3 creating pull request, and we are very willingly eager to receive contributions from anybody in the near future. Everyone, including Future-Tech Corp. (FTCo) members are expected to follow the guidence of how to contribute.
 
-#### coding guidence
+#### Coding guidence
 Your chances of getting feedback and seeing your code merged into the project greatly depend on how granular your changes are. The style of coding is based on Jetbrains code format.
 
 We recommend using ```git diff --color``` when reviewing your changes so that you don't have any spurious whitespace issues in the code that you submit.
 
-#### patch submissing
+#### Patch submissing
 Once you are ready to share your work with the us, you should push all the commits to a new branch begins with ```yourName_``` and send us a pull request.
 
 We welcome submissions which are work in-progress in order to get feedback early in the development process. When opening the pull request, select "Draft" in the dropdown menu when creating the PR to clearly mark the intent of the pull request. Prefixing the title with "WIP:" is also good practice.
