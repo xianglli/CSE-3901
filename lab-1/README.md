@@ -23,5 +23,37 @@ For example, 3 solid red diamonds, 2 solid green squiggles, and 1 solid purple o
 
 
 ## Design & Develop
-TODO
+### Code layout
+* config/ 
 
+    config folder contains only one file, config.rb. It contains the global variable and system setting information. It can modify the style of GUI.
+
+
+* utilities/
+
+    utilities was formed with two important part. First is the class of each item in the card game, include game class, card class, player class, board class. The second part is checker functions. Still, checker functions was included in the module actionChecker in actionChecker.rb. It contains checker for cards logic, and for system, most importantly, checkers for buttons.
+
+
+* media/
+
+    media contains pictures and other media used in GUI game
+
+
+* media/cards/
+
+    the picture of cards. Cards file name is an integer that decimal number of the picture title represents the code of the card. The specific conversion method can be found in ```./utilities/cards/rb```.
+
+
+* game.rb
+
+    the actual game of Set game. This include ```gosu``` module.
+
+
+* startGame.rb
+    
+    the starter of the game. It contains the selection of game mode.
+    
+
+    
+
+    
