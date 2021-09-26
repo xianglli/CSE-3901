@@ -23,6 +23,15 @@ class GameInterface < Gosu::Window
 
     @newgame = Game.new(option)
     @images = []
+    dealCards
+
+    # make sure possible set exist
+    while hint == 0
+      reDealCards
+    end
+  end
+
+  def dealCards
     (0..11).each { |i|
       @newgame.shown_card << @newgame.board.get_card
       if @newgame.shown_card[i]
@@ -31,12 +40,29 @@ class GameInterface < Gosu::Window
     }
   end
 
+  def getBoardCardsBack
+    (0..11).each { |i|
+      @newgame.board.put_card(@newgame.shown_card[i])
+    }
+  end
+
+  def reDealCards
+    getBoardCardsBack
+    dealCards
+  end
+
   def update
     update_image
 
     if @newgame.selected_card.length == 3
       if checker(@newgame.shown_card[@newgame.selected_card[0]], @newgame.shown_card[@newgame.selected_card[1]], @newgame.shown_card[@newgame.selected_card[2]])
-        @newgame.player.score += 1
+        # less possible set exist, more score to get
+        @newgame.player.score += [1, 5 - hint].max
+        # put cards back to board
+        @newgame.selected_card.each { |i|
+          @newgame.shown_card[i].select_card
+          @newgame.board.put_card(@newgame.shown_card[i])
+        }
         @newgame.selected_card.each { |i|
           if @newgame.board.remain_card > 0
             @newgame.shown_card[i] = @newgame.board.get_card
@@ -45,6 +71,11 @@ class GameInterface < Gosu::Window
           end
         }
         @newgame.selected_card.clear
+
+        # make sure possible set exist
+        while hint == 0
+          reDealCards
+        end
       else
         (0..2).each { |i|
           @newgame.shown_card[@newgame.selected_card[i]].select_card
@@ -70,13 +101,13 @@ class GameInterface < Gosu::Window
 
   def draw
     Gosu.draw_rect(0, 0, G_WINDOWS_WIDTH, G_WINDOWS_HEIGHT, BGCOLOR, ZOrder::BACKGROUND, mode = :default)
-    @info.draw_text("Your Score: #{@newgame.player.score} sets", 960, 640, 0, scale_x = 1, scale_y = 1, color = 0xffffffff, mode = :default)
+    @info.draw_text("Your Score: #{@newgame.player.score} scores", 960, 640, 0, scale_x = 1, scale_y = 1, color = 0xffffffff, mode = :default)
     Gosu.draw_rect(100, 635, G_BUTTON_WIDTH, G_BUTTON_HEIGHT, 0xffff006e, ZOrder::BACKGROUND, mode = :default)
     @info.draw_text("Start Game", 125, 645, 0, scale_x = 1, scale_y = 1, color = 0xffeeee00, mode = :default)
 
     if @newgame.turn != -1
       Gosu.draw_rect(595, 0.5 * LINESPACE - 10, G_BUTTON_WIDTH, G_BUTTON_HEIGHT, 0xffff006e, ZOrder::BACKGROUND, mode = :default)
-      @info.draw_text("Possible Sets:" + hint().to_s, 600, 0.5 * LINESPACE, 0, scale_x = 1, scale_y = 1, color = 0xffeeee00, mode = :default)
+      @info.draw_text("Possible Sets:" + hint.to_s, 600, 0.5 * LINESPACE, 0, scale_x = 1, scale_y = 1, color = 0xffeeee00, mode = :default)
     end
 
     #Check for changes in selected images, draw border if card is selected
