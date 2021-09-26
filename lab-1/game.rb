@@ -54,11 +54,30 @@ class GameInterface < Gosu::Window
     end
   end
 
+  def hint
+    count = 0
+    for i in 0..9
+      for j in i+1..10
+        for k in j+1..11
+          if checker(@newgame.shown_card[i], @newgame.shown_card[j], @newgame.shown_card[k])
+            count += 1
+          end
+        end
+      end
+    end
+    return count
+  end
+
   def draw
     Gosu.draw_rect(0, 0, G_WINDOWS_WIDTH, G_WINDOWS_HEIGHT, BGCOLOR, ZOrder::BACKGROUND, mode = :default)
     @info.draw_text("Your Score: #{@newgame.player.score} sets", 960, 640, 0, scale_x = 1, scale_y = 1, color = 0xffffffff, mode = :default)
     Gosu.draw_rect(100, 635, G_BUTTON_WIDTH, G_BUTTON_HEIGHT, 0xffff006e, ZOrder::BACKGROUND, mode = :default)
     @info.draw_text("Start Game", 125, 645, 0, scale_x = 1, scale_y = 1, color = 0xffeeee00, mode = :default)
+
+    if @newgame.turn != -1
+      Gosu.draw_rect(595, 0.5 * LINESPACE - 10, G_BUTTON_WIDTH, G_BUTTON_HEIGHT, 0xffff006e, ZOrder::BACKGROUND, mode = :default)
+      @info.draw_text("Possible Sets:" + hint().to_s, 600, 0.5 * LINESPACE, 0, scale_x = 1, scale_y = 1, color = 0xffeeee00, mode = :default)
+    end
 
     #Check for changes in selected images, draw border if card is selected
     (0..11).each { |i|
