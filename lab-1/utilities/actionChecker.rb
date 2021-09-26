@@ -27,6 +27,12 @@ module ActionChecker
     false
   end
 
+  # this function is for formatting the clock
+  def time_format(time1, time2)
+    seconds = time2 - time1
+    seconds.to_i.to_s
+  end
+
   ###############################################
   #           System Control Checkers           #
   ###############################################
