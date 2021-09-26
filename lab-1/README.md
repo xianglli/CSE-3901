@@ -55,7 +55,7 @@ For example, 3 solid red diamonds, 2 solid green squiggles, and 1 solid purple o
     
 
 ### Contribute your code
-At the current time we just allow people from CSE 3901 group 3 creating pull request, and we are very willingly eager to receive contributions from anybody in the near future. Everyone, including Future-Tech Corp. (FTCo) members are expected to follow the guidence of how to contribute.
+At the current time we just allow people from CSE 3901 group 1 creating pull request, and we are very willingly eager to receive contributions from anybody in the near future. Everyone, including Future-Tech Corp. (FTCo) members are expected to follow the guidence of how to contribute.
 
 #### Coding guidence
 Your chances of getting feedback and seeing your code merged into the project greatly depend on how granular your changes are. The style of coding is based on Jetbrains code format.
