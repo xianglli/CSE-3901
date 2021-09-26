@@ -26,6 +26,11 @@ class Board
     return @board.pop
   end
 
+  # return a card to the board
+  def put_card(new_card)
+    @board.push(new_card)
+  end
+
   # total number of the remaining cards
   def remain_card
     @board.length
