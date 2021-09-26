@@ -113,8 +113,6 @@ class GameInterface < Gosu::Window
     elsif @newgame.shown_card[cardNumber].selected == 1
       @newgame.selected_card.delete(cardNumber)
       @newgame.shown_card[cardNumber].select_card
-    else
-      # TODO: should have some alert: Can not select more than 3 cards
     end
   end
 end
