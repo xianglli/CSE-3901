@@ -56,16 +56,16 @@ class GameInterface < Gosu::Window
 
   def hint
     count = 0
-    for i in 0..9
-      for j in i+1..10
-        for k in j+1..11
+    (0..9).each { |i|
+      (i + 1..10).each { |j|
+        (j + 1..11).each { |k|
           if checker(@newgame.shown_card[i], @newgame.shown_card[j], @newgame.shown_card[k])
             count += 1
           end
-        end
-      end
-    end
-    return count
+        }
+      }
+    }
+    count
   end
 
   def draw
