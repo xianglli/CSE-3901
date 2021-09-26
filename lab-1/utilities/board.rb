@@ -9,16 +9,12 @@ class Board
   def initialize
     shuffler = []
     @board = []
-    # shuffler is the array which stores all the id
+
     (0..80).each { |i|
-      shuffler[i] = i
-    }
-    # all the ids are randomly distributed in the array
-    shuffler = shuffler.shuffle
-    shuffler.each { |i|
-      # create the new instance of Card class for each card and add to board
       @board << Card.new(i)
     }
+
+    @board.shuffle!
   end
 
   # remove the last element in board
@@ -29,6 +25,7 @@ class Board
   # return a card to the board
   def put_card(new_card)
     @board.push(new_card)
+    @board.shuffle!
   end
 
   # total number of the remaining cards
