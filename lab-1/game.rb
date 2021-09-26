@@ -73,6 +73,7 @@ class GameInterface < Gosu::Window
 
     if @newgame.turn != -1
       Gosu.draw_rect(100, 635, G_BUTTON_WIDTH, G_BUTTON_HEIGHT, 0xffe6e6e6, ZOrder::TOP, mode = :default)
+      @info.draw_text("Time of this attempt: #{time_format(@newgame.start, Time.now)} s", 100, 0.5 * LINESPACE, 0, scale_x = 1, scale_y = 1, color = 0xffffffff, mode = :default)
     end
 
   end
@@ -89,6 +90,7 @@ class GameInterface < Gosu::Window
         switch_select_state(clickType)
       elsif clickType == "begin"
         @newgame.turn = 0
+        @newgame.start = Time.now
       end
 
     else
