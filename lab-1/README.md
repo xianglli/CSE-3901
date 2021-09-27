@@ -67,3 +67,4 @@ Once you are ready to share your work with the us, you should push all the commi
 
 We welcome submissions which are work in-progress in order to get feedback early in the development process. When opening the pull request, select "Draft" in the dropdown menu when creating the PR to clearly mark the intent of the pull request. Prefixing the title with "WIP:" is also good practice.
     
+[1] from http://en.wikipedia.org/wiki/Set_(game)
