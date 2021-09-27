@@ -55,6 +55,8 @@ class GameInterface < Gosu::Window
     update_image
 
     if @newgame.selected_card.length == 3
+      if @newgame.turn == 1
+
       if checker(@newgame.shown_card[@newgame.selected_card[0]], @newgame.shown_card[@newgame.selected_card[1]], @newgame.shown_card[@newgame.selected_card[2]])
         # less possible set exist, more score to get
         @newgame.player.score += [1, 5 - hint].max
@@ -82,8 +84,38 @@ class GameInterface < Gosu::Window
         }
         @newgame.selected_card.clear
       end
+      elsif @newgame.turn == 0
+        if checker1(@newgame.shown_card[@newgame.selected_card[0]], @newgame.shown_card[@newgame.selected_card[1]], @newgame.shown_card[@newgame.selected_card[2]])
+          # less possible set exist, more score to get
+          @newgame.player.score += [1, 5 - hint].max
+          # put cards back to board
+          @newgame.selected_card.each { |i|
+            @newgame.shown_card[i].select_card
+            @newgame.board.put_card(@newgame.shown_card[i])
+          }
+          @newgame.selected_card.each { |i|
+            if @newgame.board.remain_card > 0
+              @newgame.shown_card[i] = @newgame.board.get_card
+            else
+              @newgame.shown_card[i] = nil
+            end
+          }
+          @newgame.selected_card.clear
+
+          # make sure possible set exist
+          while hint == 0
+            reDealCards
+          end
+        else
+          (0..2).each { |i|
+            @newgame.shown_card[@newgame.selected_card[i]].select_card
+          }
+          @newgame.selected_card.clear
+        end
+
     end
-  end
+    end
+    end
 
   def hint
     count = 0
@@ -103,7 +135,9 @@ class GameInterface < Gosu::Window
     Gosu.draw_rect(0, 0, G_WINDOWS_WIDTH, G_WINDOWS_HEIGHT, BGCOLOR, ZOrder::BACKGROUND, mode = :default)
     @info.draw_text("Your Score: #{@newgame.player.score} scores", 960, 640, 0, scale_x = 1, scale_y = 1, color = 0xffffffff, mode = :default)
     Gosu.draw_rect(100, 635, G_BUTTON_WIDTH, G_BUTTON_HEIGHT, 0xffff006e, ZOrder::BACKGROUND, mode = :default)
-    @info.draw_text("Start Game", 125, 645, 0, scale_x = 1, scale_y = 1, color = 0xffeeee00, mode = :default)
+    @info.draw_text("Difficult Mode", 125, 645, 0, scale_x = 1, scale_y = 1, color = 0xffeeee00, mode = :default)
+    Gosu.draw_rect(400, 635, G_BUTTON_WIDTH, G_BUTTON_HEIGHT, 0xffff006e, ZOrder::BACKGROUND, mode = :default)
+    @info.draw_text("Easy Mode", 415, 645, 0, scale_x = 1, scale_y = 1, color = 0xffeeee00, mode = :default)
 
     if @newgame.turn != -1
       Gosu.draw_rect(595, 0.5 * LINESPACE - 10, G_BUTTON_WIDTH, G_BUTTON_HEIGHT, 0xffff006e, ZOrder::BACKGROUND, mode = :default)
@@ -121,8 +155,11 @@ class GameInterface < Gosu::Window
       end
     }
 
-    if @newgame.turn != -1
+    if @newgame.turn == 1
       Gosu.draw_rect(100, 635, G_BUTTON_WIDTH, G_BUTTON_HEIGHT, 0xffe6e6e6, ZOrder::TOP, mode = :default)
+      @info.draw_text("Time of this attempt: #{time_format(@newgame.start, Time.now)} s", 100, 0.5 * LINESPACE, 0, scale_x = 1, scale_y = 1, color = 0xffffffff, mode = :default)
+    elsif @newgame.turn == 0
+      Gosu.draw_rect(400, 635, G_BUTTON_WIDTH, G_BUTTON_HEIGHT, 0xffe6e6e6, ZOrder::TOP, mode = :default)
       @info.draw_text("Time of this attempt: #{time_format(@newgame.start, Time.now)} s", 100, 0.5 * LINESPACE, 0, scale_x = 1, scale_y = 1, color = 0xffffffff, mode = :default)
     end
 
@@ -138,10 +175,13 @@ class GameInterface < Gosu::Window
 
       if clickType.is_a? Integer and @newgame.turn != -1
         switch_select_state(clickType)
-      elsif clickType == "begin"
+      elsif clickType == "beginEasy"
         @newgame.turn = 0
         @newgame.start = Time.now
-      end
+      elsif clickType == "beginDifficult"
+        @newgame.turn = 1
+        @newgame.start = Time.now
+        end
 
     else
       super
