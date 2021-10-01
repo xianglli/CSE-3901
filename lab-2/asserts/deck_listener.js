@@ -5,7 +5,7 @@ const gameAlert = document.getElementsByClassName('boardMessage')[0];
 const scoreCard = document.getElementsByClassName('scoreBoard')[0];
 
 function changeSelectStatus(card) {
-    if(gameState !== -1) {
+    if (gameState !== -1) {
         card.selected = !card.selected;
         if (card.selected) {
             card.style.backgroundColor = "#ffff00";
@@ -17,7 +17,7 @@ function changeSelectStatus(card) {
 
 function calculateScore() {
     score++;
-    scoreCard.innerHTML= "Your current score: " + score;
+    scoreCard.innerHTML = "Your current score: " + score;
 }
 
 for (let i = 0; i < 12; i++) {
@@ -28,7 +28,7 @@ for (let i = 0; i < 12; i++) {
 for (let i = 0; i < 12; i++) {
     boardCard[i].addEventListener("click", function () {
         changeSelectStatus(boardCard[i]);
-
+        gameAlert.innerHTML = "";
         let selectedCard = [];
         for (let j = 0; j < 12; j++) {
             if (boardCard[j].selected) {
@@ -45,10 +45,11 @@ for (let i = 0; i < 12; i++) {
                     container.replaceChild(createRandomCard(), boardCard[selectedCard[k]]);
                 }
             } else {
-                gameAlert.innerHTML = "<p>The card you select can not be a set</p>";
+                gameAlert.innerHTML = "<div style='background-color: rgba(218,112,214,0.35); border: 1px solid crimson; color: crimson'>The card you select can not be a set</div>";
                 for (let k = 0; k < 3; k++) {
                     changeSelectStatus(boardCard[selectedCard[k]]);
                 }
+
             }
         }
     })
