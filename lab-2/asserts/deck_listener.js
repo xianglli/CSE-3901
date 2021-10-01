@@ -32,7 +32,9 @@ for (let i = 0; i < 12; i++) {
             console.log("Error: only 3 cards expected");
         } else if (selectedCard.length === 3) {
             if (cardChecker(boardCard[selectedCard[0]].label, boardCard[selectedCard[1]].label, boardCard[selectedCard[2]].label)) {
-                gameAlert.innerHTML = "The card you select can be a set";
+                for (let k = 0; k < 3; k++) {
+                    boardCard[selectedCard[k]] = createRandomCard();
+                }
             } else {
                 gameAlert.innerHTML = "The card you select can not be a set";
                 for (let k = 0; k < 3; k++) {
