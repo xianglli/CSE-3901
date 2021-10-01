@@ -45,7 +45,7 @@ for (let i = 0; i < 12; i++) {
                     container.replaceChild(createRandomCard(), boardCard[selectedCard[k]]);
                 }
             } else {
-                gameAlert.innerHTML = "The card you select can not be a set";
+                gameAlert.innerHTML = "<p>The card you select can not be a set</p>";
                 for (let k = 0; k < 3; k++) {
                     changeSelectStatus(boardCard[selectedCard[k]]);
                 }
