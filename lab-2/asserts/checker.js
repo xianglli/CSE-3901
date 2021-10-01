@@ -31,7 +31,7 @@ function getNumber(card_id) {
     return card_id % 10;
 }
 
-export function cardChecker(card1, card2, card3) {
+function cardChecker(card1, card2, card3) {
     let shape_equal = (getShape(getCardId(card1)) === getShape(getCardId(card2)) && getShape(getCardId(card2)) === getShape(getCardId(card3)));
     let shape_diff = (getShape(getCardId(card1)) !== getShape(getCardId(card2)) && getShape(getCardId(card2)) !== getShape(getCardId(card3))
         && getShape(getCardId(card3)) !== getShape(getCardId(card1)));
