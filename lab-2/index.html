@@ -11,6 +11,8 @@
 </div>
 
 <div class="content">
+    <div class="scoreBoard">
+    </div>
     <div class="board">
         <div class="boardMessage">
             <!-- This is for the alart message -->
@@ -22,15 +24,17 @@
             <!-- This is for the cards -->
             <!-- It is controlled by asserts/deck_listener.js -->
         </div>
-        <script src="asserts/shuffler.js"></script>
-        <script src="asserts/deck_listener.js"></script>
         <div class="boardButton">
             <!-- This is the place for buttons -->
             <div class="gameButton">
-                <p>Begin Game</p>
+                <div class="StartGameButton">
+                    <p>Begin Game</p>
+                </div>
             </div>
-
         </div>
     </div>
+    <script src="asserts/shuffler.js"></script>
+    <script src="asserts/button_listener.js"></script>
+    <script src="asserts/deck_listener.js"></script>
 </div>
 </body>
