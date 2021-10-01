@@ -27,6 +27,12 @@
     margin: auto;
 }
 
+.timer {
+    text-align: end;
+    padding-top: 1vh;
+    padding-right: 1vw;
+}
+
 .cardboard {
     display: flex;
     flex-wrap: wrap;
