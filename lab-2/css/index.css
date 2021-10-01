@@ -1,8 +1,15 @@
 .board {
     display: flex;
+    flex-direction: column;
     max-width: 1280px;
     background-color: #e6e6e6;
     margin: auto;
+}
+
+.board .boardMessage{
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
 }
 
 .cardboard {
