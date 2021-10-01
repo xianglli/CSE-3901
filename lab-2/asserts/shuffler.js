@@ -1,15 +1,13 @@
-export let cardDeck;
+let CARD_DECK = [...new Array(81).keys()];
 
-cardDeck = [...new Array(81).keys()];
-
-function suffle(arr) {
-    let n = arr.length;
-    const newArr = [];
-    while (n) {
-        const i = Math.floor(Math.random() * n--);
-        newArr.push(arr.splice(i, 1)[0]);
-    }
-    return newArr;
+function createCard(label) {
+    const card = document.createElement('div');
+    card.className = "card";
+    card.innerHTML = "<img src=\"../media/cards/"+(label+1)+".png\" />";
+    return card;
 }
 
-cardDeck = suffle(cardDeck);
+function createRandomCard() {
+    let index = Math.floor(Math.random() * CARD_DECK.length);
+    return createCard(CARD_DECK[index]);
+}
