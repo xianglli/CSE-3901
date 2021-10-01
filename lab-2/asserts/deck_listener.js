@@ -20,38 +20,46 @@ function calculateScore() {
     scoreCard.innerHTML = "Your current score: " + score;
 }
 
+function checkSelectCards() {
+    let selectedCard = [];
+    for (let j = 0; j < 12; j++) {
+        if (boardCard[j].selected) {
+            selectedCard.push(j);
+        }
+    }
+    if (selectedCard.length > 3) {
+        // This should be unreachable, but just put here for safety.
+        console.log("Error: only 3 cards expected");
+    } else if (selectedCard.length === 3) {
+        if (cardChecker(boardCard[selectedCard[0]].label, boardCard[selectedCard[1]].label, boardCard[selectedCard[2]].label)) {
+            calculateScore();
+            for (let k = 0; k < 3; k++) {
+                container.replaceChild(createRandomCard(), boardCard[selectedCard[k]]);
+                setBoardListener(selectedCard[k]);
+            }
+        } else {
+            gameAlert.innerHTML = "<div style='background-color: rgba(218,112,214,0.35); border: 1px solid crimson; color: crimson'>The card you select can not be a set</div>";
+            for (let k = 0; k < 3; k++) {
+                changeSelectStatus(boardCard[selectedCard[k]]);
+            }
+
+        }
+    }
+}
+
+function setBoardListener(card) {
+    boardCard[card].addEventListener("click", function () {
+        changeSelectStatus(boardCard[card]);
+        gameAlert.innerHTML = "";
+        checkSelectCards();
+    })
+}
+
 for (let i = 0; i < 12; i++) {
     const card = createRandomCard();
     container.append(card);
 }
 
 for (let i = 0; i < 12; i++) {
-    boardCard[i].addEventListener("click", function () {
-        changeSelectStatus(boardCard[i]);
-        gameAlert.innerHTML = "";
-        let selectedCard = [];
-        for (let j = 0; j < 12; j++) {
-            if (boardCard[j].selected) {
-                selectedCard.push(j);
-            }
-        }
-        if (selectedCard.length > 3) {
-            // This should be unreachable, but just put here for safety.
-            console.log("Error: only 3 cards expected");
-        } else if (selectedCard.length === 3) {
-            if (cardChecker(boardCard[selectedCard[0]].label, boardCard[selectedCard[1]].label, boardCard[selectedCard[2]].label)) {
-                calculateScore();
-                for (let k = 0; k < 3; k++) {
-                    container.replaceChild(createRandomCard(), boardCard[selectedCard[k]]);
-                }
-            } else {
-                gameAlert.innerHTML = "<div style='background-color: rgba(218,112,214,0.35); border: 1px solid crimson; color: crimson'>The card you select can not be a set</div>";
-                for (let k = 0; k < 3; k++) {
-                    changeSelectStatus(boardCard[selectedCard[k]]);
-                }
-
-            }
-        }
-    })
-
+    setBoardListener(i);
 }

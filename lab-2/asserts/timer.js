@@ -1,4 +1,4 @@
-const TOTAL_TIME = 20;
+const TOTAL_TIME = 600;
 
 const timer = document.getElementsByClassName('timer')[0];
 
