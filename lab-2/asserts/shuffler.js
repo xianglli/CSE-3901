@@ -1,4 +1,5 @@
-let CARD_DECK = [...new Array(81).keys()];
+const container = document.getElementsByClassName('cardboard')[0];
+let CARD_DECK;
 
 function createCard(label) {
     const card = document.createElement('div');
@@ -9,7 +10,7 @@ function createCard(label) {
     return card;
 }
 
-function shuffle(arr) {
+function shuffleArr(arr) {
     let n = arr.length;
     const newArr = [];
     while (n) {
@@ -19,7 +20,20 @@ function shuffle(arr) {
     return newArr;
 }
 
-CARD_DECK = shuffle(CARD_DECK);
+function shuffle() {
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+    CARD_DECK = shuffleArr([...new Array(81).keys()]);
+    for (let i = 0; i < 12; i++) {
+        const card = createRandomCard();
+        container.append(card);
+    }
+    
+    for (let i = 0; i < 12; i++) {
+        setBoardListener(i);
+    }
+}
 
 function createRandomCard() {
     return createCard(CARD_DECK.pop());

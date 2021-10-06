@@ -1,5 +1,6 @@
 const startGameButton = document.getElementsByClassName('StartGameButton')[0];
 const stopGameButton = document.getElementsByClassName('StopGameButton')[0];
+const shufflerButton = document.getElementsByClassName('shufflerButton')[0];
 let gameState = -1;
 let score = 0;
 
@@ -22,4 +23,8 @@ stopGameButton.addEventListener("click", function () {
     scoreCard.innerHTML = "Your final score: " + score;
     startGameButton.style.backgroundColor = "goldenrod";
     startGameButton.innerHTML = "<p style='color: white'>Start Game</p>";
+});
+
+shufflerButton.addEventListener("click", function () {
+    shuffle();
 });
