@@ -1,5 +1,4 @@
 // Deck listener file is for control cards
-const container = document.getElementsByClassName('cardboard')[0];
 const boardCard = document.getElementsByClassName('card');
 const gameAlert = document.getElementsByClassName('boardMessage')[0];
 const scoreCard = document.getElementsByClassName('scoreBoard')[0];
@@ -55,11 +54,4 @@ function setBoardListener(card) {
     })
 }
 
-for (let i = 0; i < 12; i++) {
-    const card = createRandomCard();
-    container.append(card);
-}
-
-for (let i = 0; i < 12; i++) {
-    setBoardListener(i);
-}
+shuffle();

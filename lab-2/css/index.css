@@ -1,80 +1,87 @@
 .title {
-    text-align: center;
+  text-align: center;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .content .scoreBoard {
-    text-align: center;
-    padding-bottom: 1vh;
+  text-align: center;
+  padding-bottom: 1vh;
 }
 
 .boardMessage {
-    display: flex;
-    justify-content: center;
-    margin:auto;
-    padding: 0 1vw;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 0 1vw;
 }
 
 .board {
-    display: flex;
-    flex-direction: column;
-    max-width: 70vw;
-    background-color: #e6e6e6;
-    margin: auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 70vw;
+  background-color: #e6e6e6;
+  margin: auto;
 }
 
 .timer {
-    text-align: end;
-    padding-top: 1vh;
-    padding-right: 1vw;
+  text-align: end;
+  padding-top: 1vh;
+  padding-right: 1vw;
 }
 
 .cardboard {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: auto;
-    padding: 1vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  padding: 1vw;
 }
 
 .card {
-    padding: 1vw;
+  padding: 1vw;
 }
 
 .boardButton {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .gameButton {
-    display: flex;
-    width: 12vw;
-    height: 6vh;
-    text-align: center;
-    margin-bottom: 1vw;
-    padding:0 1vw;
+  display: flex;
+  width: 12vw;
+  height: 6vh;
+  text-align: center;
+  margin-bottom: 1vw;
+  padding: 0 1vw;
 }
 
 .StartGameButton {
-    width: 100%;
-    height: 100%;
-    background-color: goldenrod;
-    margin: auto;
+  width: 100%;
+  height: 100%;
+  background-color: goldenrod;
+  margin: auto;
 }
 
 .StopGameButton {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(108,108,108);
-    margin: auto;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(108, 108, 108);
+  margin: auto;
+}
+
+.shufflerButton {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(129, 120, 167);
+  margin: auto;
 }
 
 .gameButton p {
-    font-size: large;
+  font-size: large;
 }
