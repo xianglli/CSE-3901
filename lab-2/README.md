@@ -6,7 +6,7 @@ We want to thank all our past and present community contributors and are really 
 ## How to run?
 Set Game (JavaScript version) is developed and tested on Google chrome, Microsoft Edge and Safari. And we do not support IE.
 
-To run this game, simply drag the index.html into your blowser and enjoy the game. If you do not want to download the code, there is an online version of that game https://plizong.com/set , but usually servral commits behind main. The published code are encoded and encrypted.
+To run this game, simply drag the index.html into your blowser and enjoy the game. If you do not want to download the code, there is an online version of that game https://plizong.com/set , but usually several commits behind main. The published code are encoded and encrypted.
 
 ## How to play?
 In the game, certain combinations of three cards are said to make up a set. For each one of the four categories of features — color, number, shape, and shading — the three cards must display that feature as a) either all the same, or b) all different. Put another way: For each feature the three cards must avoid having two cards showing one version of the feature and the remaining card showing a different version.
