@@ -82,6 +82,13 @@
   margin: auto;
 }
 
+.hintButton {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(167, 120, 132);
+  margin: auto;
+}
+
 .gameButton p {
   font-size: large;
 }
