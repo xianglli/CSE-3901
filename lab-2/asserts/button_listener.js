@@ -32,5 +32,9 @@ shufflerButton.addEventListener("click", function () {
 });
 
 hintButton.addEventListener("click", function () {
-    gameAlert.innerHTML = "<div style='background-color: rgba(218,112,214,0.35); border: 1px solid crimson; color: crimson'>There are " + hint() + " sets existed</div>.";
+    if(gameState == -1) {
+        gameAlert.innerHTML = "<div style='background-color: rgba(218,112,214,0.35); border: 1px solid crimson; color: crimson'>Game not start yet!</div>";
+    } else {
+        gameAlert.innerHTML = "<div style='background-color: rgba(120, 167, 134 ,0.35); border: 1px solid green; color: green'>There are " + hint() + " sets existed.</div>";
+    }
 });
