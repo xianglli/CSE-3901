@@ -29,6 +29,7 @@ class CreateCourses < ActiveRecord::Migration[6.1]
       t.string :catalogLevel
       t.string :courseId
       t.string :md5
+      t.boolean :tag
     end
   end
 end
