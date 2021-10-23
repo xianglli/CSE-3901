@@ -6,6 +6,8 @@ class Course < ApplicationRecord
   has_many :Section, dependent: :destroy
   include ActiveModel::Serializers::JSON
 
+  scope :filter_by_number, -> (number) { where("number like ?", "%#{number}%")}
+
   def self.save_data_from_osu
     # process http request to json file
     source = 'https://content.osu.edu/v2/classes/search?q=cse&campus=col&p=1&term=1222&subject=cse'

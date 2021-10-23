@@ -12,7 +12,8 @@ class CoursesController < ApplicationController
   def show
     @courses = Course.where(nil)
 
-    # TODO: Add filters to do search job
+    # filters, used to search by condition
+    @courses = @courses.filter_by_number(params[:number]) if params[:number].present?
   end
 
   def index
