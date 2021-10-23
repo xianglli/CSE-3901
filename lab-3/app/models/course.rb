@@ -7,22 +7,26 @@ class Course < ApplicationRecord
 
   def self.save_data_from_osu
     # process http request to json file
-    # TODO: Change the URI to user specified one
     source = 'https://content.osu.edu/v2/classes/search?q=cse&campus=col&p=1&term=1222&subject=cse'
     resp = Net::HTTP.get_response(URI.parse(source))
-    logger.debug ">>>>>>>>>> #{resp} >>>>>>>>>>>>>>>>>"
+    # TODO: handle the network error and other errors
     result = resp.body
     result = JSON.parse(result)
     courses = result['data']['courses']
 
-    # process json format to hash
+    # process json format to database
     # TODO: handle the delete record part
+    Course.update_all(tag: false)
     courses.each { |i|
       course_md5 = Digest::MD5.hexdigest(i.to_json)
-      unless Course.where(md5: course_md5).exists?
+      if Course.where(md5: course_md5).exists?
+        course = Course.find_by(md5: course_md5)
+        course.update(tag: true)
+      else
         course = Course.new
         course.from_json(i.to_json, true)
         course.md5 = course_md5
+        course.tag = true
         course.save
         sections = i['sections']
         sections.each { |j|
@@ -33,5 +37,8 @@ class Course < ApplicationRecord
         }
       end
     }
+    Course.where(tag: false).find_each do |i|
+      i.destroy
+    end
   end
 end

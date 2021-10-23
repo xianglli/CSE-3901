@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2021_10_23_075726) do
     t.string "catalogLevel"
     t.string "courseId"
     t.string "md5"
+    t.boolean "tag"
   end
 
   create_table "sections", force: :cascade do |t|
