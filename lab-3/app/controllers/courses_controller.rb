@@ -6,7 +6,7 @@ class CoursesController < ApplicationController
 
   def sync
     @courses = Course.save_data_from_osu
-    redirect_to @courses
+    # TODO: Redirect the finished result to the show or somewhat pages.
   end
 
   def show

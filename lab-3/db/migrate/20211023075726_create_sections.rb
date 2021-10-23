@@ -49,6 +49,7 @@ class CreateSections < ActiveRecord::Migration[6.1]
       t.text :courseDescription
       t.string :catalogLevel
       t.string :termCode
+      t.string :md5
     end
   end
 end
