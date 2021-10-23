@@ -28,6 +28,7 @@ class CreateCourses < ActiveRecord::Migration[6.1]
       t.string :subjectDesc
       t.string :catalogLevel
       t.string :courseId
+      t.string :md5
     end
   end
 end

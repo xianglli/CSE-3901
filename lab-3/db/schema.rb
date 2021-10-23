@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 2021_10_23_075726) do
     t.string "subjectDesc"
     t.string "catalogLevel"
     t.string "courseId"
+    t.string "md5"
   end
 
   create_table "sections", force: :cascade do |t|
@@ -94,6 +95,7 @@ ActiveRecord::Schema.define(version: 2021_10_23_075726) do
     t.text "courseDescription"
     t.string "catalogLevel"
     t.string "termCode"
+    t.string "md5"
   end
 
 end
