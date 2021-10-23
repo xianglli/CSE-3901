@@ -3,6 +3,7 @@ require 'net/http'
 require 'digest'
 
 class Course < ApplicationRecord
+  has_many :Section, dependent: :destroy
   include ActiveModel::Serializers::JSON
 
   def self.save_data_from_osu
