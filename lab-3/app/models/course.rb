@@ -3,7 +3,6 @@ require 'net/http'
 require 'digest'
 
 class Course < ApplicationRecord
-  has_many :Section, dependent: :destroy
   include ActiveModel::Serializers::JSON
 
   scope :filter_by_number, -> (number) { where("number like ?", "%#{number}%")}
@@ -29,17 +28,24 @@ class Course < ApplicationRecord
         course.from_json(i.to_json, true)
         course.md5 = course_md5
         course.tag = true
-        course.save
         sections = i['sections']
         sections.each { |j|
           section = Section.new
           j.delete("attributes")
           section.from_json(j.to_json, false)
+          section.course_id = course.id
+          logger.debug ">>>>>>>>>>> #{section} >>>>>>>>>>>>>>>."
           section.save
         }
+        course.save
       end
     }
+    # That is per relation do not works, if figure out, then it is end of life
     Course.where(tag: false).find_each do |i|
+      @section = i.where(courseId: @section.courseId)
+      @section.each do |j|
+        j.destroy
+      end
       i.destroy
     end
   end
