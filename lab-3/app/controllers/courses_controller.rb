@@ -10,6 +10,7 @@ class CoursesController < ApplicationController
   end
 
   def show
+    # TODO: Add filters to do search things
     @courses = Course.where(nil)
 
     # filters, used to search by condition

@@ -18,7 +18,6 @@ class Course < ApplicationRecord
     courses = result['data']['courses']
 
     # process json format to database
-    # TODO: handle the delete record part
     Course.update_all(tag: false)
     courses.each { |i|
       course_md5 = Digest::MD5.hexdigest(i.to_json)
