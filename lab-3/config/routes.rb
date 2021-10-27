@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   get '/courses/sync', to: 'courses#sync'
   resources :courses
 
