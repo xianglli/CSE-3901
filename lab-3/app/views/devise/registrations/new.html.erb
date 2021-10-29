@@ -9,6 +9,12 @@
   </div>
 
   <div class="field">
+    <%= f.label :osuid %>
+    <em> (OSU id (dot id) can not be changed once registered)</em><br />
+    <%= f.text_field :osuid %>
+  </div>
+
+  <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
