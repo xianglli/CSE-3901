@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_29_070723) do
+ActiveRecord::Schema.define(version: 2021_10_30_053145) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,24 @@ ActiveRecord::Schema.define(version: 2021_10_29_070723) do
     t.string "courseId"
     t.string "md5"
     t.boolean "tag"
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.string "user_id"
+    t.string "identity"
+    t.string "display_name"
+    t.string "first_name"
+    t.string "middle_name"
+    t.string "last_name"
+    t.string "legal_last_name"
+    t.string "name_suffix"
+    t.string "username"
+    t.string "email"
+    t.jsonb "address"
+    t.jsonb "phone"
+    t.jsonb "majors"
+    t.jsonb "affiliations"
+    t.jsonb "appointments"
   end
 
   create_table "sections", force: :cascade do |t|
@@ -108,7 +126,6 @@ ActiveRecord::Schema.define(version: 2021_10_29_070723) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "osuid", default: "", null: false
-    t.string "osurole"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

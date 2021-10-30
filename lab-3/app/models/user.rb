@@ -4,16 +4,26 @@ require 'net/http'
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  has_one :profile
+  after_create :create_profile!
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
   validates :osuid, presence: true
 
-  def self.get_user_identity (osu_id)
-    source = 'https://directory.osu.edu/fpjson.php?name_n='+osu_id
-    resp = Net::HTTP.get_response(URI.parse(source))
-    result = resp.body
-    result = JSON.parse(result)
-    logger.debug (result)
+  private
+
+  def create_profile!
+    profile = Profile.get_user_profile(osuid)
+    profile.user_id = id
+    # To make things easier we consider those who have appointment are teachers
+    # (that mean student assistant will be considered as teacher, so we will allow teacher apply for teaching assistant)
+    if profile.majors != nil and profile.appointments[0] == nil
+      profile.identity = 'student'
+    elsif profile.appointments[0] != nil
+      profile.identity = 'teacher'
+    end
+    profile.save
   end
+
 end
