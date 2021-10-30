@@ -11,7 +11,6 @@ class Course < ApplicationRecord
     # process http request to json file
     source = 'https://content.osu.edu/v2/classes/search?q=cse&campus=col&p=1&term=1222&subject=cse'
     resp = Net::HTTP.get_response(URI.parse(source))
-    # TODO: handle the network error and other errors
     result = resp.body
     result = JSON.parse(result)
     courses = result['data']['courses']
@@ -34,7 +33,6 @@ class Course < ApplicationRecord
           j.delete("attributes")
           section.from_json(j.to_json, false)
           section.course_id = course.id
-          logger.debug ">>>>>>>>>>> #{section} >>>>>>>>>>>>>>>."
           section.save
         }
         course.save
