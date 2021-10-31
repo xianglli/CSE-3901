@@ -1,39 +1,9 @@
 <h1>Courses</h1>
 
-<table>
-  <tr>
-    <th>courseId</th>
-    <th>term</th>
-    <th>title</th>
-    <th>shortDescription</th>
-    <th>description</th>
-    <th>component</th>
-    <th>primaryComponent</th>
-    <th>academicGroup</th>
-    <th>subject</th>
-    <th>catalogNumber</th>
-    <th>academicOrg</th>
-    <th>academicCareer</th>
-    <th>campusCode</th>
-    <th>catalogLevel</th>
-  </tr>
+<%= search_form_for @query do |f| %>
+  <%= f.label :search_course_info %>
+  <%= f.search_field :title_or_component_or_catalogNumber %>
+  <%= f.submit %>
+<% end %>
 
-  <% @courses.each do |i| %>
-    <tr>
-      <td><%= i.courseId %></td>
-      <td><%= i.term %></td>
-      <td><%= i.title %></td>
-      <td><%= i.shortDescription %></td>
-      <td><%= i.description %></td>
-      <td><%= i.component %></td>
-      <td><%= i.primaryComponent %></td>
-      <td><%= i.academicGroup %></td>
-      <td><%= i.subject %></td>
-      <td><%= i.catalogNumber %></td>
-      <td><%= i.academicOrg %></td>
-      <td><%= i.academicCareer %></td>
-      <td><%= i.campusCode %></td>
-      <td><%= i.catalogLevel %></td>
-    </tr>
-  <% end %>
-</table>
+
