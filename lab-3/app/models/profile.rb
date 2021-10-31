@@ -13,6 +13,7 @@ class Profile < ApplicationRecord
     result = result[0]
     profile = Profile.new
     profile.from_json(result.to_json, false)
+    profile["picture_url"] = "https://opic.osu.edu/"+ osuid.to_s
     return profile
   end
 end

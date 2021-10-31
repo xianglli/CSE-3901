@@ -16,6 +16,7 @@ class CreateProfiles < ActiveRecord::Migration[6.1]
       t.jsonb :majors
       t.jsonb :affiliations
       t.jsonb :appointments
+      t.text :picture_url
     end
   end
 end
