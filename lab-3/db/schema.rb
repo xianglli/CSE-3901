@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_30_053145) do
+ActiveRecord::Schema.define(version: 2021_10_31_063232) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,21 @@ ActiveRecord::Schema.define(version: 2021_10_30_053145) do
     t.string "courseId"
     t.string "md5"
     t.boolean "tag"
+  end
+
+  create_table "meetings", force: :cascade do |t|
+    t.string "classNumber"
+    t.string "buildingDescription"
+    t.string "startTime"
+    t.string "endTime"
+    t.boolean "monday"
+    t.boolean "tuesday"
+    t.boolean "wednesday"
+    t.boolean "thursday"
+    t.boolean "friday"
+    t.boolean "saturday"
+    t.boolean "sunday"
+    t.jsonb "instructors"
   end
 
   create_table "profiles", force: :cascade do |t|
