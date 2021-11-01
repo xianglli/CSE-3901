@@ -4,8 +4,14 @@
   <%= f.label :search_course_info %>
   <%= f.search_field :title_or_component_or_catalogNumber %>
   <%= f.submit %>
+  <%= logger.debug "<<<<<<<<<<<<#{@query}<<<<<<<<<<<" %>
+<% end %>
 
-<%=  # TODO: Display the search result and do the sort thing  %>
+<%= sort_link(@query, :catalogNumber) %>
+
+<%= tag.table do %>
+  <%= tag.thead display_sort_column_headers(@query), escape_attributes: false %>
+  <%= tag.tbody display_search_results(@query), escape_attributes: false %>
 <% end %>
 
 
