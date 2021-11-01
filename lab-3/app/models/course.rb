@@ -5,8 +5,6 @@ require 'digest'
 class Course < ApplicationRecord
   include ActiveModel::Serializers::JSON
 
-  scope :filter_by_number, -> (number) { where("number like ?", "%#{number}%") }
-
   def self.save_data_from_osu
     # process http request to json file
     source = 'https://content.osu.edu/v2/classes/search?q=cse&campus=col&p=1&term=1222&subject=cse'
@@ -24,14 +22,14 @@ class Course < ApplicationRecord
         course.update(tag: true)
       else
         course = Course.new
-        # TODO: select parts from api file. grab information needed.
+        #select parts from api file. grab information needed.
         course_info = Course.grab_course_info(i["course"])
         logger.debug ">>>>>>>#{course_info}>>>>>>>>>>>>>>>"
         course.from_json(course_info.to_json, false)
         course.md5 = course_md5
         course.tag = true
         sections = i['sections']
-        # TODO: also select parts from api file. grab information needed.
+        #select parts from api file. grab information needed.
         sections.each { |j|
           section = Section.new
           section_info = Course.grab_section_info(j)
@@ -80,6 +78,7 @@ class Course < ApplicationRecord
   def self.grab_section_info (section_total_info)
     @section = Hash.new
     @section["classNumber"] = section_total_info["classNumber"]
+    @section["courseId"] = section_total_info["courseId"]
     @section["section"] = section_total_info["section"]
     @section["component"] = section_total_info["component"]
     @section["instructionMode"] = section_total_info["instructionMode"]
