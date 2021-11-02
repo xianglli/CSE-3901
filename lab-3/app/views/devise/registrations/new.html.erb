@@ -1,60 +1,87 @@
+<!--
+	Identity by HTML5 UP
+	Modified by Louis Xiang Li
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
 <head>
-  <title>Sign up</title>
-  <style>
-      #login_frame {
-          width: 400px;
-          height: 360px;
-          padding: 13px;
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          margin-left: -200px;
-          margin-top: -200px;
-          background-color: rgba(240, 255, 255, 255);
-          border-radius: 10px;
-          text-align: center;
-      }
+  <title>Login</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <!--[if lte IE 8]>
+  <script src="./app/assets/js/html5shiv.js"></script><![endif]-->
+  <%= stylesheet_link_tag 'main', media: 'all',
+                          'data-turbolinks-track' => true %>
+  <!--[if lte IE 9]>
+  <link rel="stylesheet" href="./app/assets/css/ie9.css"/><![endif]-->
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="./app/assets/css/ie8.css"/><![endif]-->
+  <noscript>
+    <link rel="stylesheet" href="app/assets/stylesheets/noscript.css"/>
+  </noscript>
+</head>
+<body class="is-loading">
 
-  </style>
-  </head>
-<body>
-<div id="login_frame">
-<h2>Sign up</h2>
+<!-- Wrapper -->
+<div id="wrapper">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <!-- Main -->
+  <section id="main">
+    <header>
+      <h1>Sign up</h1>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-   <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+        <div class="field">
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"Email" %>
+        </div>
 
-  <div class="field">
-    <%= f.label :osuid %>
-    <em> (OSU id (dot id) can not be changed once registered)</em><br />
-    <%= f.text_field :osuid %>
-  </div>
+        <div class="field">
+          <%= f.text_field :osuid, placeholder:"OSU id (dot id)" %>
+        </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+        <div class="field">
+          <%= f.password_field :password, autocomplete: "new-password",  placeholder:"Password"%>
+          <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+        </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+        <div class="field">
+          <%= f.password_field :password_confirmation, autocomplete: "new-password" , placeholder:"Confirm Password"%>
+        </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+        <div class="actions">
+          <%= f.submit "Sign up" %>
+        </div>
+      <% end %>
 
-<%= render "devise/shared/links" %>
+      <%= render "devise/shared/links" %>
+    </header>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <ul class="copyright">
+      <li>&copy; Future Tech Corp</li>
+      <li>Idea: <a href="http://html5up.net">HTML5 UP</a></li>
+      <li>Design: <a href="http://plizong.com">Louis Li</a></li>
+    </ul>
+  </footer>
+
 </div>
+
+<!-- Scripts -->
+<!--[if lte IE 8]>
+<script src="./app/assets/js/respond.min.js"></script><![endif]-->
+<script>
+    if ('addEventListener' in window) {
+        window.addEventListener('load', function () {
+            document.body.className = document.body.className.replace(/\bis-loading\b/, '');
+        });
+        document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+    }
+</script>
+
 </body>
 </html>
