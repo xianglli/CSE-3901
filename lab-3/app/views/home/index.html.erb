@@ -1,13 +1,70 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
-<p>This is the home page of the project</p>
-<p class="navbar-text float-right">
-  <% if user_signed_in? %>
-    Logged in as <strong><%= current_user.email %></strong>.
-    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-    <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-  <% else %>
-    <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-    <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-  <% end %>
-</p>
+<html>
+  <head>
+    <title>Welcome Page</title>
+    <style>
+        body {
+            background-image: url("");
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        #login_frame {
+            width: 400px;
+            height: 260px;
+            padding: 13px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -200px;
+            margin-top: -200px;
+            background-color: rgba(240, 255, 255, 0.5);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #image_logo {
+            margin-top: 22px;
+        }
+
+        .label_input {
+            font-size: 14px;
+            font-family: serif ;
+
+            width: 65px;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+
+            color: white;
+            background-color: #3CD8FF;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        .text_field {
+            width: 278px;
+            height: 28px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border: 0;
+        }
+
+
+    </style>
+  </head>
+  <body>
+    <div id="login_frame">
+
+      <p>Find me in app/views/home/index.html.erb</p>
+      <p class="navbar-text float-right">
+      <% if user_signed_in? %>
+      Logged in as <strong><%= current_user.email %></strong>.
+      <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+      <% else %>
+      <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+      <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+      <% end %>
+      </p>
+    </div>
+  </body>>
+</html>
