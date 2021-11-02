@@ -12,8 +12,13 @@ class Profile < ApplicationRecord
     result = JSON.parse(result)
     result = result[0]
     profile = Profile.new
-    profile.from_json(result.to_json, false)
-    profile["picture_url"] = "https://opic.osu.edu/"+ osuid.to_s
+    if result != nil
+      profile.from_json(result.to_json, false)
+      profile["picture_url"] = "https://opic.osu.edu/" + osuid.to_s
+    else
+      profile["display_name"] = "guest"
+      profile["appointments"] = []
+    end
     return profile
   end
 end
