@@ -28,18 +28,15 @@
   <!-- Main -->
   <section id="main">
     <header>
-      <h1>Course infomation about <%= @course.subject %><%= @course.catalogNumber %></h1>
-      <h2><strong>title</strong></h2>
-      <p><%= @course.title %></p>
-      <h2><strong>shortDescription</strong></h2>
-      <p><%= @course.shortDescription %></p>
-      <h2><strong>component</strong></h2>
-      <p><%= @course.component %></p>
-      <h2><strong>campus</strong></h2>
-      <p><%= @course.campus %></p>
-      <h2><strong>description</strong></h2>
-      <p><%= @course.description %></p>
+      <h1>Sync with OSU success</h1>
     </header>
+    <footer>
+      <ul class="actions special">
+          <li>
+            <%= link_to 'Back to Courses list', courses_path %>
+          </li>
+      </ul>
+    </footer>
   </section>
 
   <!-- Footer -->
