@@ -1,70 +1,87 @@
+<!--
+	Identity by HTML5 UP
+	Modified by Louis Xiang Li
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
-  <head>
-    <title>Welcome Page</title>
-    <style>
-        body {
-            background-image: url("");
-            background-size: 100%;
-            background-repeat: no-repeat;
-        }
-        #login_frame {
-            width: 400px;
-            height: 260px;
-            padding: 13px;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin-left: -200px;
-            margin-top: -200px;
-            background-color: rgba(240, 255, 255, 0.5);
-            border-radius: 10px;
-            text-align: center;
-        }
+<head>
+  <title>Course of OSU, CSE</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <!--[if lte IE 8]>
+  <script src="./app/assets/js/html5shiv.js"></script><![endif]-->
+  <%= stylesheet_link_tag 'main', media: 'all',
+                          'data-turbolinks-track' => true %>
+  <!--[if lte IE 9]>
+  <link rel="stylesheet" href="./app/assets/css/ie9.css"/><![endif]-->
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="./app/assets/css/ie8.css"/><![endif]-->
+  <noscript>
+    <link rel="stylesheet" href="app/assets/stylesheets/noscript.css"/>
+  </noscript>
+</head>
+<body class="is-loading">
 
-        #image_logo {
-            margin-top: 22px;
-        }
+<!-- Wrapper -->
+<div id="wrapper">
 
-        .label_input {
-            font-size: 14px;
-            font-family: serif ;
-
-            width: 65px;
-            height: 28px;
-            line-height: 28px;
-            text-align: center;
-
-            color: white;
-            background-color: #3CD8FF;
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-        }
-
-        .text_field {
-            width: 278px;
-            height: 28px;
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
-            border: 0;
-        }
-
-
-    </style>
-  </head>
-  <body>
-    <div id="login_frame">
-
-      <p>Find me in app/views/home/index.html.erb</p>
-      <p class="navbar-text float-right">
+  <!-- Main -->
+  <section id="main">
+    <header>
+      <span class="avatar">
+        <%= image_tag "avatar.jpg" %>
+      </span>
+      <h1>Future Tech Corp</h1>
       <% if user_signed_in? %>
-      Logged in as <strong><%= current_user.email %></strong>.
-      <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+        <p><%= current_user.email %>, Welcome!</p>
       <% else %>
-      <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-      <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+        <p>Please sign in to learn more information.</p>
       <% end %>
-      </p>
-    </div>
-  </body>>
+    </header>
+
+    <footer>
+      <ul class="actions special">
+        <% if user_signed_in? %>
+          <li>
+            <div class="button"><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></div>
+          </li>
+          <li>
+            <div class="button"><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %></div>
+          </li>
+        <% else %>
+          <li>
+            <div class="button"><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link' %></div>
+          </li>
+          <li>
+            <div class="button"><%= link_to "Login", new_user_session_path, :class => 'navbar-link' %></div>
+          </li>
+        <% end %>
+      </ul>
+    </footer>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <ul class="copyright">
+      <li>&copy; Future Tech Corp</li>
+      <li>Idea: <a href="http://html5up.net">HTML5 UP</a></li>
+      <li>Design: <a href="http://plizong.com">Louis Li</a></li>
+    </ul>
+  </footer>
+
+</div>
+
+<!-- Scripts -->
+<!--[if lte IE 8]>
+<script src="./app/assets/js/respond.min.js"></script><![endif]-->
+<script>
+    if ('addEventListener' in window) {
+        window.addEventListener('load', function () {
+            document.body.className = document.body.className.replace(/\bis-loading\b/, '');
+        });
+        document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+    }
+</script>
+
+</body>
 </html>
