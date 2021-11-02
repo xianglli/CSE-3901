@@ -1,3 +1,25 @@
+<html>
+<head>
+  <title>Login</title>
+  <style>
+      #login_frame {
+          width: 400px;
+          height: 260px;
+          padding: 13px;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          margin-left: -200px;
+          margin-top: -200px;
+          background-color: rgba(240, 255, 255, 0.5);
+          border-radius: 10px;
+          text-align: center;
+      }
+
+  </style>
+</head>
+<body>
+<div id="login_frame">
 <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -24,3 +46,6 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
+</body>
+</html>
