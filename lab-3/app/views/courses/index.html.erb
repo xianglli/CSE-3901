@@ -2,16 +2,31 @@
 
 <%= search_form_for @query do |f| %>
   <%= f.label :search_course_info %>
-  <%= f.search_field :title_or_component_or_catalogNumber %>
-  <%= f.submit %>
-  <%= logger.debug "<<<<<<<<<<<<#{@query}<<<<<<<<<<<" %>
+  <%= f.search_field :title_or_component_or_catalogNumber_cont %>
+  <%= f.submit "Filter" %>
 <% end %>
 
-<%= sort_link(@query, :catalogNumber) %>
-
-<%= tag.table do %>
-  <%= tag.thead display_sort_column_headers(@query), escape_attributes: false %>
-  <%= tag.tbody display_search_results(@query), escape_attributes: false %>
-<% end %>
+<table id="computer_search_results">
+  <thead>
+  <tr>
+    <th>title</th>
+    <th>subject</th>
+    <th>catalogNumber</th>
+    <th>campus</th>
+    <th>Check Sections</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @course.each do |i| %>
+    <tr>
+      <td><%= i.title %></td>
+      <td><%= i.subject %></td>
+      <td><%= i.catalogNumber %></td>
+      <td><%= i.campus %></td>
+      <td>"check"</td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
 
 
