@@ -29,11 +29,15 @@
   <section id="main">
     <header>
       <span class="avatar">
-        <%= image_tag "avatar.jpg" %>
+        <% if user_signed_in? %>
+          <%= image_tag User.get_user_profile(current_user.id).picture_url %>
+        <% else %>
+          <%= image_tag "avatar.jpg" %>
+        <% end %>
       </span>
       <h1>Future Tech Corp</h1>
       <% if user_signed_in? %>
-        <p><%= current_user.email %>, Welcome!</p>
+        <p><%= User.get_user_profile(current_user.id).display_name %>, Welcome!</p>
       <% else %>
         <p>Please sign in to learn more information.</p>
       <% end %>
@@ -48,6 +52,7 @@
           <li>
             <div class="button"><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %></div>
           </li>
+          <br/>
         <% else %>
           <li>
             <div class="button"><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link' %></div>

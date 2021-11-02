@@ -14,7 +14,7 @@ class User < ApplicationRecord
   private
 
   def create_profile!
-    profile = Profile.get_user_profile(osuid)
+    profile = Profile.get_user_profile_from_osu(osuid)
     profile.user_id = id
     # To make things easier we consider those who have appointment are teachers
     # (that mean student assistant will be considered as teacher, so we will allow teacher apply for teaching assistant)
@@ -24,6 +24,11 @@ class User < ApplicationRecord
       profile.identity = 'teacher'
     end
     profile.save
+  end
+
+  def self.get_user_profile(user_id)
+    profile = Profile.find_by(user_id: user_id)
+    profile
   end
 
 end
