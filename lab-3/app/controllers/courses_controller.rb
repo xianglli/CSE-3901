@@ -11,12 +11,11 @@ class CoursesController < ApplicationController
   end
 
   def show
-    @courses = Course.all
-
+    @course = Course.find(params[:id])
   end
 
   def index
     @query = Course.ransack(params[:q])
-    @course = @query.result
+    @courselist = @query.result
   end
 end

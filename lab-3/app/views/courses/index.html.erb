@@ -17,13 +17,13 @@
   </tr>
   </thead>
   <tbody>
-  <% @course.each do |i| %>
+  <% @courselist.each do |i| %>
     <tr>
       <td><%= i.title %></td>
       <td><%= i.subject %></td>
       <td><%= i.catalogNumber %></td>
       <td><%= i.campus %></td>
-      <td>"check"</td>
+      <td><%= link_to 'Show', course_path(i) %></td>
     </tr>
   <% end %>
   </tbody>

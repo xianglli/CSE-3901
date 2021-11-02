@@ -1,39 +1,69 @@
-<h1>Courses</h1>
+<!--
+	Identity by HTML5 UP
+	Modified by Louis Xiang Li
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+  <title>Login</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <!--[if lte IE 8]>
+  <script src="./app/assets/js/html5shiv.js"></script><![endif]-->
+  <%= stylesheet_link_tag 'main', media: 'all',
+                          'data-turbolinks-track' => true %>
+  <!--[if lte IE 9]>
+  <link rel="stylesheet" href="./app/assets/css/ie9.css"/><![endif]-->
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="./app/assets/css/ie8.css"/><![endif]-->
+  <noscript>
+    <link rel="stylesheet" href="app/assets/stylesheets/noscript.css"/>
+  </noscript>
+</head>
+<body class="is-loading">
 
-<table>
-  <tr>
-    <th>courseId</th>
-    <th>term</th>
-    <th>title</th>
-    <th>shortDescription</th>
-    <th>description</th>
-    <th>component</th>
-    <th>primaryComponent</th>
-    <th>academicGroup</th>
-    <th>subject</th>
-    <th>catalogNumber</th>
-    <th>academicOrg</th>
-    <th>academicCareer</th>
-    <th>campusCode</th>
-    <th>catalogLevel</th>
-  </tr>
+<!-- Wrapper -->
+<div id="wrapper">
 
-  <% @courses.each do |i| %>
-    <tr>
-      <td><%= i.courseId %></td>
-      <td><%= i.term %></td>
-      <td><%= i.title %></td>
-      <td><%= i.shortDescription %></td>
-      <td><%= i.description %></td>
-      <td><%= i.component %></td>
-      <td><%= i.primaryComponent %></td>
-      <td><%= i.academicGroup %></td>
-      <td><%= i.subject %></td>
-      <td><%= i.catalogNumber %></td>
-      <td><%= i.academicOrg %></td>
-      <td><%= i.academicCareer %></td>
-      <td><%= i.campusCode %></td>
-      <td><%= i.catalogLevel %></td>
-    </tr>
-  <% end %>
-</table>
+  <!-- Main -->
+  <section id="main">
+    <header>
+      <h1>Course infomation about <%= @course.subject %><%= @course.catalogNumber %></h1>
+      <h2><strong>title</strong></h2>
+      <p><%= @course.title %></p>
+      <h2><strong>shortDescription</strong></h2>
+      <p><%= @course.shortDescription %></p>
+      <h2><strong>component</strong></h2>
+      <p><%= @course.component %></p>
+      <h2><strong>campus</strong></h2>
+      <p><%= @course.campus %></p>
+      <h2><strong>description</strong></h2>
+      <p><%= @course.description %></p>
+    </header>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <ul class="copyright">
+      <li>&copy; Future Tech Corp</li>
+      <li>Idea: <a href="http://html5up.net">HTML5 UP</a></li>
+      <li>Design: <a href="http://plizong.com">Louis Li</a></li>
+    </ul>
+  </footer>
+
+</div>
+
+<!-- Scripts -->
+<!--[if lte IE 8]>
+<script src="./app/assets/js/respond.min.js"></script><![endif]-->
+<script>
+    if ('addEventListener' in window) {
+        window.addEventListener('load', function () {
+            document.body.className = document.body.className.replace(/\bis-loading\b/, '');
+        });
+        document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+    }
+</script>
+
+</body>
+</html>
