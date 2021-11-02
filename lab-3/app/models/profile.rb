@@ -5,7 +5,7 @@ class Profile < ApplicationRecord
   belongs_to :user
   validates_associated :user
 
-  def self.get_user_profile (osuid)
+  def self.get_user_profile_from_osu (osuid)
     source = 'http://directory.osu.edu/fpjson.php?name_n=' + osuid.to_s
     resp = Net::HTTP.get_response(URI.parse(source))
     result = resp.body
