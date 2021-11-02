@@ -30,7 +30,11 @@
     <header>
       <span class="avatar">
         <% if user_signed_in? %>
-          <%= image_tag User.get_user_profile(current_user.id).picture_url %>
+          <% if User.get_user_profile(current_user.id).picture_url %>
+            <%= image_tag User.get_user_profile(current_user.id).picture_url %>
+          <% else %>
+            <%= image_tag "avatar.jpg" %>
+          <% end %>
         <% else %>
           <%= image_tag "avatar.jpg" %>
         <% end %>
@@ -39,7 +43,7 @@
       <% if user_signed_in? %>
         <p><%= User.get_user_profile(current_user.id).display_name %>, Welcome!</p>
       <% else %>
-        <p>Please sign in to learn more information.</p>
+        <p>Please log in to learn more information.</p>
       <% end %>
     </header>
 
@@ -53,6 +57,14 @@
             <div class="button"><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %></div>
           </li>
           <br/>
+          <% if User.get_user_profile(current_user.id).identity %>
+            <br />
+            <a href="courses/index" class="button">view courses info</a>
+            <% if User.get_user_profile(current_user.id).identity == 'admin' %>
+              <br />
+              <a href="courses/sync" class="button">sync course with OSU database</a>
+            <% end %>
+          <% end %>
         <% else %>
           <li>
             <div class="button"><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link' %></div>
