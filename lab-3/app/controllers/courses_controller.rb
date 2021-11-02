@@ -1,7 +1,5 @@
 class CoursesController < ApplicationController
   def new
-    # TODO: Add new course method (optional) or delete new action
-    # I do not think we need new method since all the courses and information are from OSU website
   end
 
   def sync
