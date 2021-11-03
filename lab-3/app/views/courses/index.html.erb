@@ -6,14 +6,16 @@
   <%= f.submit "Filter" %>
 <% end %>
 
+<p>Find <%= @course.size %> results. Click on table title to sort</p>
 <table id="computer_search_results">
   <thead>
   <tr>
-    <th>title</th>
-    <th>subject</th>
-    <th>catalogNumber</th>
-    <th>campus</th>
-    <th>Check Sections</th>
+    <%= content_tag :th, sort_link(@query, :title) %>
+    <%= content_tag :th, sort_link(@query, :subject) %>
+    <%= content_tag :th, sort_link(@query, :catalogNumber) %>
+    <%= content_tag :th, sort_link(@query, :campus) %>
+    <%= content_tag :th, "action" %>
+    <%= content_tag :th, "Show Sections" %>
   </tr>
   </thead>
   <tbody>
@@ -24,6 +26,7 @@
       <td><%= i.catalogNumber %></td>
       <td><%= i.campus %></td>
       <td><%= link_to 'Show', course_path(i) %></td>
+      <td><a href="./show_section/<%= i.id %>">show section information</a></td>
     </tr>
   <% end %>
   </tbody>

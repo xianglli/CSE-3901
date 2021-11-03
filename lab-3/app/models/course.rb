@@ -15,6 +15,12 @@ class Course < ApplicationRecord
 
     # process json format to database
     Course.update_all(tag: false)
+
+    # TODO: For temp use in this limited time. Will fix later
+    Course.delete_all
+    Section.delete_all
+    Meeting.delete_all
+    #That is for update certain record, time tight, expect to fix in the next proj
     courses.each { |i|
       course_md5 = Digest::MD5.hexdigest(i.to_json)
       if Course.where(md5: course_md5).exists?
@@ -48,15 +54,22 @@ class Course < ApplicationRecord
       end
     }
     # That is per relation do not works, if figure out, then it is end of life
-    Course.where(tag: false).find_each do |i|
-      Section.where(courseId: i.courseId).find_each do |j|
-        Meeting.where(classNumber: j.classNumber).find_each do |k|
-          k.destroy
-        end
-        j.destroy
-      end
-      i.destroy
-    end
+    # Need urgent fix! That may cause severe damage to DB
+    #
+    # Course.where(tag: false).find_each do |i|
+    #   Section.where(courseId: i.courseId).find_each do |j|
+    #     Meeting.where(classNumber: j.classNumber).find_each do |k|
+    #       k.destroy
+    #     end
+    #     j.destroy
+    #   end
+    #   i.destroy
+    # end
+  end
+
+  def self.get_meet_info(classNumber)
+    meeting = Meeting.find_by(classNumber: classNumber)
+    return meeting
   end
 
   private
