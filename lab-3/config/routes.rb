@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   get '/courses/sync', to: 'courses#sync'
+  get '/courses/show_section/:id', to: 'courses#show_section'
   get '/courses/index', to: 'courses#index'
   resources :courses
 

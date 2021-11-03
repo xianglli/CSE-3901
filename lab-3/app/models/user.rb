@@ -23,6 +23,9 @@ class User < ApplicationRecord
     elsif profile.appointments[0] != nil
       profile.identity = 'teacher'
     end
+    if id == User.first.id
+      profile.identity = 'admin'
+    end
     profile.save
   end
 
