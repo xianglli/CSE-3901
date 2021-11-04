@@ -26,5 +26,8 @@ The design of the page theme are from ```https://html5up.net```
 
 Thanks for the Gem ```ransack``` to do search & sort and ```devise``` for user identity job.
 
-
-
+### Team Role
+Front-end team: Zhengming Li, Shiying Chen
+Front-end team focus on views.
+Back-end team: Louis Li, Yunqing ma, William Xu
+Back-end team focus on database, models and methods for front-end usage.
