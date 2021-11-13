@@ -1,7 +1,7 @@
 # README
 
 ## important notice
-The docker compose file to not capable with windows system. Guess is the .sh file problem.
+The docker compose file to not capable with windows system. Use WSL(windows subsystem Linux) instead. Guess is the .sh file problem.
 
 Please run it on either Linux (recommand) or MacOS.
 
