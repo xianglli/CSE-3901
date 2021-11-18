@@ -265,9 +265,8 @@ return function render(_ctx, _cache) {
 };
 ```
 
-- It will generate a variable \_hoisted_1 and mark it with /_#**PURE**_/.
+- It will generate a variable \_hoisted*1 and mark it with /*#**PURE**\_/.
 - \_hoisted_1 calls createStaticVNode to create a static node by passing a string of parameters.
-- In \_createBlock, the original multiple functions for creating nodes have changed to only one function. The performance improvement is self-evident.
 
 ---
 
