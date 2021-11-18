@@ -1,0 +1,85 @@
+.title {
+    text-align: center;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Introduction {
+    background-color:antiquewhite;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    padding: 2vw;
+  }
+  .example {
+    width: 200px;
+    height: 200px;
+    background: url(./media/AllCom.png);
+  }
+  .set {
+    background-color:antiquewhite;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    padding: 2vw;
+  }
+  .board {
+    display: flex;
+    flex-direction: column;
+    max-width: 70vw;
+    background-color: seashell;
+    margin: auto;
+  }
+  .boardButton {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .TorButton {  
+     display: flex;
+     width: 12vw;
+     height: 6vh;
+     text-align: center;
+     margin-bottom: 1vw;
+     padding: 0 1vw;    
+  }
+  
+  .Step1 {
+    width: 100%;
+    height: 100%;
+    background-color: #4CAF50;
+    margin: auto;
+  }
+  
+  .Step2 {
+    width: 100%;
+    height: 100%;
+    background-color: #008CBA;
+    margin: auto;
+  }
+  
+  .Step3 {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(129, 120, 167);
+    margin: auto;
+  }
+  
+  .Step4 {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(167, 120, 132);
+    margin: auto;
+  }
+  .Allcom {
+    width: 100%;
+    height: 100%;
+    background-color: slategrey;
+    margin: auto;
+    
+  }
