@@ -1,0 +1,48 @@
+<h1>Sections of <%= @course.subject %><%= @course.catalogNumber %></h1>
+
+<%#= search_form_for @query do |f| %>
+<%#= f.label :search_section_info %>
+<%#= f.search_field :title_or_instructionMode_or_catalogNumber_or_career_or_buildingDescription_cont %>
+<%#= f.submit "Filter" %>
+<%# end %>
+
+<!--<p>Find <%#= @section.size %> results. Click on table title to sort</p>-->
+<table id="computer_search_results">
+  <thead>
+  <tr>
+    <%#= content_tag :th, sort_link(@query, :title) %>
+    <%#= content_tag :th, sort_link(@query, :subject) %>
+    <%#= content_tag :th, sort_link(@query, :catalogNumber) %>
+    <%#= content_tag :th, sort_link(@query, :instructionMode) %>
+    <%#= content_tag :th, sort_link(@query, :career) %>
+    <%#= content_tag :th, sort_link(@query, :buildingDescription) %>
+    <%= content_tag :th, "class number" %>
+    <%= content_tag :th, "section" %>
+    <%= content_tag :th, "component" %>
+    <%= content_tag :th, "instructionMode" %>
+    <%= content_tag :th, "career" %>
+    <%= content_tag :th, "buildingDescription" %>
+    <%= content_tag :th, "instructor" %>
+  </tr>
+  </thead>
+  <tbody>
+  <% @section_list.each do |i| %>
+    <% meeting = Course.get_meet_info(i.classNumber) %>
+    <tr>
+      <td><%= i.classNumber %></td>
+      <td><%= i.section %></td>
+      <td><%= i.component %></td>
+      <td><%= i.instructionMode %></td>
+      <td><%= i.career %></td>
+      <td><%= meeting.buildingDescription %></td>
+      <td>
+        <% meeting.instructors.each do |j| %>
+          <%= j["displayName"] %>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+

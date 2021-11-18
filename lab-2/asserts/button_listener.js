@@ -24,7 +24,7 @@ stopGameButton.addEventListener("click", function () {
     stopGameButton.innerHTML = "<p style='color: white'>Stopped</p>";
     scoreCard.innerHTML = "Your final score: " + score;
     startGameButton.style.backgroundColor = "goldenrod";
-    startGameButton.innerHTML = "<p style='color: white'>Start Game</p>";
+    startGameButton.innerHTML = "<p style='color: black'>Begin Game</p>";
 });
 
 shufflerButton.addEventListener("click", function () {
