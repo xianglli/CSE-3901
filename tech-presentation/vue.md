@@ -60,15 +60,8 @@ Initial release in February 2014
 
 ---
 # Installation
-- CDN:
-  ```html
-   <script src="https://unpkg.com/vue@next"></script>
-  ```
-- npm
-  ```shell
-  #latest stable
-  $ npm install vue@next
-  ```
+- CDN: ```<script src="https://unpkg.com/vue@next"></script>```
+- npm ``` $ npm install vue@next ```
 
 - Download and self host
 
@@ -413,6 +406,67 @@ export function trackEffects(
 - packages/reactivity/src/effect.ts - Line 330
 - Execute the effect function
 
+---
+
+
+## Reactive
+- The ```most important``` feature of vue.js framework
+- Vue 2
+- Vue 3
+- reactive API
+- createReactiveObject
+---
+
+## Vue2
+![bg right w:17cm contrast](https://cn.vuejs.org/images/data.png)
+- How the reactive is organized
+- observer(purple) under src/core
+- getter() triggered when data got visited
+- watcher.js under observer triggered, collecting dependent
+- setter() triggered when data updated, then trigger notify
+
+---
+
+## Vue3
+- defects about Object.defineProperty:
+-- key does not exist?
+-- cannot know if change the length of the list/array
+-- vm.$set&vue.set API
+
+- The update
+```javascript
+onst p = new Proxy(target, handler)
+```
+
+---
+
+## reactive API
+``` javascript
+export function reactive<T extends object>(target: T): UnwrapNestedRefs<T>
+export function reactive(target: object) {
+  if (target && (target as Target)[ReactiveFlags.IS_READONLY]) {
+    return target
+  }
+  return createReactiveObject(
+    target,
+    false,
+    mutableHandlers,
+    mutableCollectionHandlers,
+    reactiveMap
+  )
+}
+```
+---
+## createReactiveObject
+``` javascript 
+function createReactiveObject(
+  target: Target,
+  isReadonly: boolean,
+  baseHandlers: ProxyHandler<any>,
+  collectionHandlers: ProxyHandler<any>,
+  proxyMap: WeakMap<Target, any>
+)
+```
 ---
 
 ## In the end
