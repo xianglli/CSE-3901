@@ -172,7 +172,7 @@ return function render(_ctx, _cache) {
 
 ---
 
-# What is staticize?
+# What is hoistStatic?
 
 - When the Vue compiler finds some nodes or attributes that will not change during the compilation process, it will mark these nodes.
 - Then in the process of generating code strings, the compiler will find these static nodes, staticize them, and serialize them into strings, thereby reducing compilation and rendering costs.
@@ -188,7 +188,7 @@ return function render(_ctx, _cache) {
 </div>
 ```
 
-- Vue could staticize the node <span class="foo">
+- Vue could hoistStatic the node <span class="foo">
 
 ---
 
@@ -198,11 +198,11 @@ return function render(_ctx, _cache) {
 </div>
 ```
 
-- Vue 3 could skip the node, just staticize id="foo" abd class="bar"
+- Vue 3 could skip the node, just hoistStatic id="foo" abd class="bar"
 
 ---
 
-# How staticize improve performace?
+# How hoistStatic improve performace?
 
 ```javascript
 <div>
@@ -218,7 +218,7 @@ return function render(_ctx, _cache) {
 
 ---
 
-# Without staticize
+# Without hoistStatic
 
 ```javascript
 const {
@@ -245,7 +245,7 @@ return function render(_ctx, _cache) {
 
 ---
 
-# With staticize
+# With hoistStatic
 
 ```javascript
 const {
@@ -270,14 +270,14 @@ return function render(_ctx, _cache) {
 
 ---
 
-# How staticize achieve?
+# How Vue achieve hoistStatic?
 
 ```javascript
 export function transform(root: RootNode, options: TransformOptions) {
   const context = createTransformContext(root, options)
   // traverse all nodes and transfer
   traverseNode(root, context)
-  //if the option of hoistStatic is true，do staticize
+  //if the option of hoistStatic is true，do hoistStatic
   if (options.hoistStatic) {
     hoistStatic(root, context)
   }
