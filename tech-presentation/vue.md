@@ -34,19 +34,52 @@ from source code's perspective
 
 ---
 
-## What is Vue?
-
-- By Evan You (尤雨溪)
-- progressive framework for building user interfaces
-- layer by layer from the bottom up
-
-## Why from source code?
-
-- You should use it only if you know it well.
-- There is no secret if you can view inside a software from source code.
+## What is Vue? 
+- Framework for building user interfaces
+- Focused on the view layer
+- Support sophisticated single-page applications
+- Combine the best parts of Angular and React
+- Written in Typescript
 
 ---
+# Founder
+![left w:12cm contrast](./evan.png)
 
+
+![bg right w:15cm](./evan_github.png)
+
+---
+# History
+![bg right w:10cm contrast](./vue_release.png)
+
+Started in late 2013
+Initial release in February 2014
+***Latest release in  November 2021 (V3.2.22)
+
+![](https://github.com/vuejs/vue-next/blob/master/CHANGELOG.md)
+
+---
+# Installation
+- CDN:
+  ```html
+   <script src="https://unpkg.com/vue@next"></script>
+  ```
+- npm
+  ```shell
+  #latest stable
+  $ npm install vue@next
+  ```
+
+- Download and self host
+
+
+- CLI (NOT recommanded for beginners!)
+  ```shell
+  yarn global add @vue/cli
+  #OR
+  npm install -g @vue/cli
+  ```
+---
 <!--
 _class: lead gaia
 _paginate: false
@@ -55,120 +88,16 @@ _backgroundColor: #42b983
 
 ## Welcome to the source code world of Vue.js
 
----
-
-# How Vue.js compile
-
-- the entry file is `packages/vue/index.ts `
-
-```javascript
-// This entry is the "full-build" that includes both the runtime
-// and the compiler, and supports on-the-fly compilation of the template option.
-import { initDev } from './dev'...
-
-const compileCache: Record<string, RenderFunction> = Object.create(null)
-
-function compileToFunction( ...
-  // code of the compileToFunction
-  }
-
-```
 
 ---
+<!--
+_class: lead
+_paginate: false
+-->
 
-# How Vue.js compile
+## How Vue.js compile?
 
-Dependency injection compile function to runtime
-=>
-runtime calls compiling function `compileToFunction`
-=>
-return result including code
-=>
-Pass code as a parameter to the constructor, and pass the generated function to render
-=>
-Return the render function as the compiled result
-
----
-
-```javascript
-  // The wildcard import results in a huge object with every export
-  // with keys that cannot be mangled, and can be quite heavy size-wise.
-  // In the global build we know `Vue` is available globally so we can avoid
-  // the wildcard object.
-  const render = (
-    __GLOBAL__ ? new Function(code)() : new Function('Vue', code)(runtimeDom)
-  ) as RenderFunction
-
-  // mark the function as runtime compiled
-  ;(render as InternalRenderFunction)._rc = true
-
-  return (compileCache[key] = render)
-}
-
-registerRuntimeCompiler(compileToFunction) //line 87 of index.ts
-
-export { compileToFunction as compile }
-export * from '@vue/runtime-dom'
-```
-
----
-
-```javascript
-    template = el ? el.innerHTML : ``
-  }
-
-  const { code } = compile( //line 47 of index.ts
-    template,
-    extend(
-      {
-        hoistStatic: true,
-        onError: __DEV__ ? onError : undefined,
-        onWarn: __DEV__ ? e => onError(e, true) : NOOP
-      } as CompilerOptions,
-      options
-    )
-  )
-```
-
----
-
-# A simple example
-
-```javascript
-<template>
-  <div>Hello, World!</div>
-</template>
-```
-
-```javascript
-//after compile with vue
-const _Vue = Vue;
-return function render(_ctx, _cache) {
-  with (_ctx) {
-    const { openBlock: _openBlock, createBlock: _createBlock } = _Vue;
-    return _openBlock(), _createBlock('div', null, 'Hello, World!');
-  }
-};
-```
-
----
-
-```javascript
-      )
-    warn(codeFrame ? `${message}\n${codeFrame}` : message)
-  }
-
-  // The wildcard import results in a huge object with every export
-  // with keys that cannot be mangled, and can be quite heavy size-wise.
-  // In the global build we know `Vue` is available globally so we can avoid
-  // the wildcard object.
-  const render = ( //line 77 of index.ts
-    __GLOBAL__ ? new Function(code)() : new Function('Vue', code)(runtimeDom)
-  ) as RenderFunction
-
-  // mark the function as runtime compiled
-  ;(render as InternalRenderFunction)._rc = true
-```
+# Let’s look at the source code!
 
 ---
 
@@ -327,7 +256,6 @@ function walk(
   }
 }
 ```
-
 ---
 
 <!--
