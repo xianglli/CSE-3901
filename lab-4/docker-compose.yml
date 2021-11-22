@@ -3,7 +3,7 @@ services:
   db:
     image: postgres:latest
     volumes:
-      - ./tmp/db:/var/lib/postgresql/data
+      - dbstorage:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: password
   web:
@@ -15,3 +15,5 @@ services:
       - "3000:3000"
     depends_on:
       - db
+volumes:
+    dbstorage:
