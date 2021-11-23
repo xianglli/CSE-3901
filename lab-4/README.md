@@ -1,9 +1,7 @@
 # README
 
 ## important notice
-The docker compose file to not capable with windows system. Use WSL(windows subsystem Linux) instead. Guess is the .sh file problem.
-
-Please run it on either Linux (recommand) or MacOS.
+This project can be run on operating systems with ```docker``` and ```docker-compose``` installed. But we did not fully test the project on Windows, so some of unexpected error maybe produced due to the file system privillage. If your system do not support ```docker``` (e.g, WSL 1 or OpenVZ VPS), you can use bare install instead. We do not fully test on bare machine install.
 
 ## How to run
 
