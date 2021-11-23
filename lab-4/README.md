@@ -12,7 +12,9 @@ Then run ```docker-compose build``` to build rails enviroment.
 
 Then run ```docker-compose up -d``` to run the whole lab-4 dockers.
 
-The docker file seperate db and rails. The docker is for culculate only. DB storage is in ```./tmp/db```, you can change them in ```docker-compose.yml```
+The docker file seperate db and rails. The docker is for culculate only. DB storage is in docker volumn, you can change them in ```docker-compose.yml```
+
+---
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
