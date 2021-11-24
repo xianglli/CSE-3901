@@ -9,10 +9,6 @@ Trestle.resource(:account, model: User, scope: Auth, singular: true) do
     text_field :email
 
     row do
-      col(sm: 6) { text_field :osu_id }
-    end
-
-    row do
       col(sm: 6) { password_field :password }
       col(sm: 6) { password_field :password_confirmation }
     end
