@@ -9,7 +9,6 @@ class CreateSections < ActiveRecord::Migration[6.1]
       t.string :career
       t.string :startDate
       t.string :endDate
-      t.string :class_num
       t.string :buildingDescription
       t.string :startTime
       t.string :endTime
