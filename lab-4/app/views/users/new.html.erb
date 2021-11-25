@@ -1,20 +1,73 @@
-<%= form_for :user, url: users_path do |f| %>
-  <p>
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </p>
- 
-  <p>
-    <%= f.label :osu_id %><br>
-    <%= f.text_field :osu_id %>
-  </p>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta content='width=device-width, initial-scale=1' name='viewport'>
+  <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
 
-   <p>
-    <%= f.label :password %><br>
-    <%= f.text_field :password %>
-  </p>
- 
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+  <% if Trestle.config.turbolinks %>
+    <meta content='no-cache' name='turbolinks-cache-control'>
+  <% end %>
+
+  <%= csrf_meta_tags %>
+
+  <title>Sign up</title>
+
+  <%= stylesheet_link_tag "trestle/admin", 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag "trestle/theme", 'data-turbolinks-track': 'reload' if Trestle.config.theme %>
+  <%= stylesheet_link_tag "trestle/custom", 'data-turbolinks-track': 'reload' %>
+
+  <%= stylesheet_link_tag "trestle/auth", 'data-turbolinks-track': 'reload' %>
+
+  <%= javascript_include_tag "turbolinks" if Trestle.config.turbolinks %>
+
+</head>
+
+<body class="auth-body theme-bg-dark">
+<main class="container">
+  <%= form_for :user, url: users_path do |f| %>
+
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fa fa-lock fa-fw"></i></span>
+        </div>
+        <%= f.text_field :email, placeholder: "email", class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fa fa-lock fa-fw"></i></span>
+        </div>
+        <%= f.text_field :osu_id, placeholder: "OSU dot id", class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fa fa-lock fa-fw"></i></span>
+        </div>
+        <%= f.password_field :password, placeholder: Trestle.config.auth.human_attribute_name(:password), class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fa fa-lock fa-fw"></i></span>
+        </div>
+        <%= f.password_field :password, placeholder: "Comfirm password", class: "form-control" %>
+      </div>
+    </div>
+
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
+</main>
+</body>
+</html>
+
