@@ -1,6 +1,6 @@
 Trestle.resource(:users, model: User, scope: Auth) do
   menu do
-    group :configuration, priority: :last do
+    group :user_config, priority: :last do
       item :users, icon: "fas fa-users"
     end
   end
@@ -12,8 +12,9 @@ Trestle.resource(:users, model: User, scope: Auth) do
     column :email, link: true
     column :display_name
     column :osu_id
+    column :admin
     actions do |a|
-      a.delete unless a.instance == current_user
+      a.delete unless current_user.admin
     end
   end
 
@@ -27,6 +28,14 @@ Trestle.resource(:users, model: User, scope: Auth) do
     row do
       col(sm: 6) { password_field :password }
       col(sm: 6) { password_field :password_confirmation }
+    end
+
+    row do
+      col(sm: 6) { password_field :password }
+    end
+
+    row do
+      col(sm: 6) { check_box :admin }
     end
   end
 end
