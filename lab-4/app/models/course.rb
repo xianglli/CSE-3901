@@ -7,7 +7,11 @@ class Course < ApplicationRecord
 
   def self.save_data_from_osu
     # process http request to json file
-    source = 'https://content.osu.edu/v2/classes/search?q=cse&campus=col&p=1&term=1222&subject=cse'
+    # source = 'https://content.osu.edu/v2/classes/search?q=cse&campus=col&p=1&term=1222&subject=cse'
+
+    # below is a temp address for testing
+    source = 'http://3901.plizong.com/osu_course.json'
+
     resp = Net::HTTP.get_response(URI.parse(source))
     result = resp.body
     result = JSON.parse(result)
@@ -25,20 +29,12 @@ class Course < ApplicationRecord
         course_info = Course.grab_course_info(i["course"])
         logger.debug ">>>>>>>#{course_info}>>>>>>>>>>>>>>>"
         course.from_json(course_info.to_json, false)
-        course.md5 = course_md5
-        course.tag = true
         sections = i['sections']
         #select parts from api file. grab information needed.
         sections.each { |j|
           section = Section.new
           section_info = Course.grab_section_info(j)
           section.from_json(section_info.to_json, false)
-          meetings = j['meetings']
-          meetings.each { |k|
-            meeting_info = Course.grab_meeting_info(k)
-            meeting.from_json(meeting_info.to_json, false)
-            meeting.save
-          }
           section.save
         }
         course.save
@@ -55,11 +51,6 @@ class Course < ApplicationRecord
     #   end
     #   i.destroy
     # end
-  end
-
-  def self.get_meet_info(classNumber)
-    meeting = Meeting.find_by(classNumber: classNumber)
-    return meeting
   end
 
   private

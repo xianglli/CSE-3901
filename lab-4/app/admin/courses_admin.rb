@@ -8,10 +8,10 @@ Trestle.resource(:courses) do
   # Customize the table columns shown on the index view.
   #
   table do
-    column :subject
-    column :catalogNumber
-    column :title
-    column :campus
+    column :subject, align: :center
+    column :catalogNumber, align: :center
+    column :title, align: :center
+    column :campus, align: :center
     actions
   end
 
@@ -27,14 +27,11 @@ Trestle.resource(:courses) do
       text_field :campus
       text_field :courseId
       # Define custom form fields for easy re-use
-      editor :description
+      text_area :description, rows: 5
     end
 
     tab :section do
-      # Layout fields based on a 12-column grid
-      row do
-        col(sm: 6) { select :author, Section.all }
-      end
+      #table Section.table
     end
 
   end
