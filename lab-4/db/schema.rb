@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2021_11_24_132426) do
     t.string "career"
     t.string "startDate"
     t.string "endDate"
+    t.string "class_num"
     t.string "buildingDescription"
     t.string "startTime"
     t.string "endTime"
