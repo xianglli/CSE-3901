@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_24_125737) do
+ActiveRecord::Schema.define(version: 2021_11_24_132426) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "applications", force: :cascade do |t|
+    t.string "osu_id"
+    t.string "courseId"
+    t.text "content"
+    t.string "status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "courses", force: :cascade do |t|
     t.string "title"
@@ -25,6 +34,29 @@ ActiveRecord::Schema.define(version: 2021_11_24_125737) do
     t.string "campus"
     t.jsonb "courseAttributes"
     t.string "courseId"
+  end
+
+  create_table "sections", force: :cascade do |t|
+    t.string "courseId"
+    t.string "classNumber"
+    t.string "section"
+    t.string "component"
+    t.string "instructionMode"
+    t.string "career"
+    t.string "startDate"
+    t.string "endDate"
+    t.string "class_num"
+    t.string "buildingDescription"
+    t.string "startTime"
+    t.string "endTime"
+    t.boolean "monday"
+    t.boolean "tuesday"
+    t.boolean "wednesday"
+    t.boolean "thursday"
+    t.boolean "friday"
+    t.boolean "saturday"
+    t.boolean "sunday"
+    t.jsonb "instructors"
   end
 
   create_table "users", force: :cascade do |t|
