@@ -7,6 +7,14 @@ class User < ApplicationRecord
   after_create :create_profile!
   validates :osu_id, presence: true
 
+  def initials
+
+  end
+
+  def profile?
+    avator.present?
+  end
+
   private
 
   def create_profile!

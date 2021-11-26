@@ -6,8 +6,8 @@ Trestle.resource(:users, model: User, scope: Auth) do
   end
 
   table do
-    column :avatar, header: false do |user|
-      avatar_for(user)
+    column :avator, header: false, align: :center, blank: nil do |user|
+      avatar { image_tag(user.avator) if user.profile? }
     end
     column :email, link: true
     column :display_name
