@@ -1,0 +1,2 @@
+class StudentAssistantApplication < ApplicationRecord
+end
