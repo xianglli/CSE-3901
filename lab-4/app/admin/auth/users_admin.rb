@@ -12,10 +12,8 @@ Trestle.resource(:users, model: User, scope: Auth) do
     column :email, link: true
     column :display_name
     column :osu_id
+    column :role
     column :admin
-    actions do |a|
-      a.delete unless current_user.admin
-    end
   end
 
   form do |user|
@@ -23,15 +21,11 @@ Trestle.resource(:users, model: User, scope: Auth) do
 
     row do
       col(sm: 6) { text_field :osu_id }
+      col(sm: 6) { text_field :display_name }
     end
 
     row do
-      col(sm: 6) { password_field :password }
-      col(sm: 6) { password_field :password_confirmation }
-    end
-
-    row do
-      col(sm: 6) { password_field :password }
+      col(sm: 6) { select :role, %w[student teacher] }
     end
 
     row do

@@ -16,7 +16,6 @@ class Course < ApplicationRecord
     result = resp.body
     result = JSON.parse(result)
     courses = result['data']['courses']
-    logger.debug ">>>>>>>>>#{result['data']}>>>>>>>>>>>>>"
 
     # TODO: For temp use in this limited time. Will fix later
     Course.delete_all
@@ -27,7 +26,6 @@ class Course < ApplicationRecord
         course = Course.new
         #select parts from api file. grab information needed.
         course_info = Course.grab_course_info(i["course"])
-        logger.debug ">>>>>>>#{course_info}>>>>>>>>>>>>>>>"
         course.from_json(course_info.to_json, false)
         sections = i['sections']
         #select parts from api file. grab information needed.
