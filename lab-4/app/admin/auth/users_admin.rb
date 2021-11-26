@@ -12,10 +12,8 @@ Trestle.resource(:users, model: User, scope: Auth) do
     column :email, link: true
     column :display_name
     column :osu_id
+    column :role
     column :admin
-    actions do |a|
-      a.delete unless current_user.admin
-    end
   end
 
   form do |user|
@@ -27,7 +25,6 @@ Trestle.resource(:users, model: User, scope: Auth) do
     end
 
     row do
-      link_to image_tag(user.poster_url("w500")), movie.poster_url, data: { behavior: "zoom" }
       col(sm: 6) { select :role, %w[student teacher] }
     end
 
