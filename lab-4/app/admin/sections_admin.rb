@@ -1,6 +1,8 @@
 Trestle.resource(:sections) do
   menu do
-    item :sections, icon: "fa fa-book"
+    group :course do
+      item :sections, icon: "fa fa-book"
+    end
   end
 
   # Customize the table columns shown on the index view.
