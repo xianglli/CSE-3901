@@ -16,7 +16,7 @@ Trestle.resource(:courses) do
   end
 
   #Customize the form fields shown on the new/edit views.
-  form do
+  form do |course|
     # Organize fields into tabs and sidebars
     tab :course do
       text_field :title
@@ -26,12 +26,12 @@ Trestle.resource(:courses) do
       text_field :catalogNumber
       text_field :campus
       text_field :courseId
-      # Define custom form fields for easy re-use
       text_area :description, rows: 5
     end
 
     tab :section do
-      #table Section.table
+      logger.debug "<<<<<#{course.courseId}<<<<<<<<"
+      table SectionsAdmin.table , collection: Section.where("\"courseId\" = '#{course.courseId}'")
     end
 
   end

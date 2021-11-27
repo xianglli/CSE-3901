@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.7'
 #
 gem 'trestle'
 
-gem 'trestle-auth', '~> 0.5', github: 'xianglli/trestle-auth'
+gem 'trestle-auth'#, '~> 0.5', github: 'xianglli/trestle-auth'
 
 gem 'trestle-search'
 
