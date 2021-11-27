@@ -49,6 +49,7 @@ class Course < ApplicationRecord
     #   end
     #   i.destroy
     # end
+
   end
 
   private

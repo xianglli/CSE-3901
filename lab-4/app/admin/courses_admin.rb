@@ -6,7 +6,7 @@ Trestle.resource(:courses) do
   end
 
   # Customize the table columns shown on the index view.
-  #
+
   table do
     column :subject, align: :center
     column :catalogNumber, align: :center

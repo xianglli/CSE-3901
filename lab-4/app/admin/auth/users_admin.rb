@@ -14,6 +14,7 @@ Trestle.resource(:users, model: User, scope: Auth) do
     column :osu_id
     column :role
     column :admin
+    actions
   end
 
   form do |user|
