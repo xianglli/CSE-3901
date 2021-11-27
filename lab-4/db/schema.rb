@@ -15,15 +15,6 @@ ActiveRecord::Schema.define(version: 2021_11_26_133044) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "applications", force: :cascade do |t|
-    t.string "osu_id"
-    t.string "courseId"
-    t.text "content"
-    t.string "status"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "courses", force: :cascade do |t|
     t.string "title"
     t.string "shortDescription"
@@ -59,15 +50,6 @@ ActiveRecord::Schema.define(version: 2021_11_26_133044) do
   end
 
   create_table "student_assistant_applications", force: :cascade do |t|
-    t.string "osu_id"
-    t.string "courseId"
-    t.text "content"
-    t.string "status"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "taapps", force: :cascade do |t|
     t.string "osu_id"
     t.string "courseId"
     t.text "content"
