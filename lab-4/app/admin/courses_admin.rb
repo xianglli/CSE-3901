@@ -30,8 +30,17 @@ Trestle.resource(:courses) do
     end
 
     tab :section do
-      logger.debug "<<<<<#{course.courseId}<<<<<<<<"
       table SectionsAdmin.table , collection: Section.where("\"courseId\" = '#{course.courseId}'")
+    end
+
+    tab :TA_application do
+      row do
+        col(sm: 6) {link_to "Click here to start a new application",new_student_assistant_applications_admin_path}
+      end
+      row do
+        col(sm: 6) {label "Your existing application of this course"}
+      end
+      table StudentAssistantApplicationsAdmin.table , collection: StudentAssistantApplication.where("\"courseId\" = '#{course.courseId}'")
     end
 
   end
