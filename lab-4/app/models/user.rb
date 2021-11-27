@@ -26,7 +26,6 @@ class User < ApplicationRecord
     result = resp.body
     result = JSON.parse(result)
     result = result[0]
-    logger.debug "<<<<<<<#{result}<<<<<<<<<<<<"
     if result != nil
       user_info = User.grab_user_info(result)
       profile.from_json(user_info.to_json, false)
