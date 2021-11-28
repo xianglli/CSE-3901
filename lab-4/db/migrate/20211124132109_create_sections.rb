@@ -1,7 +1,6 @@
 class CreateSections < ActiveRecord::Migration[6.1]
   def change
     create_table :sections do |t|
-      t.string :courseId
       t.string :classNumber
       t.string :section
       t.string :component
@@ -20,6 +19,7 @@ class CreateSections < ActiveRecord::Migration[6.1]
       t.boolean :saturday
       t.boolean :sunday
       t.jsonb :instructors
+      t.string :courseId
     end
   end
 end

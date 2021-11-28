@@ -27,6 +27,15 @@ Trestle.resource(:student_assistant_applications) do
 
     row do
       col { select :status, %w[pending approved denied]}
+      if student_assistant_application.status == "approved" 
+        col { select :section, Section.where("\"courseId\" = '#{Course.find(student_assistant_application.courseId).courseId}'")}
+      end
+    end
+
+    if student_assistant_application.status == "approved" 
+      row do 
+        table SectionsAdmin.table , collection: Section.where("\"courseId\" = '#{Course.find(student_assistant_application.courseId).courseId}'")
+      end
     end
   end
 
