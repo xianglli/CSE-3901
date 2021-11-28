@@ -18,15 +18,30 @@ Trestle.resource(:courses) do
   #Customize the form fields shown on the new/edit views.
   form do |course|
     # Organize fields into tabs and sidebars
-    tab :course do
-      text_field :title
-      text_field :shortDescription
-      text_field :component
-      text_field :subject
-      text_field :catalogNumber
-      text_field :campus
-      text_field :courseId
-      text_area :description, rows: 5
+    if current_user.admin
+      tab :course do
+        text_field :title
+        text_field :shortDescription
+        text_field :component
+        text_field :subject
+        text_field :catalogNumber
+        text_field :campus
+        text_field :courseId
+        text_area :description, rows: 5
+      end
+    end
+
+    unless current_user.admin
+      tab :course_info do
+        text_field :title, disabled: true
+        text_field :shortDescription, disabled: true
+        text_field :component, disabled: true
+        text_field :subject, disabled: true
+        text_field :catalogNumber, disabled: true
+        text_field :campus, disabled: true
+        text_field :courseId, disabled: true
+        text_area :description, rows: 5, disabled: true
+      end
     end
 
     tab :section do
@@ -40,7 +55,11 @@ Trestle.resource(:courses) do
       row do
         col(sm: 6) {label "Your existing application of this course"}
       end
-      table StudentAssistantApplicationsAdmin.table , collection: StudentAssistantApplication.where("\"courseId\" = '#{course.courseId}'")
+      if current_user.admin
+        table StudentAssistantApplicationsAdmin.table , collection: StudentAssistantApplication.where("\"courseId\" = '#{course.id}'")
+      else
+        table StudentAssistantApplicationsAdmin.table , collection: StudentAssistantApplication.where("\"courseId\" = '#{course.id}' and \"osu_id\" = '#{current_user.osu_id}'")
+      end
     end
 
   end

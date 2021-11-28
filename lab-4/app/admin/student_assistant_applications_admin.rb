@@ -1,6 +1,16 @@
 Trestle.resource(:student_assistant_applications) do
   menu do
-    item :student_assistant_applications, icon: "fa fa-star"
+    unless current_user.role == "teacher"
+      item :student_assistant_applications, icon: "fa fa-star"
+    end
+  end
+
+  collection do
+    unless current_user.admin
+      StudentAssistantApplication.where("\"osu_id\" = '#{current_user.osu_id}'")
+    else
+      StudentAssistantApplication.all
+    end
   end
 
   # Customize the table columns shown on the index view.
@@ -26,9 +36,13 @@ Trestle.resource(:student_assistant_applications) do
     text_area :content, row: 8
 
     row do
-      col { select :status, %w[pending approved denied]}
-      if student_assistant_application.status == "approved" 
-        col { select :section, Section.where("\"courseId\" = '#{Course.find(student_assistant_application.courseId).courseId}'")}
+      if current_user.admin
+        col { select :status, %w[pending approved denied]}
+        if student_assistant_application.status == "approved" 
+          col { select :section, Section.where("\"courseId\" = '#{Course.find(student_assistant_application.courseId).courseId}'")}
+        end
+      else
+        col { select :status, %w[pending]}
       end
     end
 

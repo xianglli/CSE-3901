@@ -1,7 +1,9 @@
 Trestle.resource(:sections) do
   menu do
-    group :course do
-      item :sections, icon: "fa fa-book"
+    if current_user.admin
+      group :course do
+        item :sections, icon: "fa fa-book"
+      end
     end
   end
 
