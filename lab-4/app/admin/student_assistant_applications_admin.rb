@@ -32,7 +32,9 @@ Trestle.resource(:student_assistant_applications) do
   #
   form do |student_assistant_application|
     select :courseId, Course.all
-    select :osu_id, [current_user.osu_id] 
+    unless current_user.admin
+      select :osu_id, [current_user.osu_id], disabled: true
+    end
     text_area :content, row: 8
 
     row do
@@ -42,7 +44,7 @@ Trestle.resource(:student_assistant_applications) do
           col { select :section, Section.where("\"courseId\" = '#{Course.find(student_assistant_application.courseId).courseId}'")}
         end
       else
-        col { select :status, %w[pending]}
+        col { select :status, %w[pending approved denied], disabled: true}
       end
     end
 

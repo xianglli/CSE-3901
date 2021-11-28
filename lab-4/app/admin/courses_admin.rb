@@ -61,7 +61,6 @@ Trestle.resource(:courses) do
         table StudentAssistantApplicationsAdmin.table , collection: StudentAssistantApplication.where("\"courseId\" = '#{course.id}' and \"osu_id\" = '#{current_user.osu_id}'")
       end
     end
-
   end
 
   # By default, all parameters passed to the update and create actions will be
