@@ -115,6 +115,8 @@ GEM
     minitest (5.14.4)
     msgpack (1.4.2)
     nio4r (2.5.8)
+    nokogiri (1.12.5-x86_64-darwin)
+      racc (~> 1.4)
     nokogiri (1.12.5-x86_64-linux)
       racc (~> 1.4)
     pg (1.2.3)
@@ -187,6 +189,7 @@ GEM
       sprockets (>= 3.0.0)
     thor (1.1.0)
     tilt (2.0.10)
+    tod (3.0.0)
     trestle (0.9.5)
       activemodel (>= 4.2.0)
       kaminari (>= 1.1.0)
@@ -240,6 +243,7 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver
   spring
+  tod
   trestle
   trestle-auth
   trestle-search
