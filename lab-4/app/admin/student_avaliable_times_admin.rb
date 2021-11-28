@@ -8,9 +8,11 @@ Trestle.resource(:student_avaliable_times) do
   table do
     column :day_of_week
     column :start_time do |time|
-      time.to_s
+      "#{time.start_time.to_s(:time)}"
     end
-    column :end_time
+    column :end_time do |time|
+      "#{time.end_time.to_s(:time)}"
+    end
     actions
   end
 

@@ -28,7 +28,6 @@ gem 'trestle-auth'#, '~> 0.5', github: 'xianglli/trestle-auth'
 
 gem 'trestle-search'
 
-
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
