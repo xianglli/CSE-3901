@@ -6,7 +6,7 @@ class User < ApplicationRecord
   include Trestle::Auth::ModelMethods::Rememberable
   after_create :create_profile!
   validates :email, presence: true, format: { with: /\A([A-Za-z.0-9])+@osu.edu\z/, message: "must use OSU email" }
-  validates :osu_id, presence: true, length: { is: 9 }, format: { with: /\A\d+\z/, message: "only allow number" }
+  validates :osu_id, presence: true, format: { with: /\A\d+\z/, message: "only allow number" }
   validates :password, presence: true, confirmation: true, length: { minimum: 8 }
   validates :password_confirmation, presence: true
 
