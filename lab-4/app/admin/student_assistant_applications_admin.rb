@@ -7,10 +7,14 @@ Trestle.resource(:student_assistant_applications) do
   #
   table do
     column :osu_id, header: "OSU dot id"
-    column :courseId, header: "CSE course number"
-    column :status, header: "Application status"
+    column :courseId, header: "CSE course" do |course|
+      "#{Course.find(course.courseId).shortDescription.to_s}"
+    end
     column :created_at
     column :updated_at
+    column :status, header: "Application status" , sort: :status, align: :center do |app|
+      status_tag(app.status, {"approved" => :success, "denied" => :danger, "pending" => :warning}[app.status] || :default)
+    end
     actions
   end
 
@@ -22,8 +26,7 @@ Trestle.resource(:student_assistant_applications) do
     text_area :content, row: 8
 
     row do
-      col { datetime_field :updated_at }
-      col { datetime_field :created_at }
+      col { select :status, %w[pending approved denied]}
     end
   end
 
