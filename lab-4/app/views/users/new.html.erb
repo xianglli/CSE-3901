@@ -27,6 +27,18 @@
 <main class="container">
   <%= form_for :user, url: users_path do |f| %>
 
+  <% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h2>Sign up failed<h2> 
+    <h2>due to <%= pluralize(@user.errors.count, "error") %>:</h2>
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
     <div class="form-group">
       <div class="input-group">
         <div class="input-group-prepend">
@@ -59,7 +71,7 @@
         <div class="input-group-prepend">
           <span class="input-group-text"><i class="fa fa-lock fa-fw"></i></span>
         </div>
-        <%= f.password_field :password, placeholder: "Comfirm password", class: "form-control" %>
+        <%= f.password_field :password_confirmation, placeholder: "Comfirm password", class: "form-control" %>
       </div>
     </div>
 
