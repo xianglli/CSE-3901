@@ -1,28 +1,25 @@
-Trestle.resource(:student_assistant_applications) do
+Trestle.resource(:student_avaliable_times) do
   menu do
-    item :student_assistant_applications, icon: "fa fa-star"
+    
   end
 
   # Customize the table columns shown on the index view.
-  #
+  
   table do
-    column :osu_id, header: "OSU dot id"
-    column :courseId, header: "CSE course number"
-    column :status, header: "Application status"
-    column :created_at
-    column :updated_at
+    column :day_of_week
+    column :start_time
+    column :end_time
     actions
   end
 
   # Customize the form fields shown on the new/edit views.
   #
-  form do |student_assistant_application|
-    text_field :courseId
-    text_area :content, row: 8
-
+  form do |student_avaliable_time|
+    select :day_of_week, %w[Mon Tue Wed Thurs Fri Sat Sun]
+  
     row do
-      col { datetime_field :updated_at }
-      col { datetime_field :created_at }
+      col { time_field :start_time }
+      col { time_field :end_time }
     end
   end
 
@@ -34,6 +31,6 @@ Trestle.resource(:student_assistant_applications) do
   #   http://guides.rubyonrails.org/action_controller_overview.html#strong-parameters
   #
   # params do |params|
-  #   params.require(:student_assistant_application).permit(:name, ...)
+  #   params.require(:student_avaliable_time).permit(:name, ...)
   # end
 end
