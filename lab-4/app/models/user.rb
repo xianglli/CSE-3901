@@ -4,12 +4,12 @@ require 'net/http'
 class User < ApplicationRecord
   include Trestle::Auth::ModelMethods
   include Trestle::Auth::ModelMethods::Rememberable
-  after_create :create_profile!
-  validates :email, presence: true, format: { with: /\A([A-Za-z.0-9])+@osu.edu\z/, message: "must use OSU email" }
-  validates :osu_id, presence: true, format: { with: /\A\d+\z/, message: "only allow number" }
-  validates :password, presence: true, confirmation: true, length: { minimum: 8 }
-  validates :password_confirmation, presence: true
+  #validates :email, presence: true, format: { with: /\A([A-Za-z.0-9])+@osu.edu\z/, message: "must use OSU email" }
+  #validates :osu_id, presence: true
+  #validates :password, presence: true, confirmation: true, length: { minimum: 8 }
+  #validates :password_confirmation, presence: true
 
+  after_create :create_profile!
 
   def initials
 
@@ -33,13 +33,13 @@ class User < ApplicationRecord
     if result != nil
       user_info = User.grab_user_info(result)
       profile.from_json(user_info.to_json, false)
-      profile["avator"] = "https://opic.osu.edu/" + osu_id.to_s
+      profile["avator"] = "https://opic.osu.edu/" + osu_id.to_s    
+      profile.save
     else
       profile["display_name"] = "guest"
       profile["role"] = "guest"
+      profile.save
     end
-
-    profile.save
   end
 
   def self.grab_user_info (user_total_info)

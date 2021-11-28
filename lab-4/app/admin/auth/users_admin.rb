@@ -1,7 +1,9 @@
 Trestle.resource(:users, model: User, scope: Auth) do
   menu do
-    group :user_config, priority: :last do
-      item :users, icon: "fas fa-users"
+    if current_user.admin
+      group :user_config, priority: :last do
+        item :users, icon: "fas fa-users"
+      end
     end
   end
 
