@@ -17,7 +17,8 @@ Trestle.resource(:student_assistant_applications) do
   # Customize the form fields shown on the new/edit views.
   #
   form do |student_assistant_application|
-    text_field :courseId
+    text_field :courseId 
+    select :osu_id, [current_user.osu_id] 
     text_area :content, row: 8
 
     row do
