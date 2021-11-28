@@ -11,7 +11,7 @@ Trestle.resource(:users, model: User, scope: Auth) do
     end
     column :email, link: true
     column :display_name
-    column :osu_id
+    column :osu_id, header: "OSU dot id"
     column :role
     column :admin
     actions
@@ -21,7 +21,7 @@ Trestle.resource(:users, model: User, scope: Auth) do
     text_field :email
 
     row do
-      col(sm: 6) { text_field :osu_id }
+      col(sm: 6) { text_field :osu_id, header: "OSU dot id" }
       col(sm: 6) { text_field :display_name }
     end
 

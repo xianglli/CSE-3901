@@ -1,0 +1,2 @@
+class StudentAvaliableTime < ApplicationRecord
+end
