@@ -7,7 +7,9 @@ Trestle.resource(:student_avaliable_times) do
   
   table do
     column :day_of_week
-    column :start_time
+    column :start_time do |time|
+      time.to_s
+    end
     column :end_time
     actions
   end
@@ -15,9 +17,13 @@ Trestle.resource(:student_avaliable_times) do
   # Customize the form fields shown on the new/edit views.
   #
   form do |student_avaliable_time|
-    select :day_of_week, %w[Mon Tue Wed Thurs Fri Sat Sun]
-  
+
     row do
+      col { select :osu_id, [current_user.osu_id] }
+    end
+
+    row do
+      col {select :day_of_week, %w[Mon Tue Wed Thurs Fri Sat Sun]}
       col { time_field :start_time }
       col { time_field :end_time }
     end
