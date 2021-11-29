@@ -1,30 +1,4 @@
 Trestle.resource(:student_assistant_applications) do
-  authorize do
-    index? do
-      true
-    end
-
-    show? do |app|
-      (current_user.osu_id == app.osu_id) || current_user.admin
-    end
-
-    update? do |app|
-      (current_user.osu_id == app.osu_id) || current_user.admin
-    end
-
-    edit? do |app|
-      (current_user.osu_id == app.osu_id) || current_user.admin
-    end
-
-    new? do
-      true
-    end
-
-    destroy? do
-      not (current_user.admin? && current_user.role=="teacher")
-    end
-  end
-
   menu do
     unless current_user.role == "teacher"
       item :student_assistant_applications, icon: "fa fa-star"
@@ -57,9 +31,9 @@ Trestle.resource(:student_assistant_applications) do
   # Customize the form fields shown on the new/edit views.
   #
   form do |student_assistant_application|
-    select :courseId, Course.all
+    select :courseId, Course.all, label: "CSE course name"
     unless current_user.admin
-      select :osu_id, [current_user.osu_id], disabled: true
+      select :osu_id, [current_user.osu_id], label: "OSU dot id" 
     end
     text_area :content, row: 8
 
