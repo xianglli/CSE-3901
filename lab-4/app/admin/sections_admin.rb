@@ -36,13 +36,14 @@ Trestle.resource(:sections) do
   # Customize the table columns shown on the index view.
   #
   table do |section|
+    column :id
     column :classNumber
     column :section
     column :component
     column :instructionMode
     column :ta_num, header: "TA number"
     column :ta_num_remain, header: "Avaliable Position" do |sec|
-      status_tag((sec.ta_num - StudentAssistantApplication.where("\"section\"='#{sec.id}'").count).to_s)
+      status_tag((sec.ta_num - StudentAssistantApplication.where("\"section\"='#{sec.id}'").count).to_s,{ "0" => :danger}[(sec.ta_num - StudentAssistantApplication.where("\"section\"='#{sec.id}'").count).to_s] || :success)
     end
     column :career
     column :buildingDescription, header: "Address"
@@ -59,14 +60,39 @@ Trestle.resource(:sections) do
 
   # Customize the form fields shown on the new/edit views.
   #
-  # form do |section|
-  #   text_field :name
-  #
-  #   row do
-  #     col { datetime_field :updated_at }
-  #     col { datetime_field :created_at }
-  #   end
-  # end
+  form do |section|
+    tab :section do
+      text_field :classNumber
+      text_field :section
+      text_field :component
+      text_field :instructionMode
+      text_field :ta_num, label: "TA number"
+      text_field :career
+      text_field :buildingDescription, label: "Address"
+      check_box :monday
+      check_box :tuesday
+      check_box :wednesday
+      check_box :thursday
+      check_box :friday
+      check_box :saturday
+      check_box :sunday
+      text_field :instructors
+    end
+
+    tab :Teaching_assistants do
+      table Auth::UsersAdmin.table, collection: User.joins("INNER JOIN student_assistant_applications ON student_assistant_applications.osu_id = users.osu_id AND student_assistant_applications.section = '#{section.id}'")
+    end
+
+    tab :Evaluate_students do
+      row do
+        col(sm: 6) {link_to "Click here to start a new evaluation",new_reviews_admin_path}
+      end
+      row do
+        col(sm: 6) {label "Your existing application of this course"}
+      end
+      table ReviewsAdmin.table, collection: Review.joins("INNER JOIN student_assistant_applications ON student_assistant_applications.osu_id = reviews.osu_id AND student_assistant_applications.section = '#{section.id}'")
+    end
+  end
 
   # By default, all parameters passed to the update and create actions will be
   # permitted. If you do not have full trust in your users, you should explicitly

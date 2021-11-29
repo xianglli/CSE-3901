@@ -20,12 +20,15 @@ Trestle.resource(:reviews) do
   #
   form do |review|
     row do
-      select :classNumber, Course.all, label: "CSE course name"
-      select :osu_id, [current_user.osu_id], label: "OSU dot id" 
+      col(sm: 6) {select :classNumber, Course.all, label: "CSE course name"}
+      col(sm: 6) {select :osu_id, User.joins("INNER JOIN student_assistant_applications ON student_assistant_applications.osu_id = users.osu_id AND student_assistant_applications.\"courseId\" = '#{review.classNumber}'"), label: "OSU dot id" }
     end
   
     row do
-      
+      col(sm: 6) {select :reliable, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+      col(sm: 6) {select :knowledgeable, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+      col(sm: 6) {select :friendly, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+      col(sm: 6) {select :leadership, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
     end
   end
 
