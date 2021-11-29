@@ -20,7 +20,7 @@ Trestle.resource(:student_avaliable_times) do
   form do |student_avaliable_time|
 
     row do
-      col { select :osu_id, [current_user.osu_id] }
+      col { select :osu_id, [current_user.osu_id], label: "OSU dot id" }
     end
 
     row do
