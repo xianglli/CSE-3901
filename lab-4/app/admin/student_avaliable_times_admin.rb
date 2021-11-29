@@ -1,6 +1,5 @@
 Trestle.resource(:student_avaliable_times) do
   menu do
-    
   end
 
   # Customize the table columns shown on the index view.

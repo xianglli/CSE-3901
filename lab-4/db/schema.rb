@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_28_101054) do
+ActiveRecord::Schema.define(version: 2021_11_28_125522) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2021_11_28_101054) do
   end
 
   create_table "sections", force: :cascade do |t|
+    t.string "courseId"
     t.string "classNumber"
     t.string "section"
     t.string "component"
@@ -57,7 +58,7 @@ ActiveRecord::Schema.define(version: 2021_11_28_101054) do
     t.boolean "saturday"
     t.boolean "sunday"
     t.jsonb "instructors"
-    t.string "courseId"
+    t.integer "ta_num", default: 4
   end
 
   create_table "student_assistant_applications", force: :cascade do |t|

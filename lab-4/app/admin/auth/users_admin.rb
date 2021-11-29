@@ -1,4 +1,29 @@
 Trestle.resource(:users, model: User, scope: Auth) do
+  authorize do
+    index? do
+      current_user.admin?
+    end
+
+    show? do |app|
+      (current_user.osu_id == app.osu_id) || current_user.admin
+    end
+
+    update? do |app|
+      (current_user.osu_id == app.osu_id) || current_user.admin
+    end
+
+    edit? do |app|
+      (current_user.osu_id == app.osu_id) || current_user.admin
+    end
+
+    new? do
+      current_user.admin?
+    end
+
+    destroy? do
+      current_user.admin?
+    end
+  end
   menu do
     if current_user.admin
       group :user_config, priority: :last do
