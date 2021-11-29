@@ -35,11 +35,27 @@ Trestle.resource(:sections) do
 
   # Customize the table columns shown on the index view.
   #
-  # table do
-  #   column :name
-  #   column :created_at, align: :center
-  #   actions
-  # end
+  table do |section|
+    column :classNumber
+    column :section
+    column :component
+    column :instructionMode
+    column :ta_num, header: "TA number"
+    column :ta_num_remain, header: "Avaliable Position" do |sec|
+      status_tag((sec.ta_num - StudentAssistantApplication.where("\"section\"='#{sec.id}'").count).to_s)
+    end
+    column :career
+    column :buildingDescription, header: "Address"
+    column :monday
+    column :tuesday
+    column :wednesday
+    column :thursday
+    column :friday
+    column :saturday
+    column :sunday
+    column :instructors
+    actions
+  end
 
   # Customize the form fields shown on the new/edit views.
   #

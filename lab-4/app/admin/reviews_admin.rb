@@ -1,13 +1,14 @@
 Trestle.resource(:reviews) do
   menu do
-    item :reviews, icon: "fa fa-star"
   end
 
   # Customize the table columns shown on the index view.
   #
   table do
     column :osu_id, header: "OSU dot id"
-    column :classNumber, header: "Class Number"
+    column :classNumber, header: "CSE course" do |course|
+      "#{Course.find(course.classNumber).shortDescription.to_s}"
+    end
     column :reliable, header: "Reliale"
     column :knowledgeable, header: "Knowledgeable"
     column :friendly, header: "Frendly"
@@ -17,14 +18,16 @@ Trestle.resource(:reviews) do
 
   # Customize the form fields shown on the new/edit views.
   #
-  # form do |review|
-  #   text_field :name
-  #
-  #   row do
-  #     col { datetime_field :updated_at }
-  #     col { datetime_field :created_at }
-  #   end
-  # end
+  form do |review|
+    row do
+      select :classNumber, Course.all, label: "CSE course name"
+      select :osu_id, [current_user.osu_id], label: "OSU dot id" 
+    end
+  
+    row do
+      
+    end
+  end
 
   # By default, all parameters passed to the update and create actions will be
   # permitted. If you do not have full trust in your users, you should explicitly
