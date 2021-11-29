@@ -65,10 +65,10 @@ ActiveRecord::Schema.define(version: 2021_11_29_070111) do
     t.string "osu_id"
     t.string "courseId"
     t.text "content"
-    t.string "status"
+    t.string "status", default: "pending"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "section", default: "pending"
+    t.string "section"
   end
 
   create_table "student_avaliable_times", force: :cascade do |t|
