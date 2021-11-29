@@ -1,5 +1,8 @@
 const startGameButton = document.getElementsByClassName('StartGameButton')[0];
 const stopGameButton = document.getElementsByClassName('StopGameButton')[0];
+const shufflerButton = document.getElementsByClassName('shufflerButton')[0];
+const hintButton = document.getElementsByClassName('hintButton')[0];
+
 let gameState = -1;
 let score = 0;
 
@@ -21,5 +24,17 @@ stopGameButton.addEventListener("click", function () {
     stopGameButton.innerHTML = "<p style='color: white'>Stopped</p>";
     scoreCard.innerHTML = "Your final score: " + score;
     startGameButton.style.backgroundColor = "goldenrod";
-    startGameButton.innerHTML = "<p style='color: white'>Start Game</p>";
+    startGameButton.innerHTML = "<p style='color: black'>Begin Game</p>";
+});
+
+shufflerButton.addEventListener("click", function () {
+    shuffle();
+});
+
+hintButton.addEventListener("click", function () {
+    if(gameState == -1) {
+        gameAlert.innerHTML = "<div style='background-color: rgba(218,112,214,0.35); border: 1px solid crimson; color: crimson'>Game not start yet!</div>";
+    } else {
+        gameAlert.innerHTML = "<div style='background-color: rgba(120, 167, 134 ,0.35); border: 1px solid green; color: green'>There are " + hint() + " sets existed.</div>";
+    }
 });

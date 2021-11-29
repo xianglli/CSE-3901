@@ -1,0 +1,100 @@
+<!--
+	Identity by HTML5 UP
+	Modified by Louis Xiang Li
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+  <title>Edit information</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <!--[if lte IE 8]>
+  <script src="./app/assets/js/html5shiv.js"></script><![endif]-->
+  <%= stylesheet_link_tag 'main', media: 'all',
+                          'data-turbolinks-track' => true %>
+  <!--[if lte IE 9]>
+  <link rel="stylesheet" href="./app/assets/css/ie9.css"/><![endif]-->
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="./app/assets/css/ie8.css"/><![endif]-->
+  <noscript>
+    <link rel="stylesheet" href="app/assets/stylesheets/noscript.css"/>
+  </noscript>
+</head>
+<body class="is-loading">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+  <!-- Main -->
+  <section id="main">
+    <header>
+      <h1>Edit information</h1>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+
+        <div class="field">
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" ,placeholder:"Email"%>
+        </div>
+
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+        <% end %>
+
+        <div class="field">
+          <i>(leave blank if you don't want to change)</i>
+          <%= f.password_field :password, autocomplete: "new-password", placeholder:"New Password" %>
+          <% if @minimum_password_length %>
+            <em><%= @minimum_password_length %> characters minimum</em>
+          <% end %>
+        </div>
+
+        <div class="field">
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder:"Confirm New Password"%>
+        </div>
+
+        <div class="field">
+          <%= f.password_field :current_password, autocomplete: "current-password", placeholder:"Current Password" %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Update" %>
+        </div>
+      <% end %>
+
+      <%= link_to "Back", :back %><br />
+
+      <%= render "devise/shared/links" %>
+      <br />
+      <br />
+      <h3 style="color:red">dangerous action!</h3>
+
+      <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
+
+    </header>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <ul class="copyright">
+      <li>&copy; Future Tech Corp</li>
+      <li>Idea: <a href="http://html5up.net">HTML5 UP</a></li>
+      <li>Design: <a href="http://plizong.com">Louis Li</a></li>
+    </ul>
+  </footer>
+
+</div>
+
+<!-- Scripts -->
+<!--[if lte IE 8]>
+<script src="./app/assets/js/respond.min.js"></script><![endif]-->
+<script>
+    if ('addEventListener' in window) {
+        window.addEventListener('load', function () {
+            document.body.className = document.body.className.replace(/\bis-loading\b/, '');
+        });
+        document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+    }
+</script>
+
+</body>
+</html>
