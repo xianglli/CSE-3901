@@ -1,4 +1,30 @@
 Trestle.resource(:sections) do
+  authorize do
+    index? do
+      true
+    end
+
+    show? do
+      true
+    end
+
+    update? do
+      current_user.admin?
+    end
+
+    edit? do
+      current_user.admin?
+    end
+
+    new? do
+      current_user.admin?
+    end
+
+    destroy? do
+      current_user.admin?
+    end
+  end
+
   menu do
     if current_user.admin
       group :course do

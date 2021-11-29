@@ -1,4 +1,30 @@
 Trestle.resource(:student_assistant_applications) do
+  authorize do
+    index? do
+      true
+    end
+
+    show? do |app|
+      (current_user.osu_id == app.osu_id) || current_user.admin
+    end
+
+    update? do |app|
+      (current_user.osu_id == app.osu_id) || current_user.admin
+    end
+
+    edit? do |app|
+      (current_user.osu_id == app.osu_id) || current_user.admin
+    end
+
+    new? do
+      true
+    end
+
+    destroy? do
+      not (current_user.admin? && current_user.role=="teacher")
+    end
+  end
+
   menu do
     unless current_user.role == "teacher"
       item :student_assistant_applications, icon: "fa fa-star"

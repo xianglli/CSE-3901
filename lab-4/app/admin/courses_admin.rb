@@ -1,4 +1,31 @@
 Trestle.resource(:courses) do
+  authorize do
+    index? do
+      true
+    end
+
+    show? do
+      true
+    end
+
+    update? do
+      current_user.admin?
+    end
+
+    edit? do
+      current_user.admin?
+    end
+
+    new? do
+      current_user.admin?
+    end
+
+    destroy? do
+      current_user.admin?
+    end
+
+  end
+
   menu do
     group :course do
       item :courses, icon: "fa fa-book"
@@ -18,30 +45,15 @@ Trestle.resource(:courses) do
   #Customize the form fields shown on the new/edit views.
   form do |course|
     # Organize fields into tabs and sidebars
-    if current_user.admin
-      tab :course do
-        text_field :title
-        text_field :shortDescription
-        text_field :component
-        text_field :subject
-        text_field :catalogNumber
-        text_field :campus
-        text_field :courseId
-        text_area :description, rows: 5
-      end
-    end
-
-    unless current_user.admin
-      tab :course_info do
-        text_field :title, disabled: true
-        text_field :shortDescription, disabled: true
-        text_field :component, disabled: true
-        text_field :subject, disabled: true
-        text_field :catalogNumber, disabled: true
-        text_field :campus, disabled: true
-        text_field :courseId, disabled: true
-        text_area :description, rows: 5, disabled: true
-      end
+    tab :course do
+      text_field :title
+      text_field :shortDescription
+      text_field :component
+      text_field :subject
+      text_field :catalogNumber
+      text_field :campus
+      text_field :courseId
+      text_area :description, rows: 5
     end
 
     tab :section do
