@@ -9,13 +9,20 @@ class Course < ApplicationRecord
     # process http request to json file
     # source = 'https://content.osu.edu/v2/classes/search?q=cse&campus=col&p=1&term=1222&subject=cse'
 
-    # below is a temp address for testing
-    source = 'http://3901.plizong.com/osu_course.json'
+    source = 'https://content.osu.edu/v2/classes/search?q=cse&campus=col&p=1&term=1222&subject=cse'
 
     resp = Net::HTTP.get_response(URI.parse(source))
     result = resp.body
     result = JSON.parse(result)
     courses = result['data']['courses']
+    if courses.nil?
+      # below is a mirror address for osu courses
+      source = 'http://3901.plizong.com/osu_course.json'
+      resp = Net::HTTP.get_response(URI.parse(source))
+      result = resp.body
+      result = JSON.parse(result)
+      courses = result['data']['courses']
+    end
 
     # TODO: For temp use in this limited time. Will fix later
     Course.delete_all
