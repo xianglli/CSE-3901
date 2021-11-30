@@ -9,6 +9,8 @@ class User < ApplicationRecord
   #validates :password, presence: true, confirmation: true, length: { minimum: 8 }
   #validates :password_confirmation, presence: true
 
+  validate :custom_validation
+
   after_create :create_profile!
 
   def initials
@@ -19,9 +21,24 @@ class User < ApplicationRecord
     avator.present?
   end
 
-  private
+  private def custom_validation
+    if email.empty?
+      self.errors[:base] << "Email can't be blank"
+    elsif (/[A-Za-z.0-9]+@osu.edu/ =~ email).nil?
+      self.errors[:base] << "Must use OSU email"
+    end
+    if osu_id.empty?
+      self.errors[:base] << "OSU dot id can't be blank"
+    elsif (/[A-Za-z]+\.[0-9]+/ =~ osu_id).nil?
+      self.errors[:base] << "OSU dot id in wrong format"
+    end
+    if !password.nil? && password.length < 8
+      self.errors[:base] << "Password too short, at least 8 characters"
+    end
+  end
 
   def create_profile!
+    unless osu_id == "deleteme.1"
     profile = User.find_by(osu_id: osu_id)
     # To make things easier we consider those who have appointment are teachers
     # (that mean student assistant will be considered as teacher, so we will allow teacher apply for teaching assistant)
@@ -39,6 +56,7 @@ class User < ApplicationRecord
       profile["display_name"] = "guest"
       profile["role"] = "guest"
       profile.save
+    end
     end
   end
 

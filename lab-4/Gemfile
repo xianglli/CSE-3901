@@ -22,12 +22,15 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 #
+
+# Application frameworks
 gem 'trestle'
-
 gem 'trestle-auth', '~> 0.5', github: 'xianglli/trestle-auth'
-
 gem 'trestle-search'
 
+
+# Model search
+gem 'pg_search'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

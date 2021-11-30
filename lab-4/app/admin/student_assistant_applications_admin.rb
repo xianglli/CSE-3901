@@ -1,30 +1,4 @@
 Trestle.resource(:student_assistant_applications) do
-  authorize do
-    index? do
-      true
-    end
-
-    show? do |app|
-      (current_user.osu_id == app.osu_id) || current_user.admin
-    end
-
-    update? do |app|
-      (current_user.osu_id == app.osu_id) || current_user.admin
-    end
-
-    edit? do |app|
-      (current_user.osu_id == app.osu_id) || current_user.admin
-    end
-
-    new? do
-      true
-    end
-
-    destroy? do
-      not (current_user.admin? && current_user.role=="teacher")
-    end
-  end
-
   menu do
     unless current_user.role == "teacher"
       item :student_assistant_applications, icon: "fa fa-star"
@@ -57,26 +31,45 @@ Trestle.resource(:student_assistant_applications) do
   # Customize the form fields shown on the new/edit views.
   #
   form do |student_assistant_application|
-    select :courseId, Course.all
-    unless current_user.admin
-      select :osu_id, [current_user.osu_id], disabled: true
-    end
-    text_area :content, row: 8
+    tab :application do
+      select :courseId, Course.all, label: "CSE course name"
+      unless current_user.admin
+        select :osu_id, [current_user.osu_id], label: "OSU dot id" 
+      end
+      text_area :content, row: 8
 
-    row do
-      if current_user.admin
-        col { select :status, %w[pending approved denied]}
-        if student_assistant_application.status == "approved" 
-          col { select :section, Section.where("\"courseId\" = '#{Course.find(student_assistant_application.courseId).courseId}'")}
+      row do
+        if current_user.admin
+          col { select :status, %w[pending approved denied]}
+          if student_assistant_application.status == "approved" 
+            col { select :section, Section.where("\"courseId\" = '#{Course.find(student_assistant_application.courseId).courseId}'")}
+          end
+        else
+          if student_assistant_application.status == "approved" 
+            col { select :section, Section.where("\"courseId\" = '#{Course.find(student_assistant_application.courseId).courseId}'"), disabled: true}
+          end
+          col { select :status, %w[pending approved denied], disabled: true}
         end
-      else
-        col { select :status, %w[pending approved denied], disabled: true}
+      end
+
+      if student_assistant_application.status == "approved" 
+        row do 
+          table SectionsAdmin.table , collection: Section.where("\"courseId\" = '#{Course.find(student_assistant_application.courseId).courseId}'")
+        end
       end
     end
 
-    if student_assistant_application.status == "approved" 
-      row do 
-        table SectionsAdmin.table , collection: Section.where("\"courseId\" = '#{Course.find(student_assistant_application.courseId).courseId}'")
+    if current_user.admin?
+      tab :student_avaliable_time do 
+        table StudentAvaliableTimesAdmin.table , collection: StudentAvaliableTime.where("\"osu_id\" = '#{student_assistant_application.osu_id}'")
+      end
+
+      tab :recommandation do
+
+      end
+
+      tab :review_of_student do
+        table ReviewsAdmin.table , collection: Review.where("\"osu_id\" = '#{student_assistant_application.osu_id}'")
       end
     end
   end

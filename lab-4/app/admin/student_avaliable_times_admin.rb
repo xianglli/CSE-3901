@@ -1,4 +1,18 @@
 Trestle.resource(:student_avaliable_times) do
+  authorize do
+    scope do |collection|
+      if current_user.admin?
+        collection.all
+      else
+        collection.where(osu_id: current_user.osu_id)
+      end
+    end
+    
+    access! do |collection|
+      true
+    end
+  end
+
   menu do
   end
 
@@ -20,7 +34,7 @@ Trestle.resource(:student_avaliable_times) do
   form do |student_avaliable_time|
 
     row do
-      col { select :osu_id, [current_user.osu_id] }
+      col { select :osu_id, [current_user.osu_id], label: "OSU dot id" }
     end
 
     row do

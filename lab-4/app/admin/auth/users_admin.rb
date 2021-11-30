@@ -48,7 +48,7 @@ Trestle.resource(:users, model: User, scope: Auth) do
     text_field :email
 
     row do
-      col(sm: 6) { text_field :osu_id, header: "OSU dot id" }
+      col(sm: 6) { text_field :osu_id, label: "OSU dot id" }
       col(sm: 6) { text_field :display_name }
     end
 

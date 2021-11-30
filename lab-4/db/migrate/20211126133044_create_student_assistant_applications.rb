@@ -5,7 +5,7 @@ class CreateStudentAssistantApplications < ActiveRecord::Migration[6.1]
       t.string :courseId
       t.text :content
       #status including pending, approved, denied.
-      t.string :status
+      t.string :status, default: "pending"
       t.timestamps
     end
   end

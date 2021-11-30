@@ -16,6 +16,7 @@ Trestle.resource(:account, model: User, scope: Auth, singular: true) do
 
       divider
       
+      if current_user.admin
       row do
         col(sm: 6) {label :"Dangerous Action! Please make sure you need to process"}
       end
@@ -23,6 +24,7 @@ Trestle.resource(:account, model: User, scope: Auth, singular: true) do
       row do
         link_to "Sync course list with OSU", "../../courses/sync" , { confirm: "Are you sure?", disable_with: "Processing..." }
       end
+    end
     end
 
     tab :avaliable_time do
@@ -33,6 +35,16 @@ Trestle.resource(:account, model: User, scope: Auth, singular: true) do
       divider
 
       table StudentAvaliableTimesAdmin.table , collection: StudentAvaliableTime.where("\"osu_id\" = '#{user.osu_id}'")
+    end
+
+    tab :grader_preference do
+      row do
+        col(sm: 6) {link_to "Click here to add a new preference course",new_student_qualified_courses_admin_path}
+      end
+
+      divider
+
+      table StudentQualifiedCoursesAdmin.table , collection: StudentQualifiedCourse.where("\"osu_id\" = '#{user.osu_id}'")
     end
   end
 

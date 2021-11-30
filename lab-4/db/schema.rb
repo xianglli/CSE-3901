@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_28_125522) do
+ActiveRecord::Schema.define(version: 2021_11_29_070111) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,7 +39,6 @@ ActiveRecord::Schema.define(version: 2021_11_28_125522) do
   end
 
   create_table "sections", force: :cascade do |t|
-    t.string "courseId"
     t.string "classNumber"
     t.string "section"
     t.string "component"
@@ -58,6 +57,7 @@ ActiveRecord::Schema.define(version: 2021_11_28_125522) do
     t.boolean "saturday"
     t.boolean "sunday"
     t.jsonb "instructors"
+    t.string "courseId"
     t.integer "ta_num", default: 4
   end
 
@@ -65,10 +65,10 @@ ActiveRecord::Schema.define(version: 2021_11_28_125522) do
     t.string "osu_id"
     t.string "courseId"
     t.text "content"
-    t.string "status"
+    t.string "status", default: "pending"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "section", default: "pending"
+    t.string "section"
   end
 
   create_table "student_avaliable_times", force: :cascade do |t|
@@ -76,6 +76,12 @@ ActiveRecord::Schema.define(version: 2021_11_28_125522) do
     t.string "day_of_week"
     t.time "start_time"
     t.time "end_time"
+  end
+
+  create_table "student_qualified_courses", force: :cascade do |t|
+    t.string "osu_id"
+    t.string "courseId"
+    t.integer "preference"
   end
 
   create_table "users", force: :cascade do |t|
