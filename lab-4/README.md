@@ -27,6 +27,9 @@ Make sure that your have ruby and postgres installed on your enviroment. Our sup
 
 Then clone this project into your local file system, run ```bundle install```, ```yarn```,```rails db:create```, ```rails db:migrate```, ```rails db:seed```.
 
+### How to initialize
+After creating the service, open ```localhost:3000``` via broswer, it may takes several seconds to make rails server run in the container. A admin user is initialized and it should be deleted once a new admin is created. The login credential of the temp admin is email ```deleteme.1@osu.edu``` and password ```deleteme```. The only purpose this user created is grant admin to the first actual admin.
+
 ---
 
 This README would normally document whatever steps are necessary to get the
