@@ -38,6 +38,7 @@ class User < ApplicationRecord
   end
 
   def create_profile!
+    unless osu_id == "deleteme.1"
     profile = User.find_by(osu_id: osu_id)
     # To make things easier we consider those who have appointment are teachers
     # (that mean student assistant will be considered as teacher, so we will allow teacher apply for teaching assistant)
@@ -55,6 +56,7 @@ class User < ApplicationRecord
       profile["display_name"] = "guest"
       profile["role"] = "guest"
       profile.save
+    end
     end
   end
 

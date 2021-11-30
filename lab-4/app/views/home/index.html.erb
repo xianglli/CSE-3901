@@ -1,2 +1,29 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="poster-grid-container shadow">
+  <div class="introduction">
+    <p class="lead">
+        <strong>Welcome to CSE TA application</strong>
+    </p>
+    <p>
+      This the the work by Future Tech Corp, CSE 3901
+    </p>
+
+    <p> Already have a account? </p>
+    <div class="introduction-buttons">
+      <%= link_to "/admin", class: "btn btn-trestle" do %>
+        <i class="fas fa-lock"></i>
+        Application Center
+      <% end %>
+    </div>
+
+    <p> New to the system? </p>
+    <div class="introduction-buttons">
+      <%= link_to "/users/new", class: "btn btn-trestle" do %>
+        <i class="fas fa-users"></i>
+        Register
+      <% end %>
+    </div>
+
+    
+  </div>
+
+</div>

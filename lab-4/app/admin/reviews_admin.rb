@@ -13,7 +13,6 @@ Trestle.resource(:reviews) do
     column :knowledgeable, header: "Knowledgeable"
     column :friendly, header: "Frendly"
     column :leadership, header: "Leadership"
-    actions
   end
 
   # Customize the form fields shown on the new/edit views.

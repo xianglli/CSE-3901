@@ -15,15 +15,6 @@ ActiveRecord::Schema.define(version: 2021_11_29_070111) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "applications", force: :cascade do |t|
-    t.string "osu_id"
-    t.string "courseId"
-    t.text "content"
-    t.string "status"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "courses", force: :cascade do |t|
     t.string "title"
     t.string "shortDescription"
@@ -48,7 +39,6 @@ ActiveRecord::Schema.define(version: 2021_11_29_070111) do
   end
 
   create_table "sections", force: :cascade do |t|
-    t.string "courseId"
     t.string "classNumber"
     t.string "section"
     t.string "component"
@@ -56,7 +46,6 @@ ActiveRecord::Schema.define(version: 2021_11_29_070111) do
     t.string "career"
     t.string "startDate"
     t.string "endDate"
-    t.string "class_num"
     t.string "buildingDescription"
     t.string "startTime"
     t.string "endTime"
@@ -68,6 +57,7 @@ ActiveRecord::Schema.define(version: 2021_11_29_070111) do
     t.boolean "saturday"
     t.boolean "sunday"
     t.jsonb "instructors"
+    t.string "courseId"
     t.integer "ta_num", default: 4
   end
 
@@ -75,10 +65,10 @@ ActiveRecord::Schema.define(version: 2021_11_29_070111) do
     t.string "osu_id"
     t.string "courseId"
     t.text "content"
-    t.string "status"
+    t.string "status", default: "pending"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "section", default: "pending"
+    t.string "section"
   end
 
   create_table "student_avaliable_times", force: :cascade do |t|
