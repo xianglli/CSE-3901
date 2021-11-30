@@ -9,6 +9,8 @@ class User < ApplicationRecord
   #validates :password, presence: true, confirmation: true, length: { minimum: 8 }
   #validates :password_confirmation, presence: true
 
+  validate :custom_validation
+
   after_create :create_profile!
 
   def initials
@@ -19,7 +21,21 @@ class User < ApplicationRecord
     avator.present?
   end
 
-  private
+  private def custom_validation
+    if email.empty?
+      self.errors[:base] << "Email can't be blank"
+    elsif (/[A-Za-z.0-9]+@osu.edu/ =~ email).nil?
+      self.errors[:base] << "Must use OSU email"
+    end
+    if osu_id.empty?
+      self.errors[:base] << "OSU dot id can't be blank"
+    elsif (/[A-Za-z]+\.[0-9]+/ =~ osu_id).nil?
+      self.errors[:base] << "OSU dot id in wrong format"
+    end
+    if !password.nil? && password.length < 8
+      self.errors[:base] << "Password too short, at least 8 characters"
+    end
+  end
 
   def create_profile!
     profile = User.find_by(osu_id: osu_id)
