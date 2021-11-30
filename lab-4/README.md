@@ -5,9 +5,9 @@ This project can be run on operating systems with ```docker``` and ```docker-com
 
 ## How to run
 
-## How to deploy
+### How to deploy
 
-## Deploy with Docker (Recommanded)
+#### Deploy with Docker (Recommanded)
 For windows and macOS users, you can use ```docker desktop``` to run this project. However, if you are using ```docker desktop``` with ```WSL2``` backend, you may face performance issue since we will share local dictory into docker.
 
 If you are using an linux machine (exclude WSL), Make sure that you have ```docker``` and ```docker-compose``` installed on your machine.
@@ -20,7 +20,7 @@ Once the containers run properly, you can run ```docker-compose run yarn```, aft
 
 The docker file seperate db and rails. The docker is for culculate only. DB storage is in docker volumn, you can change them in ```docker-compose.yml```.
 
-## Deploy on bare machine
+#### Deploy on bare machine
 If you are running this project on a machine without docker or you would like to install docker, you can run that on bare machine.
 
 Make sure that your have ruby and postgres installed on your enviroment. Our supported ruby verison is ```3.0.2```, that can be checked with command ```ruby -v```.
