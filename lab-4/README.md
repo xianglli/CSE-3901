@@ -23,7 +23,7 @@ Run ```docker-compose build``` to build rails enviroment.
 
 Run ```docker-compose up -d``` to run the whole lab-4 dockers.
 
-Once the containers run properly, you can run ```docker-compose run yarn```, after that, run ```docker-compose run rails db:create```,```docker-compose run rails db:migrate```,```docker-compose run rails db:seed```.
+Once the containers run properly, you can run ```docker-compose run web yarn```, after that, run ```docker-compose run web rails db:create```, ```docker-compose run web rails db:migrate```, ```docker-compose run web rails db:seed```.
 
 The docker file seperate db and rails. The docker is for culculate only. DB storage is in docker volumn, you can change them in ```docker-compose.yml```.
 
@@ -63,7 +63,7 @@ If you are consideing modify docker things, we have three files related to docke
 ### add a new model administrated by tresle
 Assuming you would like to create a new model ```Article```
 Run ```docker-compose run rails g model Article```
-Once the model created, you can run ```docker-compose run rails generate trestle:resource Article``` to add it into tresle.
+Once the model created, you can run ```docker-compose run web rails generate trestle:resource Article``` if you use docker, or ```rails generate trestle:resource Article``` on bare machine or docker cli to add it into tresle.
 
 ### after you update your code
 If you make changes to the Gemfile or the Compose file to try out some different configurations, you need to rebuild. Some changes require only ```docker-compose up --build```, but a full rebuild requires a re-run of ```docker-compose run web bundle install``` to sync changes in the ```Gemfile.lock``` to the host, followed by ```docker-compose up --build```.
