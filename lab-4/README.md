@@ -4,7 +4,7 @@
 This project can be run on operating systems with ```docker``` and ```docker-compose``` installed. But we did not fully test the project on Windows, so some of unexpected error maybe produced due to the file system privillage. If your system do not support ```docker``` (e.g, WSL 1 or OpenVZ VPS), you can use bare install instead. We do not fully test on bare machine install.
 
 ## Overview
-Currently CSE department is hiring teaching assistant in a very traditional mode, that is, using email for application and recommandations, this project is helping CSE department doing digital transformation on TA applications.
+Currently CSE department is hiring teaching assistant in a very traditional mode, that is, using email for application and recommandations, this project is helping CSE department doing digital transformation on TA applications. For the live demo, please visit http://3901.plizong.com:3000.
 
 This project is part of CSE 3901 course. We want to thank all our past and present community contributors and are really interested in all new potential contributions. For this project no contribution is too small, we encourage all types of contributions.
 
