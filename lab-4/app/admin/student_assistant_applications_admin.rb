@@ -65,7 +65,7 @@ Trestle.resource(:student_assistant_applications) do
       end
 
       tab :recommandation do
-
+        table TeacherRecommandationsAdmin.table, collection: TeacherRecommandation.where("student_osu_id = '#{student_assistant_application.osu_id}'")
       end
 
       tab :review_of_student do
