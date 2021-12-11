@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_11_014527) do
+ActiveRecord::Schema.define(version: 2021_12_11_015939) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,6 +61,8 @@ ActiveRecord::Schema.define(version: 2021_12_11_014527) do
     t.jsonb "instructors"
     t.string "courseId"
     t.integer "ta_num", default: 4
+    t.tsvector "tsv"
+    t.index ["tsv"], name: "index_sections_on_tsv", using: :gin
   end
 
   create_table "student_assistant_applications", force: :cascade do |t|

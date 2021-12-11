@@ -33,6 +33,10 @@ Trestle.resource(:sections) do
     end
   end
 
+  search do |query|
+    query ? collection.pg_search(query) : collection
+  end
+
   # Customize the table columns shown on the index view.
   #
   table do |section|
