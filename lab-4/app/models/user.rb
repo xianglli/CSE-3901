@@ -21,6 +21,7 @@ class User < ApplicationRecord
     avator.present?
   end
 
+  # This is because of we use the same model for edit user and sign in, so rails default is not capable.
   private def custom_validation
     if email.empty?
       self.errors[:base] << "Email can't be blank"

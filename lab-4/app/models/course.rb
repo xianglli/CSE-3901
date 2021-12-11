@@ -5,6 +5,10 @@ require 'digest'
 class Course < ApplicationRecord
   include ActiveModel::Serializers::JSON
 
+  include PgSearch::Model
+  pg_search_scope :pg_search, against: [:title, :catalogNumber], using: { tsearch: { prefix: true, tsvector_column: "tsv" } }
+
+
   def self.save_data_from_osu
     # process http request to json file
     # source = 'https://content.osu.edu/v2/classes/search?q=cse&campus=col&p=1&term=1222&subject=cse'
@@ -61,6 +65,7 @@ class Course < ApplicationRecord
 
   private
 
+  ## identify course information, course_total_info: json body of the api file, course part
   def self.grab_course_info (course_total_info)
     @course = Hash.new
     @course["title"] = course_total_info["title"]
@@ -75,6 +80,7 @@ class Course < ApplicationRecord
     @course
   end
 
+  # identify section information, section_total_info: json body of the api file, section part
   def self.grab_section_info (section_total_info)
     @section = Hash.new
     @section["classNumber"] = section_total_info["classNumber"]
@@ -85,6 +91,7 @@ class Course < ApplicationRecord
     @section["career"] = section_total_info["career"]
     @section["startDate"] = section_total_info["startDate"]
     @section["endDate"] = section_total_info["endDate"]
+    # below are from meeting info, so we grub the first meeting in our meeting info.
     @section["buildingDescription"] = section_total_info["meetings"][0]["buildingDescription"]
     @section["startTime"] = section_total_info["meetings"][0]["startTime"]
     @section["endTime"] = section_total_info["meetings"][0]["endTime"]
