@@ -1,0 +1,24 @@
+<div class="poster-grid-container shadow">
+  <div class="introduction">
+    <p class="lead">
+        <p>Course recommandation</p>
+    </p>
+
+    <form id = "selection", action="/courses/rec?id=<%=params[:id]%>&n=<%=params[:n]%>">
+      
+        <p> Number of Course recommandation </p>
+        <input type="text" id="n" name="n">
+
+        <div class="introduction-buttons">
+            <input type="submit" value="submit" class="btn btn-trestle">
+        </div>
+    </form>  	
+
+    <div class="introduction-buttons">
+      <%= link_to "../../admin", class: "btn btn-trestle" do %>
+        <i class="fas fa-users"></i>
+        Back to admin home
+      <% end %>
+    </div>
+  </div>
+</div>
