@@ -7,13 +7,20 @@ services:
     environment:
       POSTGRES_PASSWORD: password
   web:
-    build: .
+    build: ./webapp
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
-      - .:/myapp
+      - ./webapp:/myapp
     ports:
       - "3000:3000"
     depends_on:
       - db
+  rec:
+    build: ./rec
+    volumes:
+      - ./rec:/rec
+    ports:
+      - "5000:5000"
+
 volumes:
     dbstorage:

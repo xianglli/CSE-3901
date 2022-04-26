@@ -1,2 +1,0 @@
-class TeacherRecommandation < ApplicationRecord
-end
