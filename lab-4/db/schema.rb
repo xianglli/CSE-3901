@@ -10,10 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_29_070111) do
+ActiveRecord::Schema.define(version: 2022_04_23_175727) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "courserecs", force: :cascade do |t|
+    t.string "osu_id"
+    t.string "courseId"
+  end
 
   create_table "courses", force: :cascade do |t|
     t.string "title"
@@ -25,6 +30,8 @@ ActiveRecord::Schema.define(version: 2021_11_29_070111) do
     t.string "campus"
     t.jsonb "courseAttributes"
     t.string "courseId"
+    t.tsvector "tsv"
+    t.index ["tsv"], name: "index_courses_on_tsv", using: :gin
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -59,6 +66,8 @@ ActiveRecord::Schema.define(version: 2021_11_29_070111) do
     t.jsonb "instructors"
     t.string "courseId"
     t.integer "ta_num", default: 4
+    t.tsvector "tsv"
+    t.index ["tsv"], name: "index_sections_on_tsv", using: :gin
   end
 
   create_table "student_assistant_applications", force: :cascade do |t|
@@ -82,6 +91,15 @@ ActiveRecord::Schema.define(version: 2021_11_29_070111) do
     t.string "osu_id"
     t.string "courseId"
     t.integer "preference"
+  end
+
+  create_table "teacher_recommandations", force: :cascade do |t|
+    t.string "teacher_osu_id"
+    t.string "student_osu_id"
+    t.string "courseId"
+    t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|

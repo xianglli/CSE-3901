@@ -33,6 +33,10 @@ Trestle.resource(:sections) do
     end
   end
 
+  search do |query|
+    query ? collection.pg_search(query) : collection
+  end
+
   # Customize the table columns shown on the index view.
   #
   table do |section|
@@ -87,10 +91,10 @@ Trestle.resource(:sections) do
       row do
         col(sm: 6) {link_to "Click here to start a new evaluation",new_reviews_admin_path}
       end
-      row do
-        col(sm: 6) {label "Your existing application of this course"}
-      end
-      table ReviewsAdmin.table, collection: Review.joins("INNER JOIN student_assistant_applications ON student_assistant_applications.osu_id = reviews.osu_id AND student_assistant_applications.section = '#{section.id}'")
+      # row do
+      #    col(sm: 6) {label "Your existing application of this course"}
+      #  end
+      # table ReviewsAdmin.table, collection: Review.joins("INNER JOIN student_assistant_applications ON student_assistant_applications.osu_id = reviews.osu_id AND student_assistant_applications.section = '#{section.id}'")
     end
   end
 

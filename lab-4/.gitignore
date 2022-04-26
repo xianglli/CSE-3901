@@ -35,6 +35,7 @@
 yarn-debug.log*
 .yarn-integrity
 .idea/
+.DS_Store
 
 /public/packs
 /public/packs-test

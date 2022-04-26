@@ -5,17 +5,28 @@ require 'digest'
 class Course < ApplicationRecord
   include ActiveModel::Serializers::JSON
 
+  include PgSearch::Model
+  pg_search_scope :pg_search, against: [:title, :catalogNumber], using: { tsearch: { prefix: true, tsvector_column: "tsv" } }
+
+
   def self.save_data_from_osu
     # process http request to json file
     # source = 'https://content.osu.edu/v2/classes/search?q=cse&campus=col&p=1&term=1222&subject=cse'
 
-    # below is a temp address for testing
-    source = 'http://3901.plizong.com/osu_course.json'
+    source = 'https://content.osu.edu/v2/classes/search?q=12&p=1&term=1222&campus=col&academic-career=ugrd&instruction-mode=dl'
 
     resp = Net::HTTP.get_response(URI.parse(source))
     result = resp.body
     result = JSON.parse(result)
     courses = result['data']['courses']
+    if courses.nil?
+      # below is a mirror address for osu courses
+      source = 'http://3901.plizong.com/osu_course.json'
+      resp = Net::HTTP.get_response(URI.parse(source))
+      result = resp.body
+      result = JSON.parse(result)
+      courses = result['data']['courses']
+    end
 
     # TODO: For temp use in this limited time. Will fix later
     Course.delete_all
@@ -52,8 +63,24 @@ class Course < ApplicationRecord
 
   end
 
+  def self.getrec(id,n)
+    # process http request to json file
+    source = 'http://172.17.0.1:5000/api?id='+id.to_s+"&n="+n.to_s
+    #Courserec.delete_by(Courserec.osu_id == id)
+    resp = Net::HTTP.get_response(URI.parse(source))
+    result = resp.body
+    result = JSON.parse(result)
+    courserec = result['courses']
+    courserec.each{ |i|
+      course_rec = Courserec.new
+      course_rec["osu_id"] = id
+      course_rec["courseId"]= i
+    }
+  end
+
   private
 
+  ## identify course information, course_total_info: json body of the api file, course part
   def self.grab_course_info (course_total_info)
     @course = Hash.new
     @course["title"] = course_total_info["title"]
@@ -68,6 +95,7 @@ class Course < ApplicationRecord
     @course
   end
 
+  # identify section information, section_total_info: json body of the api file, section part
   def self.grab_section_info (section_total_info)
     @section = Hash.new
     @section["classNumber"] = section_total_info["classNumber"]
@@ -78,6 +106,7 @@ class Course < ApplicationRecord
     @section["career"] = section_total_info["career"]
     @section["startDate"] = section_total_info["startDate"]
     @section["endDate"] = section_total_info["endDate"]
+    # below are from meeting info, so we grub the first meeting in our meeting info.
     @section["buildingDescription"] = section_total_info["meetings"][0]["buildingDescription"]
     @section["startTime"] = section_total_info["meetings"][0]["startTime"]
     @section["endTime"] = section_total_info["meetings"][0]["endTime"]

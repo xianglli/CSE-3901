@@ -21,7 +21,7 @@ Trestle.resource(:student_qualified_courses) do
   #
   table do
     column :osu_id, header: "OSU dot id"
-    column :courseId, header: "CSE course" do |course|
+    column :courseId, header: "Course" do |course|
       "#{Course.find(course.courseId).shortDescription.to_s}"
     end
     column :preference, align: :center do |course|
@@ -38,7 +38,7 @@ Trestle.resource(:student_qualified_courses) do
     end
 
     row do
-      col {select :courseId, Course.all, label: "CSE course name"}
+      col {select :courseId, Course.all, label: "Course name"}
     end
   
     row do

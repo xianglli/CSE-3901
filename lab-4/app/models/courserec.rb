@@ -1,0 +1,2 @@
+class Courserec < ApplicationRecord
+end

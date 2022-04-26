@@ -1,0 +1,2 @@
+class CourserecController < ApplicationController
+end

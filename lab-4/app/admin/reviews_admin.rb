@@ -1,12 +1,13 @@
 Trestle.resource(:reviews) do
   menu do
+    item :courses, icon: "fa fa-star"
   end
 
   # Customize the table columns shown on the index view.
   #
   table do
     column :osu_id, header: "OSU dot id"
-    column :classNumber, header: "CSE course" do |course|
+    column :classNumber, header: "Course" do |course|
       "#{Course.find(course.classNumber).shortDescription.to_s}"
     end
     column :reliable, header: "Reliale"
@@ -19,7 +20,7 @@ Trestle.resource(:reviews) do
   #
   form do |review|
     row do
-      col(sm: 6) {select :classNumber, Course.all, label: "CSE course name"}
+      col(sm: 6) {select :classNumber, Course.all, label: "Course name"}
       col(sm: 6) {select :osu_id, User.joins("INNER JOIN student_assistant_applications ON student_assistant_applications.osu_id = users.osu_id AND student_assistant_applications.\"courseId\" = '#{review.classNumber}'"), label: "OSU dot id" }
     end
   

@@ -15,6 +15,12 @@ Trestle.resource(:account, model: User, scope: Auth, singular: true) do
       end
 
       divider
+
+      row do
+        link_to "Get recommanded Courses", "../../courses/rec" , { confirm: "Are you sure?", disable_with: "Processing..." }
+      end
+
+      divider
       
       if current_user.admin
       row do
@@ -23,6 +29,10 @@ Trestle.resource(:account, model: User, scope: Auth, singular: true) do
 
       row do
         link_to "Sync course list with OSU", "../../courses/sync" , { confirm: "Are you sure?", disable_with: "Processing..." }
+      end
+
+      row do
+        link_to "Recommander System", "http://localhost:5000"
       end
     end
     end

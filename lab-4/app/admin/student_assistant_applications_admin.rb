@@ -17,7 +17,7 @@ Trestle.resource(:student_assistant_applications) do
   #
   table do
     column :osu_id, header: "OSU dot id"
-    column :courseId, header: "CSE course" do |course|
+    column :courseId, header: "Course" do |course|
       "#{Course.find(course.courseId).shortDescription.to_s}"
     end
     column :created_at
@@ -32,7 +32,7 @@ Trestle.resource(:student_assistant_applications) do
   #
   form do |student_assistant_application|
     tab :application do
-      select :courseId, Course.all, label: "CSE course name"
+      select :courseId, Course.all, label: "Course name"
       unless current_user.admin
         select :osu_id, [current_user.osu_id], label: "OSU dot id" 
       end
@@ -65,7 +65,7 @@ Trestle.resource(:student_assistant_applications) do
       end
 
       tab :recommandation do
-
+        table TeacherRecommandationsAdmin.table, collection: TeacherRecommandation.where("student_osu_id = '#{student_assistant_application.osu_id}'")
       end
 
       tab :review_of_student do
