@@ -17,6 +17,7 @@ services:
       - db
   rec:
     build: ./rec
+    command: python3 server.py
     volumes:
       - ./rec:/rec
     ports:

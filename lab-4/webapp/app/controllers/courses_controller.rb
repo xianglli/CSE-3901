@@ -4,6 +4,6 @@ class CoursesController < ApplicationController
   end
 
   def rec
-    @courserec = Course.getrec(rand(1..10000),params[:n])
+    @courserec = Course.getrec(1,5)
   end
 end

@@ -9717,3 +9717,1517 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.0ms | Allocations: 8475)
 
 
+Started GET "/" for 172.18.0.1 at 2022-04-26 03:54:04 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 78)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 7741)
+Completed 200 OK in 29ms (Views: 28.0ms | Allocations: 8141)
+
+
+Started GET "/" for 172.18.0.1 at 2022-04-26 03:54:33 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 78)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 7741)
+Completed 200 OK in 23ms (Views: 21.8ms | Allocations: 8142)
+
+
+Started GET "/api" for 172.18.0.1 at 2022-04-26 03:55:37 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/api"):
+  
+Started GET "/" for 172.18.0.1 at 2022-04-27 20:51:04 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 472)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 130.9ms | Allocations: 45401)
+Completed 200 OK in 146ms (Views: 137.2ms | ActiveRecord: 0.0ms | Allocations: 49462)
+
+
+Started GET "/admin" for 172.18.0.1 at 2022-04-27 20:54:27 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Trestle::DashboardController#index as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Filter chain halted as :require_authenticated_user rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 763)
+
+
+Started GET "/admin/login" for 172.18.0.1 at 2022-04-27 20:54:27 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Trestle::Auth::SessionsController#new as HTML
+  Rendering layout layouts/trestle/auth.html.erb
+  Rendering /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/sessions/new.html.erb within layouts/trestle/auth
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/sessions/_form.html.erb (Duration: 69.1ms | Allocations: 18606)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/sessions/new.html.erb within layouts/trestle/auth (Duration: 72.4ms | Allocations: 19675)
+  Rendered layout layouts/trestle/auth.html.erb (Duration: 90.3ms | Allocations: 37033)
+Completed 200 OK in 98ms (Views: 91.9ms | ActiveRecord: 0.0ms | Allocations: 38565)
+
+
+Started GET "/admin" for 172.18.0.1 at 2022-04-27 20:54:27 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Trestle::DashboardController#index as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Filter chain halted as :require_authenticated_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 364)
+
+
+Started GET "/admin/login" for 172.18.0.1 at 2022-04-27 20:54:28 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Trestle::Auth::SessionsController#new as HTML
+  Rendering layout layouts/trestle/auth.html.erb
+  Rendering /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/sessions/new.html.erb within layouts/trestle/auth
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/sessions/_form.html.erb (Duration: 1.2ms | Allocations: 426)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/sessions/new.html.erb within layouts/trestle/auth (Duration: 2.7ms | Allocations: 727)
+  Rendered layout layouts/trestle/auth.html.erb (Duration: 18.3ms | Allocations: 16526)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms | Allocations: 17034)
+
+
+Started POST "/admin/login" for 172.18.0.1 at 2022-04-27 20:54:30 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Trestle::Auth::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"deleteme.1@osu.edu", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "deleteme.1@osu.edu"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/admin/
+Completed 302 Found in 248ms (ActiveRecord: 26.4ms | Allocations: 10098)
+
+
+Started GET "/admin/" for 172.18.0.1 at 2022-04-27 20:54:31 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Trestle::DashboardController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/admin/reviews
+Completed 302 Found in 29ms (ActiveRecord: 1.4ms | Allocations: 25798)
+
+
+Started GET "/admin/reviews" for 172.18.0.1 at 2022-04-27 20:54:31 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ReviewsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 4.6ms | Allocations: 2086)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 1.1ms | Allocations: 251)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 2.2ms | Allocations: 148)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 1.3ms | Allocations: 285)
+  [1m[36mReview Load (2.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 6.1ms | Allocations: 3384)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 6.9ms | Allocations: 1211)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 38.5ms | Allocations: 15920)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 46.7ms | Allocations: 19094)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 1.3ms | Allocations: 327)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 6.8ms | Allocations: 3234)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 14.1ms | Allocations: 1312)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 15.5ms | Allocations: 1868)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 1.1ms | Allocations: 232)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 101.1ms | Allocations: 49780)
+Completed 200 OK in 119ms (Views: 103.4ms | ActiveRecord: 2.8ms | Allocations: 54440)
+
+
+Started GET "/admin/student_assistant_applications" for 172.18.0.1 at 2022-04-27 20:54:33 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentAssistantApplicationsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 2.1ms | Allocations: 2142)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 54)
+  [1m[36mStudentAssistantApplication Load (11.6ms)[0m  [1m[34mSELECT "student_assistant_applications".* FROM "student_assistant_applications" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 17.6ms | Allocations: 3986)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 0.8ms | Allocations: 446)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 25.2ms | Allocations: 9209)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 27.2ms | Allocations: 10673)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 1.9ms | Allocations: 2035)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.6ms | Allocations: 363)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 0.8ms | Allocations: 492)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 46.5ms | Allocations: 35885)
+Completed 200 OK in 58ms (Views: 35.9ms | ActiveRecord: 12.5ms | Allocations: 39450)
+
+
+Started GET "/admin/reviews" for 172.18.0.1 at 2022-04-27 20:54:34 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ReviewsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 1.8ms | Allocations: 1531)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.0ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 49)
+  [1m[36mReview Load (1.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 3.9ms | Allocations: 2780)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 0.8ms | Allocations: 357)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 8.4ms | Allocations: 5586)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 9.5ms | Allocations: 6093)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 2.4ms | Allocations: 1974)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.6ms | Allocations: 341)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 0.9ms | Allocations: 470)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 36.9ms | Allocations: 31095)
+Completed 200 OK in 43ms (Views: 36.3ms | ActiveRecord: 2.3ms | Allocations: 33044)
+
+
+Started GET "/admin/student_assistant_applications" for 172.18.0.1 at 2022-04-27 20:54:36 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentAssistantApplicationsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 2.3ms | Allocations: 1998)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.2ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 49)
+  [1m[36mStudentAssistantApplication Load (1.4ms)[0m  [1m[34mSELECT "student_assistant_applications".* FROM "student_assistant_applications" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 5.3ms | Allocations: 3641)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 0.6ms | Allocations: 388)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 11.1ms | Allocations: 6945)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 12.1ms | Allocations: 7595)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 2.1ms | Allocations: 1979)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.5ms | Allocations: 341)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 0.7ms | Allocations: 470)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 33.4ms | Allocations: 32588)
+Completed 200 OK in 39ms (Views: 32.5ms | ActiveRecord: 2.5ms | Allocations: 34460)
+
+
+Started GET "/admin/reviews" for 172.18.0.1 at 2022-04-27 20:54:37 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ReviewsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 2.2ms | Allocations: 1533)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.2ms | Allocations: 49)
+  [1m[36mReview Load (1.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 3.7ms | Allocations: 2779)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 0.6ms | Allocations: 357)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 8.7ms | Allocations: 5587)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 9.8ms | Allocations: 6094)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 2.3ms | Allocations: 1974)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.7ms | Allocations: 341)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 1.0ms | Allocations: 470)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 40.1ms | Allocations: 31098)
+Completed 200 OK in 45ms (Views: 39.7ms | ActiveRecord: 2.1ms | Allocations: 32942)
+
+
+Started GET "/admin/student_assistant_applications" for 172.18.0.1 at 2022-04-27 20:54:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentAssistantApplicationsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 3.8ms | Allocations: 1998)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.3ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.3ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 49)
+  [1m[36mStudentAssistantApplication Load (1.0ms)[0m  [1m[34mSELECT "student_assistant_applications".* FROM "student_assistant_applications" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 4.4ms | Allocations: 3641)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 0.8ms | Allocations: 388)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 13.3ms | Allocations: 6945)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 14.1ms | Allocations: 7595)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 3.3ms | Allocations: 1978)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.5ms | Allocations: 341)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 0.9ms | Allocations: 470)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 40.5ms | Allocations: 32585)
+Completed 200 OK in 45ms (Views: 40.0ms | ActiveRecord: 2.0ms | Allocations: 34440)
+
+
+Started GET "/admin/reviews" for 172.18.0.1 at 2022-04-27 20:54:42 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ReviewsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 1.7ms | Allocations: 1531)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.4ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.2ms | Allocations: 49)
+  [1m[36mReview Load (3.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 8.3ms | Allocations: 2779)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 1.4ms | Allocations: 357)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 15.5ms | Allocations: 5585)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 16.7ms | Allocations: 6092)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 3.4ms | Allocations: 1972)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.7ms | Allocations: 341)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 1.0ms | Allocations: 470)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 101.5ms | Allocations: 31097)
+Completed 200 OK in 109ms (Views: 99.4ms | ActiveRecord: 5.0ms | Allocations: 32922)
+
+
+Started GET "/admin/courses" for 172.18.0.1 at 2022-04-27 20:54:43 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CoursesAdmin::AdminController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 3.3ms | Allocations: 1679)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.0ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered /usr/local/bundle/gems/trestle-search-0.4.3/app/views/trestle/search/_search.html.erb (Duration: 2.1ms | Allocations: 743)
+  [1m[36mCourse Load (7.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 54.0ms | Allocations: 33378)
+  [1m[35m (9.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "courses"[0m
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 30.7ms | Allocations: 7404)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 105.0ms | Allocations: 46247)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 107.5ms | Allocations: 47482)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.4ms | Allocations: 62)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 5.8ms | Allocations: 2029)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 1.0ms | Allocations: 366)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 1.3ms | Allocations: 495)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 142.3ms | Allocations: 72723)
+Completed 200 OK in 149ms (Views: 122.7ms | ActiveRecord: 21.8ms | Allocations: 75835)
+
+
+Started GET "/admin/reviews" for 172.18.0.1 at 2022-04-27 20:54:44 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ReviewsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 2.9ms | Allocations: 1546)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.2ms | Allocations: 66)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.2ms | Allocations: 49)
+  [1m[36mReview Load (1.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 5.2ms | Allocations: 2831)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 0.6ms | Allocations: 358)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 12.8ms | Allocations: 5661)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 13.9ms | Allocations: 6181)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 2.8ms | Allocations: 1972)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.8ms | Allocations: 341)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 1.7ms | Allocations: 470)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 40.0ms | Allocations: 31167)
+Completed 200 OK in 48ms (Views: 39.4ms | ActiveRecord: 3.2ms | Allocations: 33199)
+
+
+Started GET "/admin/auth/account" for 172.18.0.1 at 2022-04-27 20:54:46 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Auth::AccountAdmin::AdminController#show as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/show.html.erb within layouts/trestle/admin
+  [1m[36mStudentAvaliableTime Load (2.5ms)[0m  [1m[34mSELECT "student_avaliable_times".* FROM "student_avaliable_times" WHERE ("osu_id" = 'deleteme.1')[0m
+  ↳ app/admin/auth/account_admin.rb:47:in `block (3 levels) in <main>'
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 12.6ms | Allocations: 4121)
+  [1m[36mStudentQualifiedCourse Load (2.2ms)[0m  [1m[34mSELECT "student_qualified_courses".* FROM "student_qualified_courses" WHERE ("osu_id" = 'deleteme.1')[0m
+  ↳ app/admin/auth/account_admin.rb:57:in `block (3 levels) in <main>'
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 5.0ms | Allocations: 2193)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 2.8ms | Allocations: 1539)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.5ms | Allocations: 391)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/_form.html.erb within trestle/application/_layout (Duration: 32.3ms | Allocations: 14521)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/show.html.erb within layouts/trestle/admin (Duration: 36.8ms | Allocations: 17409)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 2.3ms | Allocations: 2034)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.7ms | Allocations: 367)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 0.9ms | Allocations: 498)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 66.0ms | Allocations: 42691)
+Completed 200 OK in 72ms (Views: 60.0ms | ActiveRecord: 7.9ms | Allocations: 45842)
+
+
+Started GET "/admin/auth/account" for 172.18.0.1 at 2022-04-27 20:54:50 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Auth::AccountAdmin::AdminController#show as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/show.html.erb within layouts/trestle/admin
+  [1m[36mStudentAvaliableTime Load (1.3ms)[0m  [1m[34mSELECT "student_avaliable_times".* FROM "student_avaliable_times" WHERE ("osu_id" = 'deleteme.1')[0m
+  ↳ app/admin/auth/account_admin.rb:47:in `block (3 levels) in <main>'
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 3.7ms | Allocations: 2840)
+  [1m[36mStudentQualifiedCourse Load (1.3ms)[0m  [1m[34mSELECT "student_qualified_courses".* FROM "student_qualified_courses" WHERE ("osu_id" = 'deleteme.1')[0m
+  ↳ app/admin/auth/account_admin.rb:57:in `block (3 levels) in <main>'
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 2.7ms | Allocations: 1675)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 1.8ms | Allocations: 1418)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.4ms | Allocations: 361)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/_form.html.erb within trestle/application/_layout (Duration: 14.7ms | Allocations: 9278)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/show.html.erb within layouts/trestle/admin (Duration: 16.5ms | Allocations: 10128)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 2.9ms | Allocations: 1975)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.9ms | Allocations: 342)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 1.3ms | Allocations: 472)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 40.6ms | Allocations: 35119)
+Completed 200 OK in 46ms (Views: 38.7ms | ActiveRecord: 3.2ms | Allocations: 36978)
+
+
+Started GET "/courses/rec" for 172.18.0.1 at 2022-04-27 20:54:51 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CoursesController#rec as HTML
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 1315)
+
+
+  
+JSON::ParserError (809: unexpected token at '<!DOCTYPE html>
+<html>
+  <head>
+    <title>ValueError: invalid literal for int() with base 10: ''
+ // Werkzeug Debugger</title>
+    <link rel="stylesheet" href="?__debugger__=yes&amp;cmd=resource&amp;f=style.css">
+    <link rel="shortcut icon"
+        href="?__debugger__=yes&amp;cmd=resource&amp;f=console.png">
+    <script src="?__debugger__=yes&amp;cmd=resource&amp;f=debugger.js"></script>
+    <script>
+      var CONSOLE_MODE = false,
+          EVALEX = true,
+          EVALEX_TRUSTED = false,
+          SECRET = "QyuRpXzWVmy9szxHnaJg";
+    </script>
+  </head>
+  <body style="background-color: #fff">
+    <div class="debugger">
+<h1>ValueError</h1>
+<div class="detail">
+  <p class="errormsg">ValueError: invalid literal for int() with base 10: &#x27;&#x27;
+</p>
+</div>
+<h2 class="traceback">Traceback <em>(most recent call last)</em></h2>
+<div class="traceback">
+  <h3></h3>
+  <ul><li><div class="frame" id="frame-140368979888552">
+  <h4>File <cite class="filename">"/usr/local/lib/python3.7/site-packages/flask/app.py"</cite>,
+      line <em class="line">2095</em>,
+      in <code class="function">__call__</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">    </span>def __call__(self, environ: dict, start_response: t.Callable) -&gt; t.Any:</pre>
+<pre class="line before"><span class="ws">        </span>&quot;&quot;&quot;The WSGI server calls the Flask application object as the</pre>
+<pre class="line before"><span class="ws">        </span>WSGI application. This calls :meth:`wsgi_app`, which can be</pre>
+<pre class="line before"><span class="ws">        </span>wrapped to apply middleware.</pre>
+<pre class="line before"><span class="ws">        </span>&quot;&quot;&quot;</pre>
+<pre class="line current"><span class="ws">        </span>return self.wsgi_app(environ, start_response)</pre></div>
+</div>
+
+<li><div class="frame" id="frame-140368970897952">
+  <h4>File <cite class="filename">"/usr/local/lib/python3.7/site-packages/flask/app.py"</cite>,
+      line <em class="line">2080</em>,
+      in <code class="function">wsgi_app</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>try:</pre>
+<pre class="line before"><span class="ws">                </span>ctx.push()</pre>
+<pre class="line before"><span class="ws">                </span>response = self.full_dispatch_request()</pre>
+<pre class="line before"><span class="ws">            </span>except Exception as e:</pre>
+<pre class="line before"><span class="ws">                </span>error = e</pre>
+<pre class="line current"><span class="ws">                </span>response = self.handle_exception(e)</pre>
+<pre class="line after"><span class="ws">            </span>except:  # noqa: B001</pre>
+<pre class="line after"><span class="ws">                </span>error = sys.exc_info()[1]</pre>
+<pre class="line after"><span class="ws">                </span>raise</pre>
+<pre class="line after"><span class="ws">            </span>return response(environ, start_response)</pre>
+<pre class="line after"><span class="ws">        </span>finally:</pre></div>
+</div>
+
+<li><div class="frame" id="frame-140368970898072">
+  <h4>File <cite class="filename">"/usr/local/lib/python3.7/site-packages/flask/app.py"</cite>,
+      line <em class="line">2077</em>,
+      in <code class="function">wsgi_app</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">        </span>ctx = self.request_context(environ)</pre>
+<pre class="line before"><span class="ws">        </span>error: t.Optional[BaseException] = None</pre>
+<pre class="line before"><span class="ws">        </span>try:</pre>
+<pre class="line before"><span class="ws">            </span>try:</pre>
+<pre class="line before"><span class="ws">                </span>ctx.push()</pre>
+<pre class="line current"><span class="ws">                </span>response = self.full_dispatch_request()</pre>
+<pre class="line after"><span class="ws">            </span>except Exception as e:</pre>
+<pre class="line after"><span class="ws">                </span>error = e</pre>
+<pre class="line after"><span class="ws">                </span>response = self.handle_exception(e)</pre>
+<pre class="line after"><span class="ws">            </span>except:  # noqa: B001</pre>
+<pre class="line after"><span class="ws">                </span>error = sys.exc_info()[1]</pre></div>
+</div>
+
+<li><div class="frame" id="frame-140368970898192">
+  <h4>File <cite class="filename">"/usr/local/lib/python3.7/site-packages/flask/app.py"</cite>,
+      line <em class="line">1525</em>,
+      in <code class="function">full_dispatch_request</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>request_started.send(self)</pre>
+<pre class="line before"><span class="ws">            </span>rv = self.preprocess_request()</pre>
+<pre class="line before"><span class="ws">            </span>if rv is None:</pre>
+<pre class="line before"><span class="ws">                </span>rv = self.dispatch_request()</pre>
+<pre class="line before"><span class="ws">        </span>except Exception as e:</pre>
+<pre class="line current"><span class="ws">            </span>rv = self.handle_user_exception(e)</pre>
+<pre class="line after"><span class="ws">        </span>return self.finalize_request(rv)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def finalize_request(</pre>
+<pre class="line after"><span class="ws">        </span>self,</pre>
+<pre class="line after"><span class="ws">        </span>rv: t.Union[ResponseReturnValue, HTTPException],</pre></div>
+</div>
+
+<li><div class="frame" id="frame-140368970898312">
+  <h4>File <cite class="filename">"/usr/local/lib/python3.7/site-packages/flask/app.py"</cite>,
+      line <em class="line">1523</em>,
+      in <code class="function">full_dispatch_request</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">        </span>self.try_trigger_before_first_request_functions()</pre>
+<pre class="line before"><span class="ws">        </span>try:</pre>
+<pre class="line before"><span class="ws">            </span>request_started.send(self)</pre>
+<pre class="line before"><span class="ws">            </span>rv = self.preprocess_request()</pre>
+<pre class="line before"><span class="ws">            </span>if rv is None:</pre>
+<pre class="line current"><span class="ws">                </span>rv = self.dispatch_request()</pre>
+<pre class="line after"><span class="ws">        </span>except Exception as e:</pre>
+<pre class="line after"><span class="ws">            </span>rv = self.handle_user_exception(e)</pre>
+<pre class="line after"><span class="ws">        </span>return self.finalize_request(rv)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def finalize_request(</pre></div>
+</div>
+
+<li><div class="frame" id="frame-140368970898432">
+  <h4>File <cite class="filename">"/usr/local/lib/python3.7/site-packages/flask/app.py"</cite>,
+      line <em class="line">1509</em>,
+      in <code class="function">dispatch_request</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>getattr(rule, &quot;provide_automatic_options&quot;, False)</pre>
+<pre class="line before"><span class="ws">            </span>and req.method == &quot;OPTIONS&quot;</pre>
+<pre class="line before"><span class="ws">        </span>):</pre>
+<pre class="line before"><span class="ws">            </span>return self.make_default_options_response()</pre>
+<pre class="line before"><span class="ws">        </span># otherwise dispatch to the handler for that endpoint</pre>
+<pre class="line current"><span class="ws">        </span>return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def full_dispatch_request(self) -&gt; Response:</pre>
+<pre class="line after"><span class="ws">        </span>&quot;&quot;&quot;Dispatches the request and on top of that performs request</pre>
+<pre class="line after"><span class="ws">        </span>pre and postprocessing as well as HTTP exception catching and</pre>
+<pre class="line after"><span class="ws">        </span>error handling.</pre></div>
+</div>
+
+<li><div class="frame" id="frame-140368970898552">
+  <h4>File <cite class="filename">"/rec/server.py"</cite>,
+      line <em class="line">53</em>,
+      in <code class="function">api_select</code></h4>
+  <div class="source "><pre class="line before"><span class="ws">  </span>if &#x27;id&#x27; in request.args:</pre>
+<pre class="line before"><span class="ws">        </span>user = int(request.args[&#x27;id&#x27;])</pre>
+<pre class="line before"><span class="ws">  </span>else:</pre>
+<pre class="line before"><span class="ws">      </span>return &quot;Error: No id field provided. Please specify an id.&quot;</pre>
+<pre class="line before"><span class="ws">  </span>if &#x27;n&#x27; in request.args:</pre>
+<pre class="line current"><span class="ws">        </span>N = int(request.args[&#x27;n&#x27;])</pre>
+<pre class="line after"><span class="ws">  </span>else:</pre>
+<pre class="line after"><span class="ws">      </span>return &quot;Error: No n field provided. Please specify an n.&quot;</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">  </span>#Getting the userID from the user Index</pre>
+<pre class="line after"><span class="ws">  </span>users = data[&#x27;userID&#x27;].unique()</pre></div>
+</div>
+</ul>
+  <blockquote>ValueError: invalid literal for int() with base 10: &#x27;&#x27;
+</blockquote>
+</div>
+
+<div class="plain">
+    <p>
+      This is the Copy/Paste friendly version of the traceback.
+    </p>
+    <textarea cols="50" rows="10" name="code" readonly>Traceback (most recent call last):
+  File &quot;/usr/local/lib/python3.7/site-packages/flask/app.py&quot;, line 2095, in __call__
+    return self.wsgi_app(environ, start_response)
+  File &quot;/usr/local/lib/python3.7/site-packages/flask/app.py&quot;, line 2080, in wsgi_app
+    response = self.handle_exception(e)
+  File &quot;/usr/local/lib/python3.7/site-packages/flask/app.py&quot;, line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File &quot;/usr/local/lib/python3.7/site-packages/flask/app.py&quot;, line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File &quot;/usr/local/lib/python3.7/site-packages/flask/app.py&quot;, line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File &quot;/usr/local/lib/python3.7/site-packages/flask/app.py&quot;, line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File &quot;/rec/server.py&quot;, line 53, in api_select
+    N = int(request.args[&#x27;n&#x27;])
+ValueError: invalid literal for int() with base 10: &#x27;&#x27;
+</textarea>
+</div>
+<div class="explanation">
+  The debugger caught an exception in your WSGI application.  You can now
+  look at the traceback which led to the error.  <span class="nojavascript">
+  If you enable JavaScript you can also use additional features such as code
+  execution (if the evalex feature is enabled), automatic pasting of the
+  exceptions and much more.</span>
+</div>
+      <div class="footer">
+        Brought to you by <strong class="arthur">DON'T PANIC</strong>, your
+        friendly Werkzeug powered traceback interpreter.
+      </div>
+    </div>
+
+    <div class="pin-prompt">
+      <div class="inner">
+        <h3>Console Locked</h3>
+        <p>
+          The console is locked and needs to be unlocked by entering the PIN.
+          You can find the PIN printed out on the standard output of your
+          shell that runs the server.
+        <form>
+          <p>PIN:
+            <input type=text name=pin size=14>
+            <input type=submit name=btn value="Confirm Pin">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!--
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2095, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2080, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/rec/server.py", line 53, in api_select
+    N = int(request.args['n'])
+ValueError: invalid literal for int() with base 10: ''
+
+
+-->
+'):
+  
+app/models/course.rb:72:in `getrec'
+app/controllers/courses_controller.rb:7:in `rec'
+Started GET "/courses/rec" for 172.18.0.1 at 2022-04-27 20:57:04 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CoursesController#rec as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1490)
+
+
+  
+JSON::ParserError (809: unexpected token at '<!DOCTYPE html>
+<html>
+  <head>
+    <title>ValueError: invalid literal for int() with base 10: ''
+ // Werkzeug Debugger</title>
+    <link rel="stylesheet" href="?__debugger__=yes&amp;cmd=resource&amp;f=style.css">
+    <link rel="shortcut icon"
+        href="?__debugger__=yes&amp;cmd=resource&amp;f=console.png">
+    <script src="?__debugger__=yes&amp;cmd=resource&amp;f=debugger.js"></script>
+    <script>
+      var CONSOLE_MODE = false,
+          EVALEX = true,
+          EVALEX_TRUSTED = false,
+          SECRET = "QyuRpXzWVmy9szxHnaJg";
+    </script>
+  </head>
+  <body style="background-color: #fff">
+    <div class="debugger">
+<h1>ValueError</h1>
+<div class="detail">
+  <p class="errormsg">ValueError: invalid literal for int() with base 10: &#x27;&#x27;
+</p>
+</div>
+<h2 class="traceback">Traceback <em>(most recent call last)</em></h2>
+<div class="traceback">
+  <h3></h3>
+  <ul><li><div class="frame" id="frame-140368970920728">
+  <h4>File <cite class="filename">"/usr/local/lib/python3.7/site-packages/flask/app.py"</cite>,
+      line <em class="line">2095</em>,
+      in <code class="function">__call__</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">    </span>def __call__(self, environ: dict, start_response: t.Callable) -&gt; t.Any:</pre>
+<pre class="line before"><span class="ws">        </span>&quot;&quot;&quot;The WSGI server calls the Flask application object as the</pre>
+<pre class="line before"><span class="ws">        </span>WSGI application. This calls :meth:`wsgi_app`, which can be</pre>
+<pre class="line before"><span class="ws">        </span>wrapped to apply middleware.</pre>
+<pre class="line before"><span class="ws">        </span>&quot;&quot;&quot;</pre>
+<pre class="line current"><span class="ws">        </span>return self.wsgi_app(environ, start_response)</pre></div>
+</div>
+
+<li><div class="frame" id="frame-140368970920488">
+  <h4>File <cite class="filename">"/usr/local/lib/python3.7/site-packages/flask/app.py"</cite>,
+      line <em class="line">2080</em>,
+      in <code class="function">wsgi_app</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>try:</pre>
+<pre class="line before"><span class="ws">                </span>ctx.push()</pre>
+<pre class="line before"><span class="ws">                </span>response = self.full_dispatch_request()</pre>
+<pre class="line before"><span class="ws">            </span>except Exception as e:</pre>
+<pre class="line before"><span class="ws">                </span>error = e</pre>
+<pre class="line current"><span class="ws">                </span>response = self.handle_exception(e)</pre>
+<pre class="line after"><span class="ws">            </span>except:  # noqa: B001</pre>
+<pre class="line after"><span class="ws">                </span>error = sys.exc_info()[1]</pre>
+<pre class="line after"><span class="ws">                </span>raise</pre>
+<pre class="line after"><span class="ws">            </span>return response(environ, start_response)</pre>
+<pre class="line after"><span class="ws">        </span>finally:</pre></div>
+</div>
+
+<li><div class="frame" id="frame-140368970920848">
+  <h4>File <cite class="filename">"/usr/local/lib/python3.7/site-packages/flask/app.py"</cite>,
+      line <em class="line">2077</em>,
+      in <code class="function">wsgi_app</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">        </span>ctx = self.request_context(environ)</pre>
+<pre class="line before"><span class="ws">        </span>error: t.Optional[BaseException] = None</pre>
+<pre class="line before"><span class="ws">        </span>try:</pre>
+<pre class="line before"><span class="ws">            </span>try:</pre>
+<pre class="line before"><span class="ws">                </span>ctx.push()</pre>
+<pre class="line current"><span class="ws">                </span>response = self.full_dispatch_request()</pre>
+<pre class="line after"><span class="ws">            </span>except Exception as e:</pre>
+<pre class="line after"><span class="ws">                </span>error = e</pre>
+<pre class="line after"><span class="ws">                </span>response = self.handle_exception(e)</pre>
+<pre class="line after"><span class="ws">            </span>except:  # noqa: B001</pre>
+<pre class="line after"><span class="ws">                </span>error = sys.exc_info()[1]</pre></div>
+</div>
+
+<li><div class="frame" id="frame-140368970921208">
+  <h4>File <cite class="filename">"/usr/local/lib/python3.7/site-packages/flask/app.py"</cite>,
+      line <em class="line">1525</em>,
+      in <code class="function">full_dispatch_request</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>request_started.send(self)</pre>
+<pre class="line before"><span class="ws">            </span>rv = self.preprocess_request()</pre>
+<pre class="line before"><span class="ws">            </span>if rv is None:</pre>
+<pre class="line before"><span class="ws">                </span>rv = self.dispatch_request()</pre>
+<pre class="line before"><span class="ws">        </span>except Exception as e:</pre>
+<pre class="line current"><span class="ws">            </span>rv = self.handle_user_exception(e)</pre>
+<pre class="line after"><span class="ws">        </span>return self.finalize_request(rv)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def finalize_request(</pre>
+<pre class="line after"><span class="ws">        </span>self,</pre>
+<pre class="line after"><span class="ws">        </span>rv: t.Union[ResponseReturnValue, HTTPException],</pre></div>
+</div>
+
+<li><div class="frame" id="frame-140368970921328">
+  <h4>File <cite class="filename">"/usr/local/lib/python3.7/site-packages/flask/app.py"</cite>,
+      line <em class="line">1523</em>,
+      in <code class="function">full_dispatch_request</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">        </span>self.try_trigger_before_first_request_functions()</pre>
+<pre class="line before"><span class="ws">        </span>try:</pre>
+<pre class="line before"><span class="ws">            </span>request_started.send(self)</pre>
+<pre class="line before"><span class="ws">            </span>rv = self.preprocess_request()</pre>
+<pre class="line before"><span class="ws">            </span>if rv is None:</pre>
+<pre class="line current"><span class="ws">                </span>rv = self.dispatch_request()</pre>
+<pre class="line after"><span class="ws">        </span>except Exception as e:</pre>
+<pre class="line after"><span class="ws">            </span>rv = self.handle_user_exception(e)</pre>
+<pre class="line after"><span class="ws">        </span>return self.finalize_request(rv)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def finalize_request(</pre></div>
+</div>
+
+<li><div class="frame" id="frame-140368970921448">
+  <h4>File <cite class="filename">"/usr/local/lib/python3.7/site-packages/flask/app.py"</cite>,
+      line <em class="line">1509</em>,
+      in <code class="function">dispatch_request</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>getattr(rule, &quot;provide_automatic_options&quot;, False)</pre>
+<pre class="line before"><span class="ws">            </span>and req.method == &quot;OPTIONS&quot;</pre>
+<pre class="line before"><span class="ws">        </span>):</pre>
+<pre class="line before"><span class="ws">            </span>return self.make_default_options_response()</pre>
+<pre class="line before"><span class="ws">        </span># otherwise dispatch to the handler for that endpoint</pre>
+<pre class="line current"><span class="ws">        </span>return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def full_dispatch_request(self) -&gt; Response:</pre>
+<pre class="line after"><span class="ws">        </span>&quot;&quot;&quot;Dispatches the request and on top of that performs request</pre>
+<pre class="line after"><span class="ws">        </span>pre and postprocessing as well as HTTP exception catching and</pre>
+<pre class="line after"><span class="ws">        </span>error handling.</pre></div>
+</div>
+
+<li><div class="frame" id="frame-140368970921568">
+  <h4>File <cite class="filename">"/rec/server.py"</cite>,
+      line <em class="line">53</em>,
+      in <code class="function">api_select</code></h4>
+  <div class="source "><pre class="line before"><span class="ws">  </span>if &#x27;id&#x27; in request.args:</pre>
+<pre class="line before"><span class="ws">        </span>user = int(request.args[&#x27;id&#x27;])</pre>
+<pre class="line before"><span class="ws">  </span>else:</pre>
+<pre class="line before"><span class="ws">      </span>return &quot;Error: No id field provided. Please specify an id.&quot;</pre>
+<pre class="line before"><span class="ws">  </span>if &#x27;n&#x27; in request.args:</pre>
+<pre class="line current"><span class="ws">        </span>N = int(request.args[&#x27;n&#x27;])</pre>
+<pre class="line after"><span class="ws">  </span>else:</pre>
+<pre class="line after"><span class="ws">      </span>return &quot;Error: No n field provided. Please specify an n.&quot;</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">  </span>#Getting the userID from the user Index</pre>
+<pre class="line after"><span class="ws">  </span>users = data[&#x27;userID&#x27;].unique()</pre></div>
+</div>
+</ul>
+  <blockquote>ValueError: invalid literal for int() with base 10: &#x27;&#x27;
+</blockquote>
+</div>
+
+<div class="plain">
+    <p>
+      This is the Copy/Paste friendly version of the traceback.
+    </p>
+    <textarea cols="50" rows="10" name="code" readonly>Traceback (most recent call last):
+  File &quot;/usr/local/lib/python3.7/site-packages/flask/app.py&quot;, line 2095, in __call__
+    return self.wsgi_app(environ, start_response)
+  File &quot;/usr/local/lib/python3.7/site-packages/flask/app.py&quot;, line 2080, in wsgi_app
+    response = self.handle_exception(e)
+  File &quot;/usr/local/lib/python3.7/site-packages/flask/app.py&quot;, line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File &quot;/usr/local/lib/python3.7/site-packages/flask/app.py&quot;, line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File &quot;/usr/local/lib/python3.7/site-packages/flask/app.py&quot;, line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File &quot;/usr/local/lib/python3.7/site-packages/flask/app.py&quot;, line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File &quot;/rec/server.py&quot;, line 53, in api_select
+    N = int(request.args[&#x27;n&#x27;])
+ValueError: invalid literal for int() with base 10: &#x27;&#x27;
+</textarea>
+</div>
+<div class="explanation">
+  The debugger caught an exception in your WSGI application.  You can now
+  look at the traceback which led to the error.  <span class="nojavascript">
+  If you enable JavaScript you can also use additional features such as code
+  execution (if the evalex feature is enabled), automatic pasting of the
+  exceptions and much more.</span>
+</div>
+      <div class="footer">
+        Brought to you by <strong class="arthur">DON'T PANIC</strong>, your
+        friendly Werkzeug powered traceback interpreter.
+      </div>
+    </div>
+
+    <div class="pin-prompt">
+      <div class="inner">
+        <h3>Console Locked</h3>
+        <p>
+          The console is locked and needs to be unlocked by entering the PIN.
+          You can find the PIN printed out on the standard output of your
+          shell that runs the server.
+        <form>
+          <p>PIN:
+            <input type=text name=pin size=14>
+            <input type=submit name=btn value="Confirm Pin">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!--
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2095, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2080, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/rec/server.py", line 53, in api_select
+    N = int(request.args['n'])
+ValueError: invalid literal for int() with base 10: ''
+
+
+-->
+'):
+  
+app/models/course.rb:72:in `getrec'
+app/controllers/courses_controller.rb:7:in `rec'
+Started GET "/admin/auth/account" for 172.18.0.1 at 2022-04-27 20:57:10 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Auth::AccountAdmin::AdminController#show as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/show.html.erb within layouts/trestle/admin
+  [1m[36mStudentAvaliableTime Load (1.2ms)[0m  [1m[34mSELECT "student_avaliable_times".* FROM "student_avaliable_times" WHERE ("osu_id" = 'deleteme.1')[0m
+  ↳ app/admin/auth/account_admin.rb:47:in `block (3 levels) in <main>'
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 7.7ms | Allocations: 3911)
+  [1m[36mStudentQualifiedCourse Load (1.9ms)[0m  [1m[34mSELECT "student_qualified_courses".* FROM "student_qualified_courses" WHERE ("osu_id" = 'deleteme.1')[0m
+  ↳ app/admin/auth/account_admin.rb:57:in `block (3 levels) in <main>'
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 5.1ms | Allocations: 2111)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 2.7ms | Allocations: 1471)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.2ms | Allocations: 69)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.6ms | Allocations: 367)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/_form.html.erb within trestle/application/_layout (Duration: 27.0ms | Allocations: 11786)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/show.html.erb within layouts/trestle/admin (Duration: 30.0ms | Allocations: 13445)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 3.8ms | Allocations: 2534)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.6ms | Allocations: 394)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 0.9ms | Allocations: 527)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 60.7ms | Allocations: 39246)
+Completed 200 OK in 78ms (Views: 56.7ms | ActiveRecord: 10.8ms | Allocations: 47854)
+
+
+Started GET "/courses/rec" for 172.18.0.1 at 2022-04-27 20:57:12 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CoursesController#rec as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1063)
+
+
+  
+JSON::ParserError (809: unexpected token at '<!DOCTYPE html>
+<html>
+  <head>
+    <title>ValueError: invalid literal for int() with base 10: ''
+ // Werkzeug Debugger</title>
+    <link rel="stylesheet" href="?__debugger__=yes&amp;cmd=resource&amp;f=style.css">
+    <link rel="shortcut icon"
+        href="?__debugger__=yes&amp;cmd=resource&amp;f=console.png">
+    <script src="?__debugger__=yes&amp;cmd=resource&amp;f=debugger.js"></script>
+    <script>
+      var CONSOLE_MODE = false,
+          EVALEX = true,
+          EVALEX_TRUSTED = false,
+          SECRET = "QyuRpXzWVmy9szxHnaJg";
+    </script>
+  </head>
+  <body style="background-color: #fff">
+    <div class="debugger">
+<h1>ValueError</h1>
+<div class="detail">
+  <p class="errormsg">ValueError: invalid literal for int() with base 10: &#x27;&#x27;
+</p>
+</div>
+<h2 class="traceback">Traceback <em>(most recent call last)</em></h2>
+<div class="traceback">
+  <h3></h3>
+  <ul><li><div class="frame" id="frame-140368970921688">
+  <h4>File <cite class="filename">"/usr/local/lib/python3.7/site-packages/flask/app.py"</cite>,
+      line <em class="line">2095</em>,
+      in <code class="function">__call__</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">    </span>def __call__(self, environ: dict, start_response: t.Callable) -&gt; t.Any:</pre>
+<pre class="line before"><span class="ws">        </span>&quot;&quot;&quot;The WSGI server calls the Flask application object as the</pre>
+<pre class="line before"><span class="ws">        </span>WSGI application. This calls :meth:`wsgi_app`, which can be</pre>
+<pre class="line before"><span class="ws">        </span>wrapped to apply middleware.</pre>
+<pre class="line before"><span class="ws">        </span>&quot;&quot;&quot;</pre>
+<pre class="line current"><span class="ws">        </span>return self.wsgi_app(environ, start_response)</pre></div>
+</div>
+
+<li><div class="frame" id="frame-140368970921808">
+  <h4>File <cite class="filename">"/usr/local/lib/python3.7/site-packages/flask/app.py"</cite>,
+      line <em class="line">2080</em>,
+      in <code class="function">wsgi_app</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>try:</pre>
+<pre class="line before"><span class="ws">                </span>ctx.push()</pre>
+<pre class="line before"><span class="ws">                </span>response = self.full_dispatch_request()</pre>
+<pre class="line before"><span class="ws">            </span>except Exception as e:</pre>
+<pre class="line before"><span class="ws">                </span>error = e</pre>
+<pre class="line current"><span class="ws">                </span>response = self.handle_exception(e)</pre>
+<pre class="line after"><span class="ws">            </span>except:  # noqa: B001</pre>
+<pre class="line after"><span class="ws">                </span>error = sys.exc_info()[1]</pre>
+<pre class="line after"><span class="ws">                </span>raise</pre>
+<pre class="line after"><span class="ws">            </span>return response(environ, start_response)</pre>
+<pre class="line after"><span class="ws">        </span>finally:</pre></div>
+</div>
+
+<li><div class="frame" id="frame-140368970921928">
+  <h4>File <cite class="filename">"/usr/local/lib/python3.7/site-packages/flask/app.py"</cite>,
+      line <em class="line">2077</em>,
+      in <code class="function">wsgi_app</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">        </span>ctx = self.request_context(environ)</pre>
+<pre class="line before"><span class="ws">        </span>error: t.Optional[BaseException] = None</pre>
+<pre class="line before"><span class="ws">        </span>try:</pre>
+<pre class="line before"><span class="ws">            </span>try:</pre>
+<pre class="line before"><span class="ws">                </span>ctx.push()</pre>
+<pre class="line current"><span class="ws">                </span>response = self.full_dispatch_request()</pre>
+<pre class="line after"><span class="ws">            </span>except Exception as e:</pre>
+<pre class="line after"><span class="ws">                </span>error = e</pre>
+<pre class="line after"><span class="ws">                </span>response = self.handle_exception(e)</pre>
+<pre class="line after"><span class="ws">            </span>except:  # noqa: B001</pre>
+<pre class="line after"><span class="ws">                </span>error = sys.exc_info()[1]</pre></div>
+</div>
+
+<li><div class="frame" id="frame-140368970922048">
+  <h4>File <cite class="filename">"/usr/local/lib/python3.7/site-packages/flask/app.py"</cite>,
+      line <em class="line">1525</em>,
+      in <code class="function">full_dispatch_request</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>request_started.send(self)</pre>
+<pre class="line before"><span class="ws">            </span>rv = self.preprocess_request()</pre>
+<pre class="line before"><span class="ws">            </span>if rv is None:</pre>
+<pre class="line before"><span class="ws">                </span>rv = self.dispatch_request()</pre>
+<pre class="line before"><span class="ws">        </span>except Exception as e:</pre>
+<pre class="line current"><span class="ws">            </span>rv = self.handle_user_exception(e)</pre>
+<pre class="line after"><span class="ws">        </span>return self.finalize_request(rv)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def finalize_request(</pre>
+<pre class="line after"><span class="ws">        </span>self,</pre>
+<pre class="line after"><span class="ws">        </span>rv: t.Union[ResponseReturnValue, HTTPException],</pre></div>
+</div>
+
+<li><div class="frame" id="frame-140368970922168">
+  <h4>File <cite class="filename">"/usr/local/lib/python3.7/site-packages/flask/app.py"</cite>,
+      line <em class="line">1523</em>,
+      in <code class="function">full_dispatch_request</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">        </span>self.try_trigger_before_first_request_functions()</pre>
+<pre class="line before"><span class="ws">        </span>try:</pre>
+<pre class="line before"><span class="ws">            </span>request_started.send(self)</pre>
+<pre class="line before"><span class="ws">            </span>rv = self.preprocess_request()</pre>
+<pre class="line before"><span class="ws">            </span>if rv is None:</pre>
+<pre class="line current"><span class="ws">                </span>rv = self.dispatch_request()</pre>
+<pre class="line after"><span class="ws">        </span>except Exception as e:</pre>
+<pre class="line after"><span class="ws">            </span>rv = self.handle_user_exception(e)</pre>
+<pre class="line after"><span class="ws">        </span>return self.finalize_request(rv)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def finalize_request(</pre></div>
+</div>
+
+<li><div class="frame" id="frame-140368970922288">
+  <h4>File <cite class="filename">"/usr/local/lib/python3.7/site-packages/flask/app.py"</cite>,
+      line <em class="line">1509</em>,
+      in <code class="function">dispatch_request</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>getattr(rule, &quot;provide_automatic_options&quot;, False)</pre>
+<pre class="line before"><span class="ws">            </span>and req.method == &quot;OPTIONS&quot;</pre>
+<pre class="line before"><span class="ws">        </span>):</pre>
+<pre class="line before"><span class="ws">            </span>return self.make_default_options_response()</pre>
+<pre class="line before"><span class="ws">        </span># otherwise dispatch to the handler for that endpoint</pre>
+<pre class="line current"><span class="ws">        </span>return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def full_dispatch_request(self) -&gt; Response:</pre>
+<pre class="line after"><span class="ws">        </span>&quot;&quot;&quot;Dispatches the request and on top of that performs request</pre>
+<pre class="line after"><span class="ws">        </span>pre and postprocessing as well as HTTP exception catching and</pre>
+<pre class="line after"><span class="ws">        </span>error handling.</pre></div>
+</div>
+
+<li><div class="frame" id="frame-140368970922408">
+  <h4>File <cite class="filename">"/rec/server.py"</cite>,
+      line <em class="line">53</em>,
+      in <code class="function">api_select</code></h4>
+  <div class="source "><pre class="line before"><span class="ws">  </span>if &#x27;id&#x27; in request.args:</pre>
+<pre class="line before"><span class="ws">        </span>user = int(request.args[&#x27;id&#x27;])</pre>
+<pre class="line before"><span class="ws">  </span>else:</pre>
+<pre class="line before"><span class="ws">      </span>return &quot;Error: No id field provided. Please specify an id.&quot;</pre>
+<pre class="line before"><span class="ws">  </span>if &#x27;n&#x27; in request.args:</pre>
+<pre class="line current"><span class="ws">        </span>N = int(request.args[&#x27;n&#x27;])</pre>
+<pre class="line after"><span class="ws">  </span>else:</pre>
+<pre class="line after"><span class="ws">      </span>return &quot;Error: No n field provided. Please specify an n.&quot;</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">  </span>#Getting the userID from the user Index</pre>
+<pre class="line after"><span class="ws">  </span>users = data[&#x27;userID&#x27;].unique()</pre></div>
+</div>
+</ul>
+  <blockquote>ValueError: invalid literal for int() with base 10: &#x27;&#x27;
+</blockquote>
+</div>
+
+<div class="plain">
+    <p>
+      This is the Copy/Paste friendly version of the traceback.
+    </p>
+    <textarea cols="50" rows="10" name="code" readonly>Traceback (most recent call last):
+  File &quot;/usr/local/lib/python3.7/site-packages/flask/app.py&quot;, line 2095, in __call__
+    return self.wsgi_app(environ, start_response)
+  File &quot;/usr/local/lib/python3.7/site-packages/flask/app.py&quot;, line 2080, in wsgi_app
+    response = self.handle_exception(e)
+  File &quot;/usr/local/lib/python3.7/site-packages/flask/app.py&quot;, line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File &quot;/usr/local/lib/python3.7/site-packages/flask/app.py&quot;, line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File &quot;/usr/local/lib/python3.7/site-packages/flask/app.py&quot;, line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File &quot;/usr/local/lib/python3.7/site-packages/flask/app.py&quot;, line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File &quot;/rec/server.py&quot;, line 53, in api_select
+    N = int(request.args[&#x27;n&#x27;])
+ValueError: invalid literal for int() with base 10: &#x27;&#x27;
+</textarea>
+</div>
+<div class="explanation">
+  The debugger caught an exception in your WSGI application.  You can now
+  look at the traceback which led to the error.  <span class="nojavascript">
+  If you enable JavaScript you can also use additional features such as code
+  execution (if the evalex feature is enabled), automatic pasting of the
+  exceptions and much more.</span>
+</div>
+      <div class="footer">
+        Brought to you by <strong class="arthur">DON'T PANIC</strong>, your
+        friendly Werkzeug powered traceback interpreter.
+      </div>
+    </div>
+
+    <div class="pin-prompt">
+      <div class="inner">
+        <h3>Console Locked</h3>
+        <p>
+          The console is locked and needs to be unlocked by entering the PIN.
+          You can find the PIN printed out on the standard output of your
+          shell that runs the server.
+        <form>
+          <p>PIN:
+            <input type=text name=pin size=14>
+            <input type=submit name=btn value="Confirm Pin">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!--
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2095, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2080, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/rec/server.py", line 53, in api_select
+    N = int(request.args['n'])
+ValueError: invalid literal for int() with base 10: ''
+
+
+-->
+'):
+  
+app/models/course.rb:72:in `getrec'
+app/controllers/courses_controller.rb:7:in `rec'
+Started GET "/admin/auth/account" for 172.18.0.1 at 2022-04-27 20:57:17 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Auth::AccountAdmin::AdminController#show as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/show.html.erb within layouts/trestle/admin
+  [1m[36mStudentAvaliableTime Load (1.4ms)[0m  [1m[34mSELECT "student_avaliable_times".* FROM "student_avaliable_times" WHERE ("osu_id" = 'deleteme.1')[0m
+  ↳ app/admin/auth/account_admin.rb:47:in `block (3 levels) in <main>'
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 7.0ms | Allocations: 2892)
+  [1m[36mStudentQualifiedCourse Load (1.5ms)[0m  [1m[34mSELECT "student_qualified_courses".* FROM "student_qualified_courses" WHERE ("osu_id" = 'deleteme.1')[0m
+  ↳ app/admin/auth/account_admin.rb:57:in `block (3 levels) in <main>'
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 3.6ms | Allocations: 1677)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 2.5ms | Allocations: 1431)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.5ms | Allocations: 362)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/_form.html.erb within trestle/application/_layout (Duration: 19.9ms | Allocations: 9367)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/show.html.erb within layouts/trestle/admin (Duration: 22.6ms | Allocations: 10247)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 3.0ms | Allocations: 1992)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.5ms | Allocations: 342)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 0.7ms | Allocations: 472)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 54.0ms | Allocations: 35367)
+Completed 200 OK in 59ms (Views: 51.7ms | ActiveRecord: 3.7ms | Allocations: 37228)
+
+
+Started GET "/admin/auth/account" for 172.18.0.1 at 2022-04-27 20:57:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Auth::AccountAdmin::AdminController#show as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/show.html.erb within layouts/trestle/admin
+  [1m[36mStudentAvaliableTime Load (3.0ms)[0m  [1m[34mSELECT "student_avaliable_times".* FROM "student_avaliable_times" WHERE ("osu_id" = 'deleteme.1')[0m
+  ↳ app/admin/auth/account_admin.rb:47:in `block (3 levels) in <main>'
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 13.4ms | Allocations: 3911)
+  [1m[36mStudentQualifiedCourse Load (2.0ms)[0m  [1m[34mSELECT "student_qualified_courses".* FROM "student_qualified_courses" WHERE ("osu_id" = 'deleteme.1')[0m
+  ↳ app/admin/auth/account_admin.rb:57:in `block (3 levels) in <main>'
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 4.8ms | Allocations: 2111)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 6.7ms | Allocations: 1471)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.2ms | Allocations: 69)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.8ms | Allocations: 367)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/_form.html.erb within trestle/application/_layout (Duration: 32.1ms | Allocations: 11786)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/show.html.erb within layouts/trestle/admin (Duration: 34.6ms | Allocations: 13445)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.2ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 23.6ms | Allocations: 2893)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 12.8ms | Allocations: 394)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 13.3ms | Allocations: 527)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 101.4ms | Allocations: 39584)
+Completed 200 OK in 132ms (Views: 95.2ms | ActiveRecord: 17.2ms | Allocations: 48228)
+
+
+Started GET "/courses/rec" for 172.18.0.1 at 2022-04-27 20:57:54 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CoursesController#rec as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/rec.html.erb within layouts/application
+  Rendered courses/rec.html.erb within layouts/application (Duration: 0.6ms | Allocations: 323)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 8292)
+Completed 200 OK in 51ms (Views: 19.3ms | ActiveRecord: 4.2ms | Allocations: 12639)
+
+
+Started GET "/courses/rec?n=5" for 172.18.0.1 at 2022-04-27 20:58:01 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CoursesController#rec as HTML
+  Parameters: {"n"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering courses/rec.html.erb within layouts/application
+  Rendered courses/rec.html.erb within layouts/application (Duration: 0.4ms | Allocations: 73)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 7711)
+Completed 200 OK in 49ms (Views: 22.8ms | ActiveRecord: 0.0ms | Allocations: 8731)
+
+
+Started GET "/admin" for 172.18.0.1 at 2022-04-27 20:58:04 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Trestle::DashboardController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/admin/reviews
+Completed 302 Found in 11ms (ActiveRecord: 1.1ms | Allocations: 2758)
+
+
+Started GET "/admin/reviews" for 172.18.0.1 at 2022-04-27 20:58:04 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ReviewsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 3.0ms | Allocations: 1638)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 54)
+  [1m[36mReview Load (1.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 4.4ms | Allocations: 2983)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 0.9ms | Allocations: 416)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 11.4ms | Allocations: 5989)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 15.8ms | Allocations: 6625)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 11.8ms | Allocations: 2029)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.5ms | Allocations: 364)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 1.1ms | Allocations: 493)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 54.6ms | Allocations: 31831)
+Completed 200 OK in 62ms (Views: 55.0ms | ActiveRecord: 2.1ms | Allocations: 34698)
+
+
+Started GET "/admin" for 172.18.0.1 at 2022-04-27 20:58:04 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Trestle::DashboardController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/admin/reviews
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms | Allocations: 2437)
+
+
+Started GET "/admin/reviews" for 172.18.0.1 at 2022-04-27 20:58:04 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ReviewsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 2.0ms | Allocations: 1531)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 49)
+  [1m[36mReview Load (2.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 6.8ms | Allocations: 2780)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 0.6ms | Allocations: 357)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 12.0ms | Allocations: 5586)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 13.3ms | Allocations: 6093)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 2.4ms | Allocations: 1971)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.9ms | Allocations: 341)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 1.2ms | Allocations: 470)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 39.5ms | Allocations: 31075)
+Completed 200 OK in 47ms (Views: 37.7ms | ActiveRecord: 3.9ms | Allocations: 32939)
+
+
+Started GET "/admin/student_assistant_applications" for 172.18.0.1 at 2022-04-27 20:58:05 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentAssistantApplicationsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 2.7ms | Allocations: 2102)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 54)
+  [1m[36mStudentAssistantApplication Load (1.2ms)[0m  [1m[34mSELECT "student_assistant_applications".* FROM "student_assistant_applications" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 5.9ms | Allocations: 3853)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 4.4ms | Allocations: 447)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 15.4ms | Allocations: 7354)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 17.2ms | Allocations: 8225)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 2.9ms | Allocations: 2033)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 1.0ms | Allocations: 362)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 1.5ms | Allocations: 491)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.4ms | Allocations: 59)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 43.5ms | Allocations: 33445)
+Completed 200 OK in 52ms (Views: 44.2ms | ActiveRecord: 2.2ms | Allocations: 36285)
+
+
+Started GET "/admin/reviews" for 172.18.0.1 at 2022-04-27 20:58:06 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ReviewsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 1.5ms | Allocations: 1531)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.3ms | Allocations: 49)
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 4.3ms | Allocations: 2780)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 1.1ms | Allocations: 357)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 10.4ms | Allocations: 5586)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 11.3ms | Allocations: 6093)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 2.1ms | Allocations: 1973)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.4ms | Allocations: 341)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 0.8ms | Allocations: 470)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 34.3ms | Allocations: 31077)
+Completed 200 OK in 41ms (Views: 33.9ms | ActiveRecord: 2.6ms | Allocations: 33023)
+
+
+Started GET "/admin/student_assistant_applications" for 172.18.0.1 at 2022-04-27 20:58:08 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentAssistantApplicationsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 2.1ms | Allocations: 1996)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.2ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 49)
+  [1m[36mStudentAssistantApplication Load (1.2ms)[0m  [1m[34mSELECT "student_assistant_applications".* FROM "student_assistant_applications" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 5.0ms | Allocations: 3641)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 0.6ms | Allocations: 388)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 9.8ms | Allocations: 6943)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 10.7ms | Allocations: 7593)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 3.5ms | Allocations: 1977)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.8ms | Allocations: 341)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 1.4ms | Allocations: 470)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 34.8ms | Allocations: 32388)
+Completed 200 OK in 39ms (Views: 34.1ms | ActiveRecord: 2.0ms | Allocations: 34233)
+
+
+Started GET "/admin/courses" for 172.18.0.1 at 2022-04-27 20:58:09 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CoursesAdmin::AdminController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 2.2ms | Allocations: 1642)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered /usr/local/bundle/gems/trestle-search-0.4.3/app/views/trestle/search/_search.html.erb (Duration: 1.0ms | Allocations: 523)
+  [1m[36mCourse Load (1.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 41.1ms | Allocations: 32817)
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "courses"[0m
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 6.0ms | Allocations: 4132)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 53.6ms | Allocations: 40149)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 54.4ms | Allocations: 40784)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 2.6ms | Allocations: 2016)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.5ms | Allocations: 357)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 0.7ms | Allocations: 486)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 76.2ms | Allocations: 65774)
+Completed 200 OK in 81ms (Views: 71.0ms | ActiveRecord: 6.9ms | Allocations: 68313)
+
+
+Started GET "/admin/sections" for 172.18.0.1 at 2022-04-27 20:58:10 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SectionsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 7.6ms | Allocations: 1680)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.3ms | Allocations: 69)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.2ms | Allocations: 54)
+  Rendered /usr/local/bundle/gems/trestle-search-0.4.3/app/views/trestle/search/_search.html.erb (Duration: 1.4ms | Allocations: 533)
+  [1m[36mSection Load (13.5ms)[0m  [1m[34mSELECT "sections".* FROM "sections" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='601')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='601')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='602')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='602')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='603')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='603')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='604')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='604')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='605')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='605')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='606')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='606')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='607')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='607')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='608')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='608')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='609')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='609')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='610')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='610')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='611')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='611')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='612')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='612')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='613')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='613')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='614')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='614')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='615')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='615')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='616')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='616')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='617')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='617')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='618')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='618')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='619')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='619')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='620')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='620')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='621')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='621')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='622')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='622')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='623')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='623')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='624')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='624')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='625')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='625')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 192.6ms | Allocations: 91389)
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "sections"[0m
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 15.3ms | Allocations: 4849)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 224.5ms | Allocations: 101183)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 226.5ms | Allocations: 102418)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 3.2ms | Allocations: 2016)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.7ms | Allocations: 357)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 1.0ms | Allocations: 486)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 262.4ms | Allocations: 127602)
+Completed 200 OK in 270ms (Views: 205.2ms | ActiveRecord: 59.1ms | Allocations: 130819)
+
+
+Started GET "/admin/teacher_recommandations" for 172.18.0.1 at 2022-04-27 20:58:12 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeacherRecommandationsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 2.2ms | Allocations: 2023)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 54)
+  [1m[36mTeacherRecommandation Load (11.0ms)[0m  [1m[34mSELECT "teacher_recommandations".* FROM "teacher_recommandations" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 19.2ms | Allocations: 5515)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 1.1ms | Allocations: 439)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 27.1ms | Allocations: 10612)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 28.6ms | Allocations: 11981)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 2.1ms | Allocations: 2034)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.6ms | Allocations: 362)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 0.8ms | Allocations: 491)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 52.2ms | Allocations: 36997)
+Completed 200 OK in 59ms (Views: 42.0ms | ActiveRecord: 11.8ms | Allocations: 40503)
+
+
+Started GET "/admin/reviews" for 172.18.0.1 at 2022-04-27 20:58:13 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ReviewsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 1.9ms | Allocations: 1531)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.2ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 49)
+  [1m[36mReview Load (1.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 13.1ms | Allocations: 2781)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 1.2ms | Allocations: 357)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 18.8ms | Allocations: 5587)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 19.9ms | Allocations: 6094)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 2.5ms | Allocations: 1972)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.8ms | Allocations: 341)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 1.3ms | Allocations: 470)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 45.7ms | Allocations: 31077)
+Completed 200 OK in 51ms (Views: 45.3ms | ActiveRecord: 2.0ms | Allocations: 33016)
+
+
+Started GET "/admin/student_assistant_applications" for 172.18.0.1 at 2022-04-27 20:58:15 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentAssistantApplicationsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 2.0ms | Allocations: 1996)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 49)
+  [1m[36mStudentAssistantApplication Load (1.1ms)[0m  [1m[34mSELECT "student_assistant_applications".* FROM "student_assistant_applications" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 4.4ms | Allocations: 3643)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 0.5ms | Allocations: 388)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 8.9ms | Allocations: 6945)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 9.7ms | Allocations: 7595)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 3.2ms | Allocations: 1977)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.7ms | Allocations: 341)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 1.1ms | Allocations: 470)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 37.5ms | Allocations: 32390)
+Completed 200 OK in 43ms (Views: 37.1ms | ActiveRecord: 1.9ms | Allocations: 34234)
+
+

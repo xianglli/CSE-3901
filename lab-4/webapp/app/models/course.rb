@@ -65,7 +65,7 @@ class Course < ApplicationRecord
 
   def self.getrec(id,n)
     # process http request to json file
-    source = 'http://172.17.0.1:5000/api?id='+id.to_s+"&n="+n.to_s
+    source = 'http://rec:5000/api?id='+id.to_s+"&n="+n.to_s
     #Courserec.delete_by(Courserec.osu_id == id)
     resp = Net::HTTP.get_response(URI.parse(source))
     result = resp.body
