@@ -13,7 +13,7 @@ class Course < ApplicationRecord
     # process http request to json file
     # source = 'https://content.osu.edu/v2/classes/search?q=cse&campus=col&p=1&term=1222&subject=cse'
 
-    source = 'https://content.osu.edu/v2/classes/search?q=12&p=1&term=1222&campus=col&academic-career=ugrd&instruction-mode=dl'
+    source = 'https://content.osu.edu/v2/classes/search?q=1&campus=col&p=1'
 
     resp = Net::HTTP.get_response(URI.parse(source))
     result = resp.body
@@ -65,6 +65,10 @@ class Course < ApplicationRecord
 
   def self.getrec(id,n)
     # process http request to json file
+    if n==nil
+      n=5
+    end
+    Courserec.delete_all
     source = 'http://172.17.0.1:5000/api?id='+id.to_s+"&n="+n.to_s
     #Courserec.delete_by(Courserec.osu_id == id)
     resp = Net::HTTP.get_response(URI.parse(source))
@@ -75,6 +79,7 @@ class Course < ApplicationRecord
       course_rec = Courserec.new
       course_rec["osu_id"] = id
       course_rec["courseId"]= i
+      course_rec.save
     }
   end
 
