@@ -3,7 +3,7 @@ Trestle.configure do |config|
   #
   # Set the page title shown in the main header within the admin.
   #
-  config.site_title = "Course recommand sys"
+  config.site_title = "助教管理系统"
 
   # Specify a custom image to be used in place of the site title for mobile and
   # expanded/desktop navigation. These images should be placed within your
@@ -22,7 +22,7 @@ Trestle.configure do |config|
   # Set the text shown in the page footer within the admin.
   # Defaults to 'Powered by Trestle'.
   #
-  config.footer = "Copyright by Tengwen Liang"
+  config.footer = "版权所有 梁腾文"
 
   # Sets the default precision for timestamps (either :minutes or :seconds).
   # Defaults to :minutes.

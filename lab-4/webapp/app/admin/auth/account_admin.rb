@@ -17,22 +17,22 @@ Trestle.resource(:account, model: User, scope: Auth, singular: true) do
       divider
 
       row do
-        link_to "Get recommanded Courses", "../../courses/rec" , { confirm: "Are you sure?", disable_with: "Processing..." }
+        link_to "获取推荐课程", "../../courses/rec" , { confirm: "Are you sure?", disable_with: "Processing..." }
       end
 
       divider
       
       if current_user.admin
       row do
-        col(sm: 6) {label :"Dangerous Action! Please make sure you need to process"}
+        col(sm: 6) {label :"管理平台功能"}
       end
 
       row do
-        link_to "Sync course list with OSU", "../../courses/sync" , { confirm: "Are you sure?", disable_with: "Processing..." }
+        link_to "与服务器同步课程", "../../courses/sync" , { confirm: "Are you sure?", disable_with: "Processing..." }
       end
 
       row do
-        link_to "Recommander System", "http://localhost:5000"
+        link_to "课程推荐系统", "http://localhost:5000"
       end
     end
     end

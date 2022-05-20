@@ -6,14 +6,14 @@ Trestle.resource(:reviews) do
   # Customize the table columns shown on the index view.
   #
   table do
-    column :osu_id, header: "OSU dot id"
-    column :classNumber, header: "Course" do |course|
+    column :osu_id, header: "学号"
+    column :classNumber, header: "课程" do |course|
       "#{Course.find(course.classNumber).shortDescription.to_s}"
     end
-    column :reliable, header: "Reliale"
-    column :knowledgeable, header: "Knowledgeable"
-    column :friendly, header: "Frendly"
-    column :leadership, header: "Leadership"
+    column :reliable, header: "可信度"
+    column :knowledgeable, header: "技能"
+    column :friendly, header: "亲和力"
+    column :leadership, header: "领导力"
   end
 
   # Customize the form fields shown on the new/edit views.

@@ -39,10 +39,10 @@ Trestle.resource(:courses) do
   # Customize the table columns shown on the index view.
 
   table do
-    column :subject, align: :center
-    column :catalogNumber, align: :center
-    column :title, align: :center
-    column :campus, align: :center
+    column :subject, align: :center, header: "学院"
+    column :catalogNumber, align: :center, header: "课程号"
+    column :title, align: :center, header: "名称"
+    column :campus, align: :center, header: "校区"
     actions
   end
 

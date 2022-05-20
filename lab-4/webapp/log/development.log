@@ -17588,3 +17588,1107 @@ Processing by CourserecsAdmin::AdminController#index as HTML
 Completed 200 OK in 73ms (Views: 52.4ms | ActiveRecord: 17.2ms | Allocations: 42205)
 
 
+Started GET "/" for 172.18.0.1 at 2022-05-20 03:36:10 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 472)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 212.5ms | Allocations: 45365)
+Completed 200 OK in 229ms (Views: 218.0ms | ActiveRecord: 0.0ms | Allocations: 49550)
+
+
+Started GET "/" for 172.18.0.1 at 2022-05-20 03:38:27 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 346)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 8406)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 10235)
+
+
+Started GET "/admin" for 172.18.0.1 at 2022-05-20 03:38:33 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Trestle::DashboardController#index as HTML
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/admin/courserecs
+Completed 302 Found in 95ms (ActiveRecord: 20.8ms | Allocations: 39260)
+
+
+Started GET "/admin/courserecs" for 172.18.0.1 at 2022-05-20 03:38:33 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CourserecsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 3.8ms | Allocations: 2110)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 1.4ms | Allocations: 264)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 1.1ms | Allocations: 148)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 1.0ms | Allocations: 285)
+  [1m[36mCourserec Load (12.1ms)[0m  [1m[34mSELECT "courserecs".* FROM "courserecs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  [1m[36mCourse Load (7.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (2.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (2.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (3.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 114], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (2.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 90], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 131], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (2.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 119], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 117], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (2.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 77.9ms | Allocations: 20344)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 5.8ms | Allocations: 1228)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 104.4ms | Allocations: 32936)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 110.5ms | Allocations: 36148)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 1.2ms | Allocations: 332)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 4.8ms | Allocations: 3457)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 2.7ms | Allocations: 1223)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 4.9ms | Allocations: 1842)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.8ms | Allocations: 229)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 161.2ms | Allocations: 67739)
+Completed 200 OK in 176ms (Views: 118.1ms | ActiveRecord: 49.4ms | Allocations: 72415)
+
+
+Started GET "/admin" for 172.18.0.1 at 2022-05-20 03:38:33 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Trestle::DashboardController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/admin/courserecs
+Completed 302 Found in 6ms (ActiveRecord: 1.2ms | Allocations: 2654)
+
+
+Started GET "/admin/courserecs" for 172.18.0.1 at 2022-05-20 03:38:33 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CourserecsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 4.6ms | Allocations: 1562)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.4ms | Allocations: 67)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 49)
+  [1m[36mCourserec Load (1.5ms)[0m  [1m[34mSELECT "courserecs".* FROM "courserecs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  [1m[36mCourse Load (1.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 114], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 90], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 131], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 119], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 117], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 34.8ms | Allocations: 11961)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 0.6ms | Allocations: 373)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 43.1ms | Allocations: 14823)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 44.3ms | Allocations: 15353)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 2.7ms | Allocations: 2193)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.4ms | Allocations: 365)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 1.0ms | Allocations: 494)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 71.3ms | Allocations: 40679)
+Completed 200 OK in 76ms (Views: 57.7ms | ActiveRecord: 15.1ms | Allocations: 42558)
+
+
+Started GET "/admin/reviews" for 172.18.0.1 at 2022-05-20 03:38:41 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ReviewsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 3.8ms | Allocations: 1674)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.4ms | Allocations: 69)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 54)
+  [1m[36mReview Load (2.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 7.4ms | Allocations: 3060)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 0.9ms | Allocations: 415)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 17.9ms | Allocations: 7798)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 19.7ms | Allocations: 9034)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 6.1ms | Allocations: 2239)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.7ms | Allocations: 364)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 0.9ms | Allocations: 493)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 46.3ms | Allocations: 34395)
+Completed 200 OK in 65ms (Views: 45.4ms | ActiveRecord: 3.5ms | Allocations: 37666)
+
+
+Started GET "/admin/student_assistant_applications" for 172.18.0.1 at 2022-05-20 03:38:45 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentAssistantApplicationsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 2.0ms | Allocations: 2142)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.0ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 54)
+  [1m[36mStudentAssistantApplication Load (3.7ms)[0m  [1m[34mSELECT "student_assistant_applications".* FROM "student_assistant_applications" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 9.8ms | Allocations: 3963)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 0.8ms | Allocations: 446)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 16.5ms | Allocations: 9186)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 18.3ms | Allocations: 10650)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 2.3ms | Allocations: 2245)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.6ms | Allocations: 362)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 0.9ms | Allocations: 491)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 44.6ms | Allocations: 36093)
+Completed 200 OK in 54ms (Views: 41.8ms | ActiveRecord: 4.6ms | Allocations: 39413)
+
+
+Started GET "/admin/auth/users" for 172.18.0.1 at 2022-05-20 03:38:47 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Auth::UsersAdmin::AdminController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 1.8ms | Allocations: 1684)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.0ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.2ms | Allocations: 54)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 8.3ms | Allocations: 5968)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 1.0ms | Allocations: 380)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 15.5ms | Allocations: 10673)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 17.2ms | Allocations: 11904)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 3.8ms | Allocations: 2237)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.7ms | Allocations: 357)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 1.0ms | Allocations: 486)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.3ms | Allocations: 59)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 47.8ms | Allocations: 37305)
+Completed 200 OK in 55ms (Views: 48.1ms | ActiveRecord: 2.2ms | Allocations: 40284)
+
+
+Started GET "/admin/sections" for 172.18.0.1 at 2022-05-20 03:38:50 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SectionsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 2.5ms | Allocations: 1681)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.2ms | Allocations: 69)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.3ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.2ms | Allocations: 54)
+  Rendered /usr/local/bundle/gems/trestle-search-0.4.3/app/views/trestle/search/_search.html.erb (Duration: 2.6ms | Allocations: 756)
+  [1m[36mSection Load (3.0ms)[0m  [1m[34mSELECT "sections".* FROM "sections" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='1')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='1')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='2')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='2')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='3')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='3')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='4')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='4')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='5')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='5')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='6')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='6')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='7')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='7')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='8')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='8')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='9')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='9')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='10')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='10')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='11')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='11')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='12')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='12')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='13')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='13')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='14')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='14')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='15')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='15')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='16')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='16')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='17')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='17')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='18')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='18')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='19')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='19')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='20')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='20')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='21')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='21')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='22')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='22')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='23')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='23')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='24')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='24')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='25')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='25')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 226.5ms | Allocations: 94305)
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "sections"[0m
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 25.5ms | Allocations: 7514)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 274.3ms | Allocations: 107298)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 276.8ms | Allocations: 108533)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 3.6ms | Allocations: 2239)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.9ms | Allocations: 366)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 1.4ms | Allocations: 495)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 300.9ms | Allocations: 133962)
+Completed 200 OK in 309ms (Views: 239.3ms | ActiveRecord: 63.7ms | Allocations: 137045)
+
+
+Started GET "/admin/courses" for 172.18.0.1 at 2022-05-20 03:38:55 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CoursesAdmin::AdminController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 2.1ms | Allocations: 1682)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered /usr/local/bundle/gems/trestle-search-0.4.3/app/views/trestle/search/_search.html.erb (Duration: 0.6ms | Allocations: 533)
+  [1m[36mCourse Load (5.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 34.4ms | Allocations: 27595)
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "courses"[0m
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 9.1ms | Allocations: 4300)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 50.0ms | Allocations: 36843)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 55.5ms | Allocations: 38078)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 2.2ms | Allocations: 2227)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.6ms | Allocations: 357)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 0.8ms | Allocations: 486)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 78.1ms | Allocations: 63496)
+Completed 200 OK in 92ms (Views: 71.1ms | ActiveRecord: 9.5ms | Allocations: 66554)
+
+
+Started GET "/admin/courses?page=2" for 172.18.0.1 at 2022-05-20 03:39:01 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CoursesAdmin::AdminController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 2.1ms | Allocations: 1538)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered /usr/local/bundle/gems/trestle-search-0.4.3/app/views/trestle/search/_search.html.erb (Duration: 0.6ms | Allocations: 520)
+  [1m[36mCourse Load (1.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 25]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 33.5ms | Allocations: 27184)
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "courses"[0m
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 7.3ms | Allocations: 4335)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 46.5ms | Allocations: 34579)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 47.4ms | Allocations: 35087)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 2.2ms | Allocations: 2180)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.4ms | Allocations: 340)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 0.7ms | Allocations: 469)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 68.4ms | Allocations: 60296)
+Completed 200 OK in 74ms (Views: 66.4ms | ActiveRecord: 3.5ms | Allocations: 62275)
+
+
+Started GET "/admin/courses?page=2" for 172.18.0.1 at 2022-05-20 03:40:16 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CoursesAdmin::AdminController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 2.1ms | Allocations: 2294)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.3ms | Allocations: 69)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 55)
+  Rendered /usr/local/bundle/gems/trestle-search-0.4.3/app/views/trestle/search/_search.html.erb (Duration: 0.7ms | Allocations: 523)
+  [1m[36mCourse Load (1.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 25]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 40.1ms | Allocations: 32794)
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "courses"[0m
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 6.1ms | Allocations: 4439)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 51.7ms | Allocations: 41090)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 52.7ms | Allocations: 41729)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 3.8ms | Allocations: 2694)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.6ms | Allocations: 398)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 0.9ms | Allocations: 529)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 133.4ms | Allocations: 67656)
+Completed 200 OK in 155ms (Views: 127.9ms | ActiveRecord: 11.8ms | Allocations: 77111)
+
+
+Started GET "/admin/sections" for 172.18.0.1 at 2022-05-20 03:40:18 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SectionsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 2.5ms | Allocations: 1642)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.3ms | Allocations: 69)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.3ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.2ms | Allocations: 54)
+  Rendered /usr/local/bundle/gems/trestle-search-0.4.3/app/views/trestle/search/_search.html.erb (Duration: 1.3ms | Allocations: 523)
+  [1m[36mSection Load (2.4ms)[0m  [1m[34mSELECT "sections".* FROM "sections" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='1')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='1')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='2')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='2')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='3')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='3')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='4')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='4')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='5')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='5')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='6')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='6')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='7')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='7')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='8')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='8')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='9')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='9')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='10')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='10')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='11')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='11')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='12')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='12')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='13')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='13')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='14')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='14')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='15')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='15')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='16')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='16')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='17')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='17')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='18')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='18')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='19')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='19')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='20')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='20')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='21')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='21')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='22')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='22')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='23')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='23')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='24')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='24')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='25')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "student_assistant_applications" WHERE ("section"='25')[0m
+  ↳ app/admin/sections_admin.rb:50:in `block (3 levels) in <main>'
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 168.9ms | Allocations: 93871)
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "sections"[0m
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 7.9ms | Allocations: 4309)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 186.1ms | Allocations: 101395)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 187.9ms | Allocations: 102030)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 2.6ms | Allocations: 2238)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 1.3ms | Allocations: 358)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 2.7ms | Allocations: 487)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.3ms | Allocations: 59)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 215.9ms | Allocations: 127461)
+Completed 200 OK in 223ms (Views: 169.0ms | ActiveRecord: 48.9ms | Allocations: 130214)
+
+
+Started GET "/admin/teacher_recommandations" for 172.18.0.1 at 2022-05-20 03:40:19 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeacherRecommandationsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 2.2ms | Allocations: 2019)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.0ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 54)
+  [1m[36mTeacherRecommandation Load (2.2ms)[0m  [1m[34mSELECT "teacher_recommandations".* FROM "teacher_recommandations" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 9.6ms | Allocations: 5516)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 1.3ms | Allocations: 439)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 17.0ms | Allocations: 10609)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 23.9ms | Allocations: 11978)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 5.3ms | Allocations: 2246)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.7ms | Allocations: 362)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 1.4ms | Allocations: 491)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.3ms | Allocations: 59)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 55.5ms | Allocations: 37400)
+Completed 200 OK in 72ms (Views: 54.7ms | ActiveRecord: 3.2ms | Allocations: 40940)
+
+
+Started GET "/admin/courses" for 172.18.0.1 at 2022-05-20 03:40:20 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CoursesAdmin::AdminController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 4.5ms | Allocations: 1538)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.3ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered /usr/local/bundle/gems/trestle-search-0.4.3/app/views/trestle/search/_search.html.erb (Duration: 0.7ms | Allocations: 520)
+  [1m[36mCourse Load (2.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 46.1ms | Allocations: 27187)
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "courses"[0m
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 5.9ms | Allocations: 4241)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 61.2ms | Allocations: 34490)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 62.3ms | Allocations: 34998)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 4.1ms | Allocations: 2181)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 1.6ms | Allocations: 340)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 2.5ms | Allocations: 469)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 88.3ms | Allocations: 60218)
+Completed 200 OK in 93ms (Views: 85.2ms | ActiveRecord: 4.4ms | Allocations: 62195)
+
+
+Started GET "/admin/student_assistant_applications" for 172.18.0.1 at 2022-05-20 03:40:21 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentAssistantApplicationsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 2.4ms | Allocations: 2102)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.2ms | Allocations: 54)
+  [1m[36mStudentAssistantApplication Load (1.8ms)[0m  [1m[34mSELECT "student_assistant_applications".* FROM "student_assistant_applications" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 8.5ms | Allocations: 3843)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 1.0ms | Allocations: 445)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 14.5ms | Allocations: 7342)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 15.5ms | Allocations: 8212)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 2.6ms | Allocations: 2234)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.5ms | Allocations: 361)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 0.9ms | Allocations: 490)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 100.8ms | Allocations: 33545)
+Completed 200 OK in 108ms (Views: 100.0ms | ActiveRecord: 2.7ms | Allocations: 35970)
+
+
+Started GET "/admin/reviews" for 172.18.0.1 at 2022-05-20 03:40:22 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ReviewsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 4.1ms | Allocations: 1637)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.4ms | Allocations: 69)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.4ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.2ms | Allocations: 54)
+  [1m[36mReview Load (2.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 6.2ms | Allocations: 2982)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 0.6ms | Allocations: 415)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 15.5ms | Allocations: 5986)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 16.7ms | Allocations: 6622)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 3.6ms | Allocations: 2239)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.9ms | Allocations: 364)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 1.5ms | Allocations: 493)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 42.5ms | Allocations: 32014)
+Completed 200 OK in 48ms (Views: 41.0ms | ActiveRecord: 3.5ms | Allocations: 34943)
+
+
+Started GET "/admin/auth/account" for 172.18.0.1 at 2022-05-20 03:48:15 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+SyntaxError (/myapp/app/admin/auth/users_admin.rb:41: syntax error, unexpected ','
+    column :osu_id, , header: "学工号"
+                    ^
+):
+  
+app/admin/auth/users_admin.rb:41: syntax error, unexpected ','
+app/admin/auth/users_admin.rb:41: syntax error, unexpected ','
+app/admin/auth/users_admin.rb:41: syntax error, unexpected ','
+Started GET "/admin/auth/account" for 172.18.0.1 at 2022-05-20 03:48:33 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Auth::AccountAdmin::AdminController#show as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/show.html.erb within layouts/trestle/admin
+  [1m[36mStudentAvaliableTime Load (2.3ms)[0m  [1m[34mSELECT "student_avaliable_times".* FROM "student_avaliable_times" WHERE ("osu_id" = 'deleteme.1')[0m
+  ↳ app/admin/auth/account_admin.rb:47:in `block (3 levels) in <main>'
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 9.5ms | Allocations: 4397)
+  [1m[36mStudentQualifiedCourse Load (2.3ms)[0m  [1m[34mSELECT "student_qualified_courses".* FROM "student_qualified_courses" WHERE ("osu_id" = 'deleteme.1')[0m
+  ↳ app/admin/auth/account_admin.rb:57:in `block (3 levels) in <main>'
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 4.5ms | Allocations: 2193)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 1.6ms | Allocations: 1541)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.3ms | Allocations: 391)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/_form.html.erb within trestle/application/_layout (Duration: 29.6ms | Allocations: 15336)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/show.html.erb within layouts/trestle/admin (Duration: 43.1ms | Allocations: 18950)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 3.2ms | Allocations: 3113)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.7ms | Allocations: 394)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 1.0ms | Allocations: 527)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 63.7ms | Allocations: 45309)
+Completed 200 OK in 94ms (Views: 56.3ms | ActiveRecord: 18.4ms | Allocations: 58600)
+
+
+Started GET "/admin/auth/account" for 172.18.0.1 at 2022-05-20 03:49:00 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+SyntaxError (/myapp/app/admin/auth/account_admin.rb:27: syntax error, unexpected string literal, expecting '}'
+... 6) {label :管理平台功能"}
+...                              ^
+/myapp/app/admin/auth/account_admin.rb:31: syntax error, unexpected local variable or method, expecting `end'
+...nk_to "与服务器同步课程", "../../courses/sync" , { c...
+...       ^~~~~~~~~~~~~~~~~~~~~~~~
+/myapp/app/admin/auth/account_admin.rb:31: unknown regexp options - cr
+...器同步课程", "../../courses/sync" , { confirm: "Are you ...
+...                        ^~~~~~~~
+/myapp/app/admin/auth/account_admin.rb:31: syntax error, unexpected string literal, expecting `do' or '{' or '('
+...步课程", "../../courses/sync" , { confirm: "Are you sure?"...
+...                               ^
+/myapp/app/admin/auth/account_admin.rb:31: syntax error, unexpected constant, expecting `end'
+...courses/sync" , { confirm: "Are you sure?", disable_with: "P...
+...                            ^~~
+/myapp/app/admin/auth/account_admin.rb:31: syntax error, unexpected constant, expecting `end'
+...re?", disable_with: "Processing..." }
+...                     ^~~~~~~~~~
+/myapp/app/admin/auth/account_admin.rb:35: syntax error, unexpected local variable or method, expecting `end'
+...    link_to "课程推荐系统", "http://localhost:5000"
+...             ^~~~~~~~~~~~~~~~~~
+/myapp/app/admin/auth/account_admin.rb:35: syntax error, unexpected local variable or method, expecting `end'
+..._to "课程推荐系统", "http://localhost:5000"
+...                           ^~~~
+/myapp/app/admin/auth/account_admin.rb:35: unknown regexp options - lcalht
+...推荐系统", "http://localhost:5000"
+...                      ^~~~~~~~~~
+/myapp/app/admin/auth/account_admin.rb:42: syntax error, unexpected constant, expecting `end'
+...     col(sm: 6) {link_to "Click here to add a new avaliable ...
+...                          ^~~~~
+/myapp/app/admin/auth/account_admin.rb:47: syntax error, unexpected backslash, expecting `end'
+...: StudentAvaliableTime.where("\"osu_id\" = '#{user.osu_id}'")
+...                              ^
+/myapp/app/admin/auth/account_admin.rb:47: syntax error, unexpected ')', expecting `end'
+...\"osu_id\" = '#{user.osu_id}'")
+...                              ^
+/myapp/app/admin/auth/account_admin.rb:67: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/admin/auth/account_admin.rb:27: syntax error, unexpected string literal, expecting '}'
+app/admin/auth/account_admin.rb:31: syntax error, unexpected local variable or method, expecting `end'
+app/admin/auth/account_admin.rb:31: unknown regexp options - cr
+app/admin/auth/account_admin.rb:31: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/admin/auth/account_admin.rb:31: syntax error, unexpected constant, expecting `end'
+app/admin/auth/account_admin.rb:31: syntax error, unexpected constant, expecting `end'
+app/admin/auth/account_admin.rb:35: syntax error, unexpected local variable or method, expecting `end'
+app/admin/auth/account_admin.rb:35: syntax error, unexpected local variable or method, expecting `end'
+app/admin/auth/account_admin.rb:35: unknown regexp options - lcalht
+app/admin/auth/account_admin.rb:42: syntax error, unexpected constant, expecting `end'
+app/admin/auth/account_admin.rb:47: syntax error, unexpected backslash, expecting `end'
+app/admin/auth/account_admin.rb:47: syntax error, unexpected ')', expecting `end'
+app/admin/auth/account_admin.rb:67: syntax error, unexpected end-of-input, expecting `end'
+app/admin/auth/account_admin.rb:27: syntax error, unexpected string literal, expecting '}'
+app/admin/auth/account_admin.rb:31: syntax error, unexpected local variable or method, expecting `end'
+app/admin/auth/account_admin.rb:31: unknown regexp options - cr
+app/admin/auth/account_admin.rb:31: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/admin/auth/account_admin.rb:31: syntax error, unexpected constant, expecting `end'
+app/admin/auth/account_admin.rb:31: syntax error, unexpected constant, expecting `end'
+app/admin/auth/account_admin.rb:35: syntax error, unexpected local variable or method, expecting `end'
+app/admin/auth/account_admin.rb:35: syntax error, unexpected local variable or method, expecting `end'
+app/admin/auth/account_admin.rb:35: unknown regexp options - lcalht
+app/admin/auth/account_admin.rb:42: syntax error, unexpected constant, expecting `end'
+app/admin/auth/account_admin.rb:47: syntax error, unexpected backslash, expecting `end'
+app/admin/auth/account_admin.rb:47: syntax error, unexpected ')', expecting `end'
+app/admin/auth/account_admin.rb:67: syntax error, unexpected end-of-input, expecting `end'
+app/admin/auth/account_admin.rb:27: syntax error, unexpected string literal, expecting '}'
+app/admin/auth/account_admin.rb:31: syntax error, unexpected local variable or method, expecting `end'
+app/admin/auth/account_admin.rb:31: unknown regexp options - cr
+app/admin/auth/account_admin.rb:31: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/admin/auth/account_admin.rb:31: syntax error, unexpected constant, expecting `end'
+app/admin/auth/account_admin.rb:31: syntax error, unexpected constant, expecting `end'
+app/admin/auth/account_admin.rb:35: syntax error, unexpected local variable or method, expecting `end'
+app/admin/auth/account_admin.rb:35: syntax error, unexpected local variable or method, expecting `end'
+app/admin/auth/account_admin.rb:35: unknown regexp options - lcalht
+app/admin/auth/account_admin.rb:42: syntax error, unexpected constant, expecting `end'
+app/admin/auth/account_admin.rb:47: syntax error, unexpected backslash, expecting `end'
+app/admin/auth/account_admin.rb:47: syntax error, unexpected ')', expecting `end'
+app/admin/auth/account_admin.rb:67: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/admin/auth/account" for 172.18.0.1 at 2022-05-20 03:49:18 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Auth::AccountAdmin::AdminController#show as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/show.html.erb within layouts/trestle/admin
+  [1m[36mStudentAvaliableTime Load (1.4ms)[0m  [1m[34mSELECT "student_avaliable_times".* FROM "student_avaliable_times" WHERE ("osu_id" = 'deleteme.1')[0m
+  ↳ app/admin/auth/account_admin.rb:47:in `block (3 levels) in <main>'
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 8.5ms | Allocations: 3916)
+  [1m[36mStudentQualifiedCourse Load (1.6ms)[0m  [1m[34mSELECT "student_qualified_courses".* FROM "student_qualified_courses" WHERE ("osu_id" = 'deleteme.1')[0m
+  ↳ app/admin/auth/account_admin.rb:57:in `block (3 levels) in <main>'
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 3.6ms | Allocations: 2111)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 1.7ms | Allocations: 1471)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.3ms | Allocations: 367)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/_form.html.erb within trestle/application/_layout (Duration: 21.5ms | Allocations: 11796)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/show.html.erb within layouts/trestle/admin (Duration: 23.9ms | Allocations: 13518)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 3.5ms | Allocations: 3113)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.6ms | Allocations: 394)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 0.9ms | Allocations: 527)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 46.4ms | Allocations: 39877)
+Completed 200 OK in 64ms (Views: 41.4ms | ActiveRecord: 11.2ms | Allocations: 48522)
+
+
+Started GET "/admin/courserecs" for 172.18.0.1 at 2022-05-20 03:49:29 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CourserecsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 2.9ms | Allocations: 1644)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 54)
+  [1m[36mCourserec Load (1.1ms)[0m  [1m[34mSELECT "courserecs".* FROM "courserecs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  [1m[36mCourse Load (1.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 114], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 90], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 131], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 119], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 117], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 49.6ms | Allocations: 19690)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 0.8ms | Allocations: 417)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 55.3ms | Allocations: 22701)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 57.4ms | Allocations: 23338)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 2.3ms | Allocations: 2238)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.4ms | Allocations: 374)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 0.7ms | Allocations: 503)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 78.1ms | Allocations: 48575)
+Completed 200 OK in 90ms (Views: 58.5ms | ActiveRecord: 23.1ms | Allocations: 51593)
+
+
+Started GET "/admin/reviews" for 172.18.0.1 at 2022-05-20 03:49:31 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ReviewsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 2.2ms | Allocations: 1637)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 54)
+  [1m[36mReview Load (1.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 4.7ms | Allocations: 2995)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 0.7ms | Allocations: 415)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 9.8ms | Allocations: 5999)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 10.9ms | Allocations: 6635)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.2ms | Allocations: 62)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 4.2ms | Allocations: 2240)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.6ms | Allocations: 364)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 0.9ms | Allocations: 493)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 42.0ms | Allocations: 32002)
+Completed 200 OK in 55ms (Views: 41.8ms | ActiveRecord: 2.3ms | Allocations: 37123)
+
+
+Started GET "/admin/student_assistant_applications" for 172.18.0.1 at 2022-05-20 03:49:32 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentAssistantApplicationsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 3.2ms | Allocations: 2102)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.3ms | Allocations: 69)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 54)
+  [1m[36mStudentAssistantApplication Load (1.9ms)[0m  [1m[34mSELECT "student_assistant_applications".* FROM "student_assistant_applications" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 6.2ms | Allocations: 2812)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 1.5ms | Allocations: 446)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 14.2ms | Allocations: 6312)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 17.1ms | Allocations: 7184)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 3.6ms | Allocations: 2245)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.9ms | Allocations: 364)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 1.3ms | Allocations: 493)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 41.5ms | Allocations: 32484)
+Completed 200 OK in 49ms (Views: 41.3ms | ActiveRecord: 2.6ms | Allocations: 35394)
+
+
+Started GET "/admin/courses" for 172.18.0.1 at 2022-05-20 03:49:35 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CoursesAdmin::AdminController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 1.8ms | Allocations: 1642)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered /usr/local/bundle/gems/trestle-search-0.4.3/app/views/trestle/search/_search.html.erb (Duration: 0.7ms | Allocations: 523)
+  [1m[36mCourse Load (1.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 31.3ms | Allocations: 25958)
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "courses"[0m
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 6.6ms | Allocations: 4304)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 43.1ms | Allocations: 33464)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 44.1ms | Allocations: 34100)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 2.6ms | Allocations: 2226)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.4ms | Allocations: 357)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 0.7ms | Allocations: 486)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 66.5ms | Allocations: 59473)
+Completed 200 OK in 74ms (Views: 65.0ms | ActiveRecord: 3.8ms | Allocations: 62023)
+
+
+Started GET "/admin/teacher_recommandations" for 172.18.0.1 at 2022-05-20 03:49:37 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TeacherRecommandationsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 2.9ms | Allocations: 1980)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 54)
+  [1m[36mTeacherRecommandation Load (1.1ms)[0m  [1m[34mSELECT "teacher_recommandations".* FROM "teacher_recommandations" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 4.8ms | Allocations: 2949)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 0.6ms | Allocations: 439)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 10.2ms | Allocations: 6320)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 11.2ms | Allocations: 7095)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.2ms | Allocations: 62)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 4.3ms | Allocations: 2247)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.5ms | Allocations: 364)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 0.8ms | Allocations: 493)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 47.1ms | Allocations: 32470)
+Completed 200 OK in 53ms (Views: 47.1ms | ActiveRecord: 1.8ms | Allocations: 35413)
+
+
+Started GET "/admin/courserecs" for 172.18.0.1 at 2022-05-20 03:49:40 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CourserecsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 2.3ms | Allocations: 1536)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.0ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 49)
+  [1m[36mCourserec Load (1.1ms)[0m  [1m[34mSELECT "courserecs".* FROM "courserecs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  [1m[36mCourse Load (1.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 114], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 90], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 131], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 119], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 117], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 35.2ms | Allocations: 11912)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 0.6ms | Allocations: 360)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 40.4ms | Allocations: 14726)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 41.1ms | Allocations: 15233)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 2.4ms | Allocations: 2181)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.6ms | Allocations: 353)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 0.8ms | Allocations: 482)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 62.0ms | Allocations: 40314)
+Completed 200 OK in 67ms (Views: 48.5ms | ActiveRecord: 14.8ms | Allocations: 42267)
+
+
+Started GET "/admin/reviews" for 172.18.0.1 at 2022-05-20 03:49:41 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ReviewsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 1.9ms | Allocations: 1531)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.0ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 49)
+  [1m[36mReview Load (1.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 4.2ms | Allocations: 2787)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 0.7ms | Allocations: 357)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 9.2ms | Allocations: 5593)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 10.1ms | Allocations: 6100)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 4.7ms | Allocations: 2180)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.7ms | Allocations: 341)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 1.0ms | Allocations: 470)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 45.2ms | Allocations: 31097)
+Completed 200 OK in 50ms (Views: 44.5ms | ActiveRecord: 1.9ms | Allocations: 32935)
+
+
+Started GET "/admin/reviews" for 172.18.0.1 at 2022-05-20 03:50:42 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ReviewsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 4.2ms | Allocations: 1531)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.3ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 49)
+  [1m[36mReview Load (1.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 5.7ms | Allocations: 2785)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 0.7ms | Allocations: 357)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 14.2ms | Allocations: 5591)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 15.2ms | Allocations: 6098)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 2.6ms | Allocations: 2180)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 5.6ms | Allocations: 342)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 5.9ms | Allocations: 471)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 47.5ms | Allocations: 31244)
+Completed 200 OK in 52ms (Views: 46.9ms | ActiveRecord: 2.0ms | Allocations: 33067)
+
+
+Started GET "/admin" for 172.18.0.1 at 2022-05-20 03:50:43 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Trestle::DashboardController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/admin/courserecs
+Completed 302 Found in 8ms (ActiveRecord: 0.7ms | Allocations: 2859)
+
+
+Started GET "/admin/courserecs" for 172.18.0.1 at 2022-05-20 03:50:43 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CourserecsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 3.4ms | Allocations: 1577)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.2ms | Allocations: 66)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.3ms | Allocations: 49)
+  [1m[36mCourserec Load (1.4ms)[0m  [1m[34mSELECT "courserecs".* FROM "courserecs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  [1m[36mCourse Load (1.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 114], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 90], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 131], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 119], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 117], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 31.7ms | Allocations: 11959)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 0.7ms | Allocations: 380)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 39.0ms | Allocations: 14843)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 40.1ms | Allocations: 15392)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 2.5ms | Allocations: 2193)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 0.5ms | Allocations: 365)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 0.8ms | Allocations: 494)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 63.4ms | Allocations: 40758)
+Completed 200 OK in 70ms (Views: 51.3ms | ActiveRecord: 13.7ms | Allocations: 42653)
+
+
+Started GET "/admin/courserecs" for 172.18.0.1 at 2022-05-20 03:50:44 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CourserecsAdmin::AdminController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb
+  Rendering /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_header.html.erb (Duration: 1.7ms | Allocations: 1536)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/flash/_flash.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_utilities.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_tabs.html.erb (Duration: 0.1ms | Allocations: 49)
+  [1m[36mCourserec Load (1.8ms)[0m  [1m[34mSELECT "courserecs".* FROM "courserecs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  [1m[36mCourse Load (1.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 114], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 90], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 131], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 119], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 117], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  [1m[36mCourse Load (1.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/admin/courserecs_admin.rb:10:in `block (3 levels) in <main>'
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_table.html.erb (Duration: 27.5ms | Allocations: 11885)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/table/_pagination.html.erb (Duration: 0.5ms | Allocations: 360)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/application/_layout.html.erb (Duration: 32.1ms | Allocations: 14699)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/resource/index.html.erb within layouts/trestle/admin (Duration: 32.7ms | Allocations: 15206)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_title.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_sidebar.html.erb (Duration: 2.9ms | Allocations: 2180)
+  Rendered /usr/local/bundle/bundler/gems/trestle-auth-eaf2c53eb09a/app/views/trestle/auth/_userbox.html.erb (Duration: 1.7ms | Allocations: 353)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_header.html.erb (Duration: 2.3ms | Allocations: 482)
+  Rendered /usr/local/bundle/gems/trestle-0.9.5/app/views/trestle/shared/_footer.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered layout /usr/local/bundle/gems/trestle-0.9.5/app/views/layouts/trestle/admin.html.erb (Duration: 56.7ms | Allocations: 40270)
+Completed 200 OK in 61ms (Views: 44.9ms | ActiveRecord: 13.0ms | Allocations: 42096)
+
+

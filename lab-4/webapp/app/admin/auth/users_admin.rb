@@ -37,10 +37,10 @@ Trestle.resource(:users, model: User, scope: Auth) do
       avatar { image_tag(user.avator) if user.profile? }
     end
     column :email, link: true
-    column :display_name
-    column :osu_id, header: "OSU dot id"
-    column :role
-    column :admin
+    column :display_name, header: "名字"
+    column :osu_id, header: "学工号"
+    column :role, header: "职业"
+    column :admin, header: "管理员"
     actions
   end
 

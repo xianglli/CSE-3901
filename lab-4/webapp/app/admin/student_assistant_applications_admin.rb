@@ -16,13 +16,13 @@ Trestle.resource(:student_assistant_applications) do
   # Customize the table columns shown on the index view.
   #
   table do
-    column :osu_id, header: "OSU dot id"
-    column :courseId, header: "Course" do |course|
+    column :osu_id, header: "学号"
+    column :courseId, header: "课程" do |course|
       "#{Course.find(course.courseId).shortDescription.to_s}"
     end
-    column :created_at
-    column :updated_at
-    column :status, header: "Application status" , sort: :status, align: :center do |app|
+    column :created_at, header: "创建时间"
+    column :updated_at, header: "更新时间"
+    column :status, header: "申请状态" , sort: :status, align: :center do |app|
       status_tag(app.status, {"approved" => :success, "denied" => :danger, "pending" => :warning}[app.status] || :default)
     end
     actions

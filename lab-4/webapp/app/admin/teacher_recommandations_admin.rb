@@ -10,11 +10,11 @@ Trestle.resource(:teacher_recommandations) do
   #Customize the table columns shown on the index view.
   
   table do
-    column :teacher_osu_id
-    column :student_osu_id
-    column :content
-    column :created_at
-    column :updated_at
+    column :teacher_osu_id, header: "教师名"
+    column :student_osu_id, header: "学生名"
+    column :content, header: "推荐内容"
+    column :created_at, header: "创建时间"
+    column :updated_at, header: "修改时间"
   end
 
   # Customize the form fields shown on the new/edit views.

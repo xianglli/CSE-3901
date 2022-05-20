@@ -41,24 +41,24 @@ Trestle.resource(:sections) do
   #
   table do |section|
     column :id
-    column :classNumber
-    column :section
-    column :component
-    column :instructionMode
-    column :ta_num, header: "TA number"
-    column :ta_num_remain, header: "Avaliable Position" do |sec|
+    column :classNumber, header: "课程号"
+    column :section, header: "课号"
+    column :component, header: "课程类别"
+    column :instructionMode, header: "授课方式"
+    column :ta_num, header: "TA number", header: "助教需求"
+    column :ta_num_remain, header: "空余助教" do |sec|
       status_tag((sec.ta_num - StudentAssistantApplication.where("\"section\"='#{sec.id}'").count).to_s,{ "0" => :danger}[(sec.ta_num - StudentAssistantApplication.where("\"section\"='#{sec.id}'").count).to_s] || :success)
     end
-    column :career
-    column :buildingDescription, header: "Address"
-    column :monday
-    column :tuesday
-    column :wednesday
-    column :thursday
-    column :friday
-    column :saturday
-    column :sunday
-    column :instructors
+    column :career, header: "授课对象"
+    column :buildingDescription, header: "授课地点"
+    column :monday, header: "星期一"
+    column :tuesday, header: "星期二"
+    column :wednesday, header: "星期三"
+    column :thursday, header: "星期四"
+    column :friday, header: "星期五"
+    column :saturday, header: "星期六"
+    column :sunday, header: "星期天"
+    column :instructors, header: "教师"
     actions
   end
 
