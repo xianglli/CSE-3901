@@ -32,7 +32,7 @@ Trestle.resource(:account, model: User, scope: Auth, singular: true) do
       end
 
       row do
-        link_to "课程推荐系统", "http://localhost:5000"
+        link_to "课程推荐系统", "http://172.17.0.1:5000"
       end
     end
     end
